@@ -13,6 +13,18 @@ passes 10 unit tests. What step 1 found and changed:
 - The project folder name contains ':', which breaks PROJ and uv's PATH handling; `run.sh` keeps the
   virtualenv in `~/.local/share/radiusstats-europe/venv`.
 
+Step 2 (query engine) done, 2026-11-15: `app/src/engine/` — geodesic circle (WGS84, geographiclib),
+EPSG:3035 via proj4, scanline masking with 4×4 sub-cell sampling (16×16 below 20 cells radius),
+per-country sums, geotiff.js window reads with block cache + window LRU + AbortSignal, a worker that
+cancels stale queries and posts the visible layer group first. `npm test` (in app/): 30 tests, incl.
+national totals reproduced at levels 1–8 km, and 7 circles (Brussels/Antwerp/Liège, 10–50 km) within
+0.1 % of an independent pyproj computation. Changes made on the way:
+- Cell budget lowered to **100k** cells (spec range 50k–250k) for 4G: r ≤ 178 km → 1 km, ≤ 356 km → 2 km,
+  500 km → 4 km. To be re-tuned with measured bytes from the full build.
+- Pipeline: coarse-level country = most *population* in the 2×2 block (was land), and a new
+  `land_covered` layer gives the partial-coverage share exactly at every level.
+- Local CPU time per cold query: 40–190 ms.
+
 Original draft for review, 2026-11-14: Every fact marked ✅ was
 checked on 2026-11-14 against the live Eurostat API or by reading the file. Facts marked ⚠️ come
 from release notes or search results and are re-checked when the pipeline downloads the data.
@@ -62,8 +74,8 @@ levels `country` can be replaced by per-country sum bands if mixed border cells 
 (decided after the step-2 tests).
 
 ### Level choice
-Circle area = πr². The worker picks the finest level for which πr²/cell² ≤ 250k:
-r = 1–280 km → 1 km; up to 500 km → 2 km. Tiny radii are kept at 1 km (a 1 km radius covers
+Circle area = πr². The worker picks the finest level for which πr²/cell² ≤ 100k (see status above):
+r = 1–178 km → 1 km; up to 356 km → 2 km; 500 km → 4 km. Tiny radii are kept at 1 km (a 1 km radius covers
 only ~3 cells, which is why there is a low-confidence warning below 25 km).
 Each window read covers a bbox of 2r × 2r. At 500 km on the 2 km level that is 500 × 500 cells ×
 ~2 bytes compressed per layer → about 0.5 MB per layer; 9 layers ≈ 4–5 MB for the largest

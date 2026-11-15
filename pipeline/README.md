@@ -21,6 +21,7 @@ Years, coverage, currencies and the countries to build are in `../config/radiuss
 | `cog/{layer}/L{km}.tif` | float32 COG, DEFLATE + floating-point predictor, nodata −1, 256 px tiles. L2…L32 are exact 2×2 **sums** of the level below (not GDAL overviews) |
 | `cog/country/L{km}.tif` | uint8 country id (manifest `countries[].id`), 0 = sea, 255 = land outside coverage |
 | `cog/land/L{km}.tif` | land share of the cell, 0–1 |
+| `cog/land_covered/L{km}.tif` | land share of the cell that lies in a built (covered) country, 0–1 — for the partial-coverage notice |
 | `build_report.json` | gaps, fallbacks, NUTS mappings, downloads with sha256, Eurostat update stamps |
 | `validation_report.json` | output of `run.sh validate` |
 

@@ -23,14 +23,14 @@ def mean2x2(a: np.ndarray) -> np.ndarray:
     return a.astype(np.float64).reshape(h // 2, 2, w // 2, 2).mean(axis=(1, 3)).astype(np.float32)
 
 
-def mode2x2_country(a: np.ndarray, land: np.ndarray) -> np.ndarray:
-    """Country of a parent cell = the child country with the most land area.
+def mode2x2_country(a: np.ndarray, weight: np.ndarray) -> np.ndarray:
+    """Country of a parent cell = the child country with the largest summed `weight`
+    (population, plus a tiny land term so empty land still decides).
     0 (sea) only when no child has a country; 255 (land outside coverage) competes like a country."""
     h, w = a.shape
     blocks = a.reshape(h // 2, 2, w // 2, 2).transpose(0, 2, 1, 3).reshape(h // 2, w // 2, 4)
-    lw = land.astype(np.float64).reshape(h // 2, 2, w // 2, 2).transpose(0, 2, 1, 3).reshape(h // 2, w // 2, 4)
-    # tiny weight so populated-but-zero-land coastal cells still count
-    lw = np.where(blocks > 0, lw + 1e-6, 0.0)
+    lw = weight.astype(np.float64).reshape(h // 2, 2, w // 2, 2).transpose(0, 2, 1, 3).reshape(h // 2, w // 2, 4)
+    lw = np.where(blocks > 0, lw + 1e-9, 0.0)
     out = np.zeros((h // 2, w // 2), dtype=np.uint8)
     best = np.zeros((h // 2, w // 2))
     for code in np.unique(blocks):
@@ -47,7 +47,8 @@ def build(a: np.ndarray, levels: list[int], kind: str, nodata: float = -1.0,
           land: np.ndarray | None = None) -> dict[int, np.ndarray]:
     """Return {level_km: array} for every level, starting from the 1 km array `a`.
 
-    kind: 'sum' (data layers), 'mean' (land share), 'country' (uint8 ids, needs `land`).
+    kind: 'sum' (data layers), 'mean' (land shares), 'country' (uint8 ids; `land` is the 1 km
+    weight used to pick a parent's country — the pipeline passes population + 1e-6 × land).
     """
     assert levels[0] == 1 and all(levels[i + 1] == 2 * levels[i] for i in range(len(levels) - 1))
     out = {1: a}
@@ -59,7 +60,7 @@ def build(a: np.ndarray, levels: list[int], kind: str, nodata: float = -1.0,
             cur = mean2x2(cur)
         elif kind == "country":
             assert cur_land is not None
-            cur, cur_land = mode2x2_country(cur, cur_land), mean2x2(cur_land)
+            cur, cur_land = mode2x2_country(cur, cur_land), sum2x2(cur_land, nodata)
         else:
             raise ValueError(kind)
         out[lv] = cur

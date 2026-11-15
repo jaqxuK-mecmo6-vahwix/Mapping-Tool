@@ -157,9 +157,16 @@ def main(argv: list[str] | None = None) -> None:
     real.rename(columns=str).to_parquet(WORK_DIR / "real_gdp_nuts3.parquet")
 
     # --- country + land ------------------------------------------------------------------------------
+    # coarse-level country = the country with most population in the 2x2 block (land decides empty blocks)
+    pop_latest = rasterise(shape, row, col, pop_by_year[cfg.pop_years[0]], covered, 0.0)
+    cweight = np.maximum(pop_latest, 0).astype(np.float64) + 1e-6 * land
     layers["country"] = {"kind": "country", "levels": write_layer(cfg, stage, grid, "country", country, "country",
-                                                                  report, land=land)}
+                                                                  report, land=cweight)}
     layers["land"] = {"kind": "land", "levels": write_layer(cfg, stage, grid, "land", land, "mean", report)}
+    # land share that lies in built (covered) countries; mean-aggregated so coarse cells stay exact
+    land_cov = np.where(covered, land, 0).astype(np.float32)
+    layers["land_covered"] = {"kind": "land", "levels": write_layer(cfg, stage, grid, "land_covered", land_cov,
+                                                                    "mean", report)}
 
     # --- cell table with every layer's row values, for the validation script ----------------------
     WORK_DIR.mkdir(parents=True, exist_ok=True)

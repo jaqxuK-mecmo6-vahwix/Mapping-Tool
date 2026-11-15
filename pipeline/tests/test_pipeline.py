@@ -36,7 +36,7 @@ def test_partial_nodata_block_counts_as_zero():
     assert pyramid.sum2x2(a, ND)[0, 0] == 2
 
 
-def test_country_mode_uses_land_weight():
+def test_country_mode_uses_weight():
     c = np.array([[1, 1], [2, 0]], np.uint8)
     land = np.array([[0.1, 0.1], [1.0, 0.0]], np.float32)
     assert pyramid.mode2x2_country(c, land)[0, 0] == 2
