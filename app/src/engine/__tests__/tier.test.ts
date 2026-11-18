@@ -42,8 +42,18 @@ describe("location tier", () => {
     expect(locationTier(m, circle(123, 1.69e6))!.nearUp).toBeUndefined();   // Oslo: population 15% short
     expect(locationTier(m, circle(817, 12e6))!.nearUp).toBeUndefined();
   });
-  it("only for a 50 km circle", () => {
+  it("25 km city tiers", () => {
+    const at25 = (gdp: number, pop: number) => locationTier(m, circle(gdp, pop, 0, 0, 25))!;
+    expect(at25(221, 4.31e6).def.tier).toBe("A");        // Berlin: B at 50 km, A at 25 km
+    expect(at25(209, 2.49e6).def.tier).toBe("B");        // Amsterdam: A at 50 km, B at 25 km
+    expect(at25(101, 1.23e6).def.tier).toBe("C");        // Oslo
+    expect(at25(26, 0.5e6).def.tier).toBe("C");          // Aarhus, on the line
+    expect(at25(24, 0.4e6).def.tier).toBe("D");          // Bergen
+    expect(at25(221, 4.31e6).set.title).toBe("City tier");
+  });
+  it("only for 25 km and 50 km circles", () => {
     expect(locationTier(m, circle(817, 12e6, 0, 0, 49.5))).toBeNull();
+    expect(locationTier(m, circle(817, 12e6, 0, 0, 30))).toBeNull();
   });
   it("flags Irish GDP", () => {
     expect(locationTier(m, circle(273, 2.13e6, 0, 0, 50, { IE: 273_000 }))!.irelandDistorted).toBe(true);

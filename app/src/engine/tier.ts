@@ -1,18 +1,28 @@
-/** Location tier for a 50 km circle: a screening grade from GDP and population, plus a growth sign.
- *  Thresholds were set from the 50 km totals of 51 European cities (2025 population, 2023 nominal GDP). */
+/** Location tiers for 25 km (city) and 50 km (market) circles: a screening grade from GDP and population,
+ *  plus a growth sign. Thresholds were set from the totals of 51 European cities at each radius
+ *  (2025 population, 2023 nominal GDP). */
 import { cagr } from "./stats";
 import type { Manifest, QueryResult } from "./types";
 
-export const TIER_RADIUS_KM = 50;
-
 export interface TierDef { tier: "A" | "B" | "C" | "D"; name: string; minGdpBn: number; minPop: number }
+export interface TierSet { radiusKm: number; title: string; tiers: TierDef[] }
 
-export const TIERS: TierDef[] = [
-  { tier: "A", name: "Gateway metro", minGdpBn: 300, minPop: 5_000_000 },
-  { tier: "B", name: "Major metro", minGdpBn: 100, minPop: 2_000_000 },
-  { tier: "C", name: "Regional centre", minGdpBn: 30, minPop: 1_000_000 },
-  { tier: "D", name: "Local market", minGdpBn: 0, minPop: 0 },
+export const TIER_SETS: TierSet[] = [
+  { radiusKm: 25, title: "City tier", tiers: [
+    { tier: "A", name: "Global city", minGdpBn: 200, minPop: 4_000_000 },
+    { tier: "B", name: "Major city", minGdpBn: 75, minPop: 1_500_000 },
+    { tier: "C", name: "Regional city", minGdpBn: 20, minPop: 500_000 },
+    { tier: "D", name: "Local market", minGdpBn: 0, minPop: 0 },
+  ] },
+  { radiusKm: 50, title: "Market tier", tiers: [
+    { tier: "A", name: "Gateway metro", minGdpBn: 300, minPop: 5_000_000 },
+    { tier: "B", name: "Major metro", minGdpBn: 100, minPop: 2_000_000 },
+    { tier: "C", name: "Regional centre", minGdpBn: 30, minPop: 1_000_000 },
+    { tier: "D", name: "Local market", minGdpBn: 0, minPop: 0 },
+  ] },
 ];
+
+export const tierSetFor = (radiusKm: number) => TIER_SETS.find((s) => s.radiusKm === radiusKm);
 
 /** "+": population ≥ 0.8 %/yr and real GDP ≥ 2.5 %/yr; "−": population falling faster than 0.1 %/yr
  *  (smaller changes count as flat). */
@@ -24,6 +34,7 @@ export const BORDERLINE = 0.05;
 export const IE_GDP_SHARE = 0.25;
 
 export interface LocationTier {
+  set: TierSet;
   def: TierDef;
   sign: "+" | "−" | "";
   label: string;                 // e.g. "B+"
@@ -38,9 +49,10 @@ export interface LocationTier {
   irelandDistorted: boolean;
 }
 
-
 export function locationTier(m: Manifest, r: QueryResult): LocationTier | null {
-  if (r.params.radiusKm !== TIER_RADIUS_KM) return null;
+  const set = tierSetFor(r.params.radiusKm);
+  if (!set) return null;
+  const TIERS = set.tiers;
   const p = m.years.population, g = m.years.gdp;
   const pop = r.layers[`pop_${p.latest}`], nom = r.layers[`gdp_nom_eur_${g.latest}`];
   // growth over the longest comparison period (10 years with the current configuration)
@@ -61,7 +73,7 @@ export function locationTier(m: Manifest, r: QueryResult): LocationTier | null {
     ? up : undefined;
   const irelandDistorted = nom.total > 0 && (nom.byCountry.IE ?? 0) / nom.total >= IE_GDP_SHARE;
   return {
-    def, sign, label: def.tier + sign, gdpBn, population, popGrowth, realGdpGrowth,
+    set, def, sign, label: def.tier + sign, gdpBn, population, popGrowth, realGdpGrowth,
     years: p.latest - pFrom, gdpYears: g.latest - gFrom, nearUp, irelandDistorted,
   };
 }
