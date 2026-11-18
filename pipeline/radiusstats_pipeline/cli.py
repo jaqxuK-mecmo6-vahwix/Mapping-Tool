@@ -14,7 +14,9 @@ import pandas as pd
 from . import cog, gdp, pyramid
 from .config import WORK_DIR, Config, load_config
 from .fetch import download_index
+from .coverage import build_mask
 from .fx import build_fx
+from .heat import build_pmtiles
 from .grid import GridSpec, extent_for
 from .population import CellTable, allocate, build_cell_table, yearly_population
 from .report import Report
@@ -172,6 +174,16 @@ def main(argv: list[str] | None = None) -> None:
     WORK_DIR.mkdir(parents=True, exist_ok=True)
     cells.assign(row=row, col=col, **row_values).to_parquet(WORK_DIR / "cells.parquet")
 
+    # --- map display: heat tiles and coverage mask ------------------------------------------------
+    heat = {}
+    for key, lid in (("population", f"pop_{cfg.pop_years[0]}"), ("gdp", f"gdp_nom_eur_{cfg.gdp_latest}")):
+        arr = rasterise(shape, row, col, row_values[lid], covered, cfg.nodata)
+        info = build_pmtiles(stage / "heat" / f"{key}.pmtiles", arr, grid, cfg.nodata, name=f"{key} density")
+        unit = "persons per km²" if key == "population" else "million EUR per km²"
+        heat[key] = {"url": f"heat/{key}.pmtiles", "layer": lid, "unit": unit, **info}
+        print(f"   heat {key}: {info['tiles']} tiles, {info['min']:.3g}–{info['max']:.3g} {unit}")
+    mask = build_mask(cfg, stage / "coverage_mask.geojson", report)
+
     fx = build_fx(cfg, report)
     (stage / "fx.json").write_text(json.dumps(fx, indent=2))
 
@@ -191,6 +203,8 @@ def main(argv: list[str] | None = None) -> None:
         "low_confidence_gdp_radius_km": cfg.raw["low_confidence_gdp_radius_km"],
         "layers": layers,
         "fx": "fx.json",
+        "heat": heat,
+        "coverage_mask": mask,
     }
     (stage / "manifest.json").write_text(json.dumps(manifest, indent=2))
     report.write(stage / "build_report.json", extra={

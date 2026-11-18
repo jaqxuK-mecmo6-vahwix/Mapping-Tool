@@ -40,6 +40,19 @@ export interface Manifest {
   low_confidence_gdp_radius_km: number;
   layers: Record<string, LayerMeta>;
   fx: string;
+  heat?: Partial<Record<"population" | "gdp", HeatMeta>>;
+  coverage_mask?: { url: string; countries: string[] };
+}
+
+export interface HeatMeta {
+  url: string;
+  layer: string;
+  unit: string;
+  min: number;
+  max: number;
+  ramp: [number, number, number][];
+  min_zoom: number;
+  max_zoom: number;
 }
 
 export interface FxTable {

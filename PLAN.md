@@ -25,6 +25,17 @@ national totals reproduced at levels 1–8 km, and 7 circles (Brussels/Antwerp/L
   `land_covered` layer gives the partial-coverage share exactly at every level.
 - Local CPU time per cold query: 40–190 ms.
 
+Step 3 (map UI) done, 2026-11-16: Vite + React + Tailwind app in `app/` (MapLibre with OpenFreeMap
+positron, panning limited to Europe, uncovered countries greyed from GISCO 1:3M outlines, geodesic circle,
+draggable marker, Nominatim search on submit, radius slider (square-root scale) + number input,
+Population/GDP layers with PMTiles heat maps and legend, nominal/PPS and currency toggles, partial-coverage
+and low-confidence notices, per-country table, reference years, Sources screen, URL hash state, PWA for
+the app shell only). Checked in the browser on desktop and at 360 × 740 (no horizontal scroll; bottom
+sheet collapses to a one-line headline). Bundle: 131 kB + 285 kB (MapLibre) gzipped.
+Not yet checkable with the Belgium-only build: the currency toggle (needs a non-euro country), PWA install.
+Dev notes: `npm run dev` in app/ serves `../data/build` at /data/ with Range support; Vite's fs.strict is
+off in dev only because of the ':' in the folder name.
+
 Original draft for review, 2026-11-14: Every fact marked ✅ was
 checked on 2026-11-14 against the live Eurostat API or by reading the file. Facts marked ⚠️ come
 from release notes or search results and are re-checked when the pipeline downloads the data.

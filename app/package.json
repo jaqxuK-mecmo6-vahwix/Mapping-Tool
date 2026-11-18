@@ -13,18 +13,23 @@
   "dependencies": {
     "geographiclib-geodesic": "2.2.0",
     "geotiff": "2.1.3",
+    "maplibre-gl": "5.24.0",
+    "pmtiles": "4.5.0",
     "proj4": "2.22.0",
     "react": "19.1.10",
     "react-dom": "19.1.10"
   },
   "devDependencies": {
+    "@tailwindcss/vite": "4.3.3",
     "@types/node": "22.15.3",
     "@types/proj4": "2.19.0",
     "@types/react": "19.3.0",
     "@types/react-dom": "19.3.0",
     "@vitejs/plugin-react": "5.2.0",
+    "tailwindcss": "4.3.3",
     "typescript": "5.9.3",
     "vite": "7.3.7",
+    "vite-plugin-pwa": "1.3.0",
     "vitest": "3.2.7"
   },
   "//": "Scripts call node directly: the project folder name contains ':', which breaks npm's PATH for .bin shims."

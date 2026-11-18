@@ -33,7 +33,8 @@ Status: sources used by the **Belgium** build (step 1) are marked ✔; the rest 
 | ✔ | Source | Version / table | URL | Licence and citation |
 |---|---|---|---|---|
 | ✔ | Eurostat/ECB euro exchange rates, annual averages | `ert_bil_eur_a` (statinfo=AVG) | https://ec.europa.eu/eurostat/databrowser/view/ert_bil_eur_a/default/table | © European Union, Eurostat; ECB |
-| | OpenFreeMap vector tiles | — | https://openfreemap.org | © OpenMapTiles © OpenStreetMap contributors (ODbL) |
+| ✔ | Eurostat GISCO countries 2024, 1:3 million (grey-out mask of non-covered countries) | `CNTR_RG_03M_2024_4326.geojson` | https://gisco-services.ec.europa.eu/distribution/v2/countries/geojson/CNTR_RG_03M_2024_4326.geojson | © EuroGeographics for the administrative boundaries; non-commercial use with attribution |
+| ✔ | OpenFreeMap vector tiles | — | https://openfreemap.org | © OpenMapTiles © OpenStreetMap contributors (ODbL) |
 | | Nominatim geocoder | — | https://nominatim.openstreetmap.org | © OpenStreetMap contributors; OSMF usage policy |
 
 ## Methods that change source values (stated as required by the Eurostat reuse policy)

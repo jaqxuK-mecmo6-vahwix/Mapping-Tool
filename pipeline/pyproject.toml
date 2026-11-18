@@ -12,6 +12,9 @@ dependencies = [
   "pyyaml>=6",
   "requests>=2.32",
   "scipy>=1.13",
+  "shapely>=2.0",
+  "pillow>=10.4",
+  "pmtiles>=3.4",
 ]
 
 [dependency-groups]
@@ -30,3 +33,7 @@ packages = ["radiusstats_pipeline"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+
+[tool.uv]
+# supply-chain hygiene: only resolve releases that are at least ~2 weeks old at lock time
+exclude-newer = "2026-11-01T00:00:00Z"
