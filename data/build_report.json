@@ -1,0 +1,2972 @@
+{
+  "started": "2026-11-18T08:40:34+00:00",
+  "finished": "2026-11-18T08:45:45+00:00",
+  "summary": {
+    "gaps": 7,
+    "fallbacks": 9,
+    "mappings": 77,
+    "checks_failed": 0
+  },
+  "countries": [
+    "AT",
+    "BE",
+    "BG",
+    "HR",
+    "CY",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "EL",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LT",
+    "LU",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "UK",
+    "CH",
+    "NO"
+  ],
+  "seconds": 310.3,
+  "downloads": {
+    "bfs/je-d-04.02.06.01.xlsx": {
+      "bytes": 30545,
+      "fetched": "2026-11-18T07:11:21+00:00",
+      "sha256": "3280da64b916e37177212f645a31869d29c3e640ab3b690f5df7d0bc0e2cb24d",
+      "url": "https://dam-api.bfs.admin.ch/hub/api/dam/assets/36251918/master"
+    },
+    "eurostat/demo_r_pjanaggr3__A.NR.T.TOTAL..csv.gz": {
+      "bytes": 395555,
+      "fetched": "2026-11-18T07:04:30+00:00",
+      "sha256": "73ea0c6106c22cadf20d5efefdce22442844379c1eddbba84d2b189b4f6d9516",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/demo_r_pjanaggr3/A.NR.T.TOTAL./?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/ert_bil_eur_a__all.csv.gz": {
+      "bytes": 63058,
+      "fetched": "2026-11-18T07:09:13+00:00",
+      "sha256": "c9141969adceedfc86dea5d804007ce1f0a5340dc785c59e8d2579e72e42f7dd",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/ert_bil_eur_a/?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/nama_10_gdp__A.CP_MEUR+CP_MPPS_EU27_2020+CLV20_MEUR.B1GQ..csv.gz": {
+      "bytes": 33591,
+      "fetched": "2026-11-18T07:21:27+00:00",
+      "sha256": "ec65c24d1bcd0504dabb4cb0d3456b8c531e04dfcf981eab3e57746720f134a5",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MEUR+CP_MPPS_EU27_2020+CLV20_MEUR.B1GQ./?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/nama_10_gdp__A.CP_MNAC.B1GQ.CH.csv.gz": {
+      "bytes": 409,
+      "fetched": "2026-11-18T07:29:19+00:00",
+      "sha256": "780f92329121b61fb630c25026306b168a97bcfd18455fe2f7054d0eff3ce790",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MNAC.B1GQ.CH/?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/nama_10_gdp__A.CP_MNAC.B1GQ.NO.csv.gz": {
+      "bytes": 543,
+      "fetched": "2026-11-18T07:11:44+00:00",
+      "sha256": "7da3e2a61409b5c5998c1cc5ca09635c65bbcc9ff73bebb6eac7aba49f5c7a6a",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10_gdp/A.CP_MNAC.B1GQ.NO/?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/nama_10r_2gvagr__all.csv.gz": {
+      "bytes": 184969,
+      "fetched": "2026-11-18T07:06:30+00:00",
+      "sha256": "a8a3acf7d26ad0ddab03e4ae71df7c904eae53bebec1169b4d1ed86c99b747c5",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10r_2gvagr/?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/nama_10r_3gdp__all.csv.gz": {
+      "bytes": 1738973,
+      "fetched": "2026-11-18T07:06:07+00:00",
+      "sha256": "9be2595d89e66269580419c36ed1166d0388074000b5c674bee3c7bf7e30298a",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/nama_10r_3gdp/?format=SDMX-CSV&compressed=true"
+    },
+    "eurostat/prc_ppp_ind__A.PPP_EU27_2020.GDP..csv.gz": {
+      "bytes": 12230,
+      "fetched": "2026-11-18T07:18:24+00:00",
+      "sha256": "56631087aa76cb33d2ff7bf513dc67ca5ff4c3b712f79b1f12999d448b665616",
+      "url": "https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/prc_ppp_ind/A.PPP_EU27_2020.GDP./?format=SDMX-CSV&compressed=true"
+    },
+    "gisco/CNTR_RG_03M_2024_4326.geojson": {
+      "bytes": 15075984,
+      "fetched": "2026-11-16T07:25:29+00:00",
+      "sha256": "2bce754bbbdb3f97f8d839d387cd3765086f0b00823c16d8baa4c32396edc77a",
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/geojson/CNTR_RG_03M_2024_4326.geojson"
+    },
+    "gisco/CNTR_RG_20M_2024_4326.geojson": {
+      "bytes": 1984591,
+      "fetched": "2026-11-15T21:24:21+00:00",
+      "sha256": "b6a34fb2319baa8fb5bfb35ca0b4144b3831cadc17330a1871195e085a9aac94",
+      "url": "https://gisco-services.ec.europa.eu/distribution/v2/countries/geojson/CNTR_RG_20M_2024_4326.geojson"
+    },
+    "gisco/Eurostat_Census-GRID_2021_V3.zip": {
+      "bytes": 566125577,
+      "fetched": "2026-11-15T16:07:59+00:00",
+      "sha256": "18a467e3d96b71dd89f0440cc184751bded45721cdff8ba778ece79d7a4f5843",
+      "url": "https://gisco-services.ec.europa.eu/census/2021/Eurostat_Census-GRID_2021_V3.zip"
+    },
+    "gisco/grid_1km.parquet": {
+      "bytes": 175782145,
+      "fetched": "2026-11-15T16:07:38+00:00",
+      "sha256": "d10615538b229045bd4d654f4b06cdd4213be381b27eb5ce00ea556bc472a21c",
+      "url": "https://gisco-services.ec.europa.eu/grid/grid_1km.parquet"
+    },
+    "ons/LAD_MAY_2023_UK_BGC_V2.geojson": {
+      "bytes": 19142008,
+      "fetched": "2026-11-18T07:14:20+00:00",
+      "sha256": "6cdf6b192dcd3465ec8d97abf70ebb39bd121ff11eb4c0bd3157ac571a5f629d",
+      "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_May_2023_UK_BGC_V2/FeatureServer/0/query?where=1%3D1&outFields=LAD23CD&outSR=4326&f=geojson"
+    },
+    "ons/gdp_la_1998to2024.xlsx": {
+      "bytes": 984010,
+      "fetched": "2026-11-18T07:05:32+00:00",
+      "sha256": "8342c4586c71e614c897a326b994bee4dad012f9db258a2fc5f0bfdb4c0a3a48",
+      "url": "https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductlocalauthorities/1998to2024/regionalgrossdomesticproductgdplocalauthorities.xlsx"
+    },
+    "ons/myeb_2011_2025.xlsx": {
+      "bytes": 50208665,
+      "fetched": "2026-11-18T07:06:19+00:00",
+      "sha256": "d9ff4766d114ace7a40c351ba697f4a875e9e80270d9f58185319a26791f2c53",
+      "url": "https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2011tomid2025/myebtablesuk20112025.xlsx"
+    },
+    "ssb/09391_BNPB_BNPBvolum.csv": {
+      "bytes": 4375,
+      "fetched": "2026-11-18T07:11:43+00:00",
+      "sha256": "ee7b660dd3e4ef3d2e1c584da17bb360afa6dfc75f1229d61ca831cea378d921",
+      "url": "https://data.ssb.no/api/pxwebapi/v2/tables/09391/data?lang=en&outputFormat=csv&valueCodes%5BContentsCode%5D=BNPB,BNPBvolum&valueCodes%5BRegion%5D=*&valueCodes%5BTid%5D=*"
+    },
+    "worldpop/gbr_pop_2021_CN_100m_R2025A_v1.tif": {
+      "bytes": 86231919,
+      "fetched": "2026-11-18T07:14:04+00:00",
+      "sha256": "6c50719efb2a3a827e91945e7d0ccb62c4890faf72046b66ec02f527a2315687",
+      "url": "https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2021/GBR/v1/100m/constrained/gbr_pop_2021_CN_100m_R2025A_v1.tif"
+    }
+  },
+  "eurostat_last_update": {
+    "demo_r_pjanaggr3": "15/11/26 23:00:00",
+    "nama_10r_3gdp": "10/02/26 11:00:00",
+    "nama_10r_2gvagr": "23/03/26 23:00:00",
+    "ert_bil_eur_a": "08/07/26 11:00:00",
+    "prc_ppp_ind": "10/07/25 11:00:00"
+  },
+  "entries": [
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "AT",
+      "cells": 85470,
+      "population_2021": 8969068.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "BE",
+      "cells": 31538,
+      "population_2021": 11544853.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "BG",
+      "cells": 112370,
+      "population_2021": 6461591.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "HR",
+      "cells": 60873,
+      "population_2021": 3871833.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "CY",
+      "cells": 6353,
+      "population_2021": 923554.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "CZ",
+      "cells": 80134,
+      "population_2021": 10524167.0
+    },
+    {
+      "level": "gap",
+      "kind": "census_cell_not_in_gisco_grid",
+      "country": "DK",
+      "cells": 10,
+      "population": 0.0,
+      "detail": "NUTS code by nearest neighbour."
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "DK",
+      "cells": 46853,
+      "population_2021": 5826262.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "EE",
+      "cells": 47400,
+      "population_2021": 1331824.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "FI",
+      "cells": 353370,
+      "population_2021": 5469856.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "FR",
+      "cells": 554249,
+      "population_2021": 65384083.0
+    },
+    {
+      "level": "gap",
+      "kind": "census_cell_not_in_gisco_grid",
+      "country": "DE",
+      "cells": 60,
+      "population": 0.0,
+      "detail": "NUTS code by nearest neighbour."
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "DE",
+      "cells": 361759,
+      "population_2021": 81932370.0
+    },
+    {
+      "level": "gap",
+      "kind": "census_cell_not_in_gisco_grid",
+      "country": "EL",
+      "cells": 6,
+      "population": 0.0,
+      "detail": "NUTS code by nearest neighbour."
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "EL",
+      "cells": 141547,
+      "population_2021": 10443890.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "HU",
+      "cells": 94278,
+      "population_2021": 9610040.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "IE",
+      "cells": 73380,
+      "population_2021": 5145710.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "IT",
+      "cells": 307023,
+      "population_2021": 58933936.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "LV",
+      "cells": 65695,
+      "population_2021": 1888379.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "LT",
+      "cells": 65934,
+      "population_2021": 2810761.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "LU",
+      "cells": 2795,
+      "population_2021": 643424.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "MT",
+      "cells": 408,
+      "population_2021": 519562.0
+    },
+    {
+      "level": "gap",
+      "kind": "census_cell_not_in_gisco_grid",
+      "country": "NL",
+      "cells": 73,
+      "population": 0.0,
+      "detail": "NUTS code by nearest neighbour."
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "NL",
+      "cells": 38928,
+      "population_2021": 17468429.0
+    },
+    {
+      "level": "gap",
+      "kind": "census_cell_not_in_gisco_grid",
+      "country": "PL",
+      "cells": 20,
+      "population": 0.0,
+      "detail": "NUTS code by nearest neighbour."
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "PL",
+      "cells": 314181,
+      "population_2021": 37019327.0
+    },
+    {
+      "level": "gap",
+      "kind": "census_cell_not_in_gisco_grid",
+      "country": "PT",
+      "cells": 1,
+      "population": 0.0,
+      "detail": "NUTS code by nearest neighbour."
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "PT",
+      "cells": 94156,
+      "population_2021": 10343066.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "RO",
+      "cells": 240178,
+      "population_2021": 19053815.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "SK",
+      "cells": 49968,
+      "population_2021": 5449270.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "SI",
+      "cells": 20980,
+      "population_2021": 2108912.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "ES",
+      "cells": 511226,
+      "population_2021": 47400134.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "SE",
+      "cells": 462728,
+      "population_2021": 10434416.0
+    },
+    {
+      "level": "gap",
+      "kind": "national_cell_not_in_gisco_grid",
+      "country": "UK",
+      "cells": 3,
+      "population": 2.3882079879404046,
+      "detail": "Kept with land share 0."
+    },
+    {
+      "level": "info",
+      "kind": "national_base",
+      "country": "UK",
+      "rows": 223593,
+      "population_2021": 67403041.19266063,
+      "source": "WorldPop 2021 constrained 100 m, by ONS LAD 2023"
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "CH",
+      "cells": 42381,
+      "population_2021": 8738823.0
+    },
+    {
+      "level": "info",
+      "kind": "census_base",
+      "country": "NO",
+      "cells": 352726,
+      "population_2021": 5381325.0
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "AT",
+      "cells": 16184,
+      "population_2021": 1124997.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "AT",
+      "nuts_version": 2021,
+      "cells": 14,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "AT",
+      "nuts_version": 2016,
+      "cells": 14,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "BE",
+      "nuts_version": 2024,
+      "cells": 2,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "BE",
+      "cells": 11209,
+      "population_2021": 3707817.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "BE",
+      "nuts_version": 2021,
+      "cells": 17,
+      "population_2021": 35.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "BE",
+      "nuts_version": 2016,
+      "cells": 17,
+      "population_2021": 35.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2013,
+      "country": "BE",
+      "nuts_version": 2024,
+      "regions": [
+        "BE221",
+        "BE222",
+        "BE321",
+        "BE322",
+        "BE324",
+        "BE325",
+        "BE326",
+        "BE327"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "BG",
+      "cells": 17856,
+      "population_2021": 215488.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "BG",
+      "nuts_version": 2021,
+      "cells": 69,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "BG",
+      "nuts_version": 2016,
+      "cells": 69,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "CH",
+      "cells": 9527,
+      "population_2021": 1943995.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "CH",
+      "nuts_version": 2021,
+      "cells": 8,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "CH",
+      "nuts_version": 2016,
+      "cells": 8,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "CY",
+      "nuts_version": 2021,
+      "cells": 8,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "CY",
+      "nuts_version": 2016,
+      "cells": 8,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "CZ",
+      "cells": 9633,
+      "population_2021": 729697.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "CZ",
+      "nuts_version": 2021,
+      "cells": 4,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "CZ",
+      "nuts_version": 2016,
+      "cells": 4,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "DE",
+      "nuts_version": 2024,
+      "cells": 84,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "DE",
+      "cells": 121522,
+      "population_2021": 27520879.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "DE",
+      "nuts_version": 2021,
+      "cells": 242,
+      "population_2021": 3.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "DE",
+      "nuts_version": 2016,
+      "cells": 240,
+      "population_2021": 3.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "fallback",
+      "kind": "population_weight_year",
+      "country": "DE",
+      "year": 2013,
+      "used_year": 2014,
+      "detail": "Regional population incomplete for this year; GDP weights use the nearest complete year."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2014,
+      "country": "DE",
+      "nuts_version": 2024,
+      "regions": [
+        "DEG04",
+        "DEG0B",
+        "DEG0F",
+        "DEG0H",
+        "DEG0I",
+        "DEG0N",
+        "DEG0P"
+      ]
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "DK",
+      "nuts_version": 2024,
+      "cells": 10,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "DK",
+      "cells": 2675,
+      "population_2021": 725350.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "DK",
+      "nuts_version": 2021,
+      "cells": 118,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "DK",
+      "nuts_version": 2016,
+      "cells": 118,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "EE",
+      "nuts_version": 2024,
+      "cells": 76,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "EE",
+      "cells": 3432,
+      "population_2021": 16330.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "EE",
+      "nuts_version": 2021,
+      "cells": 344,
+      "population_2021": 6.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "EE",
+      "nuts_version": 2016,
+      "cells": 328,
+      "population_2021": 6.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2013,
+      "country": "EE",
+      "nuts_version": 2024,
+      "regions": [
+        "EE006",
+        "EE007"
+      ]
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "EL",
+      "nuts_version": 2024,
+      "cells": 418,
+      "population_2021": 1717.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "EL",
+      "cells": 16907,
+      "population_2021": 2665530.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "EL",
+      "nuts_version": 2021,
+      "cells": 1035,
+      "population_2021": 1737.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "EL",
+      "nuts_version": 2016,
+      "cells": 1035,
+      "population_2021": 1737.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "ES",
+      "nuts_version": 2024,
+      "cells": 3,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "ES",
+      "cells": 52782,
+      "population_2021": 936156.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "ES",
+      "nuts_version": 2021,
+      "cells": 357,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "ES",
+      "nuts_version": 2016,
+      "cells": 357,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "FI",
+      "nuts_version": 2024,
+      "cells": 29,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "FI",
+      "cells": 21900,
+      "population_2021": 50024.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "FI",
+      "nuts_version": 2021,
+      "cells": 8073,
+      "population_2021": 109.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "population_weight_nuts_version",
+      "year": 2013,
+      "country": "FI",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "FI",
+      "nuts_version": 2016,
+      "cells": 8073,
+      "population_2021": 109.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "FR",
+      "cells": 79285,
+      "population_2021": 10264533.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "FR",
+      "nuts_version": 2021,
+      "cells": 57,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "FR",
+      "nuts_version": 2016,
+      "cells": 57,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "HR",
+      "cells": 8374,
+      "population_2021": 259085.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "HR",
+      "nuts_version": 2021,
+      "cells": 144,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "HR",
+      "nuts_version": 2016,
+      "cells": 144,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2013,
+      "country": "HR",
+      "nuts_version": 2024,
+      "regions": [
+        "HR041",
+        "HR042",
+        "HR043",
+        "HR044",
+        "HR045",
+        "HR046",
+        "HR047",
+        "HR048",
+        "HR049",
+        "HR04A",
+        "HR04B",
+        "HR04C",
+        "HR04D",
+        "HR04E"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "HU",
+      "cells": 13113,
+      "population_2021": 1005011.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "HU",
+      "nuts_version": 2021,
+      "cells": 8,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "HU",
+      "nuts_version": 2016,
+      "cells": 8,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2013,
+      "region": "HUXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "IE",
+      "cells": 6369,
+      "population_2021": 423924.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "IE",
+      "nuts_version": 2021,
+      "cells": 215,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "IE",
+      "nuts_version": 2016,
+      "cells": 215,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "IT",
+      "nuts_version": 2024,
+      "cells": 201,
+      "population_2021": 1.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "IT",
+      "cells": 55618,
+      "population_2021": 6743148.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "IT",
+      "nuts_version": 2021,
+      "cells": 852,
+      "population_2021": 21.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "IT",
+      "nuts_version": 2016,
+      "cells": 852,
+      "population_2021": 21.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2013,
+      "country": "IT",
+      "nuts_version": 2024,
+      "regions": [
+        "ITG25",
+        "ITG26",
+        "ITG27",
+        "ITG28",
+        "ITG29",
+        "ITG2A",
+        "ITG2B",
+        "ITG2C"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "LT",
+      "cells": 7826,
+      "population_2021": 74437.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "LT",
+      "nuts_version": 2021,
+      "cells": 2,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "LT",
+      "nuts_version": 2016,
+      "cells": 2,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "LU",
+      "nuts_version": 2021,
+      "cells": 4,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "LU",
+      "nuts_version": 2016,
+      "cells": 4,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "LV",
+      "cells": 4339,
+      "population_2021": 44091.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "LV",
+      "nuts_version": 2021,
+      "cells": 10,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "population_weight_nuts_version",
+      "year": 2013,
+      "country": "LV",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "LV",
+      "nuts_version": 2016,
+      "cells": 10,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "MT",
+      "cells": 7,
+      "population_2021": 98.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "MT",
+      "nuts_version": 2021,
+      "cells": 2,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "MT",
+      "nuts_version": 2016,
+      "cells": 2,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "NL",
+      "nuts_version": 2024,
+      "cells": 74,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "NL",
+      "cells": 9573,
+      "population_2021": 3580505.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "NL",
+      "nuts_version": 2021,
+      "cells": 344,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "NL",
+      "nuts_version": 2016,
+      "cells": 344,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "fallback",
+      "kind": "population_weight_year",
+      "country": "NL",
+      "year": 2013,
+      "used_year": 2014,
+      "detail": "Regional population incomplete for this year; GDP weights use the nearest complete year."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2014,
+      "country": "NL",
+      "nuts_version": 2024,
+      "regions": [
+        "NL111",
+        "NL113",
+        "NL124",
+        "NL125",
+        "NL310",
+        "NL324",
+        "NL329",
+        "NL332",
+        "NL333",
+        "NL337",
+        "NL33A",
+        "NL33B",
+        "NL33C",
+        "NL412",
+        "NL413"
+      ]
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "NO",
+      "nuts_version": 2024,
+      "cells": 9,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "NO",
+      "cells": 14449,
+      "population_2021": 302262.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "NO",
+      "nuts_version": 2021,
+      "cells": 4727,
+      "population_2021": 12.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "NO",
+      "nuts_version": 2016,
+      "cells": 4727,
+      "population_2021": 12.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2013,
+      "country": "NO",
+      "nuts_version": 2024,
+      "regions": [
+        "NO011",
+        "NO012",
+        "NO021",
+        "NO022",
+        "NO031",
+        "NO032",
+        "NO033",
+        "NO034",
+        "NO041",
+        "NO042",
+        "NO043",
+        "NO051",
+        "NO052",
+        "NO053",
+        "NO074",
+        "NO082",
+        "NO091"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2013,
+      "region": "NO061",
+      "nuts_version": 2024,
+      "value": 302755.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2013,
+      "region": "NO062",
+      "nuts_version": 2024,
+      "value": 134443.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2013,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2013,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "PL",
+      "nuts_version": 2024,
+      "cells": 21,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "PL",
+      "cells": 56458,
+      "population_2021": 5647933.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "PL",
+      "nuts_version": 2021,
+      "cells": 53,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "PL",
+      "nuts_version": 2016,
+      "cells": 53,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "fallback",
+      "kind": "population_weight_year",
+      "country": "PL",
+      "year": 2013,
+      "used_year": 2014,
+      "detail": "Regional population incomplete for this year; GDP weights use the nearest complete year."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "PT",
+      "nuts_version": 2024,
+      "cells": 4,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "PT",
+      "cells": 13610,
+      "population_2021": 869515.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "PT",
+      "nuts_version": 2021,
+      "cells": 118,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "population_weight_nuts_version",
+      "year": 2013,
+      "country": "PT",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "PT",
+      "nuts_version": 2016,
+      "cells": 118,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "RO",
+      "cells": 33711,
+      "population_2021": 2248792.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "RO",
+      "nuts_version": 2021,
+      "cells": 41,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "RO",
+      "nuts_version": 2016,
+      "cells": 41,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "SE",
+      "nuts_version": 2024,
+      "cells": 12,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "SE",
+      "cells": 21758,
+      "population_2021": 119331.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "SE",
+      "nuts_version": 2021,
+      "cells": 3095,
+      "population_2021": 22.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "SE",
+      "nuts_version": 2016,
+      "cells": 3095,
+      "population_2021": 22.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "SI",
+      "cells": 3822,
+      "population_2021": 150465.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "info",
+      "kind": "cell_split_between_nuts3",
+      "country": "SK",
+      "cells": 5288,
+      "population_2021": 240117.0,
+      "detail": "Cell on a NUTS 3 border: allocated equally to the regions."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "SK",
+      "nuts_version": 2021,
+      "cells": 1,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "mapping",
+      "kind": "cell_nuts3_nearest_neighbour",
+      "country": "SK",
+      "nuts_version": 2016,
+      "cells": 1,
+      "population_2021": 0.0,
+      "detail": "Census cell without a NUTS 3 code of its own country in the GISCO grid."
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "BE",
+      "nuts_version": 2024,
+      "regions": [
+        "BE221",
+        "BE222",
+        "BE321",
+        "BE322",
+        "BE324",
+        "BE325",
+        "BE326",
+        "BE327"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "DE",
+      "nuts_version": 2024,
+      "regions": [
+        "DEG04",
+        "DEG0B",
+        "DEG0F",
+        "DEG0H",
+        "DEG0I",
+        "DEG0N",
+        "DEG0P"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "EE",
+      "nuts_version": 2024,
+      "regions": [
+        "EE006",
+        "EE007"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "FI",
+      "nuts_version": 2024,
+      "regions": [
+        "FI193",
+        "FI194",
+        "FI195",
+        "FI197",
+        "FI1C3",
+        "FI1C4",
+        "FI1D1",
+        "FI1D2",
+        "FI1D3"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2015,
+      "region": "FRXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "HR",
+      "nuts_version": 2024,
+      "regions": [
+        "HR041",
+        "HR042",
+        "HR043",
+        "HR044",
+        "HR045",
+        "HR046",
+        "HR047",
+        "HR048",
+        "HR049",
+        "HR04A",
+        "HR04B",
+        "HR04C",
+        "HR04D",
+        "HR04E"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2015,
+      "region": "HUXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "IT",
+      "nuts_version": 2024,
+      "regions": [
+        "ITG25",
+        "ITG26",
+        "ITG27",
+        "ITG28",
+        "ITG29",
+        "ITG2A",
+        "ITG2B",
+        "ITG2C"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "LV",
+      "nuts_version": 2024,
+      "regions": [
+        "LV003",
+        "LV006",
+        "LV007",
+        "LV008"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "NL",
+      "nuts_version": 2024,
+      "regions": [
+        "NL111",
+        "NL113",
+        "NL124",
+        "NL125",
+        "NL310",
+        "NL324",
+        "NL329",
+        "NL332",
+        "NL333",
+        "NL337",
+        "NL33A",
+        "NL33B",
+        "NL33C",
+        "NL412",
+        "NL413"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "NO",
+      "nuts_version": 2024,
+      "regions": [
+        "NO011",
+        "NO012",
+        "NO021",
+        "NO022",
+        "NO031",
+        "NO032",
+        "NO033",
+        "NO034",
+        "NO041",
+        "NO042",
+        "NO043",
+        "NO051",
+        "NO052",
+        "NO053",
+        "NO074",
+        "NO082",
+        "NO091"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2015,
+      "region": "NO061",
+      "nuts_version": 2024,
+      "value": 310093.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2015,
+      "region": "NO062",
+      "nuts_version": 2024,
+      "value": 135745.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2015,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2015,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2015,
+      "country": "PT",
+      "nuts_version": 2024,
+      "regions": [
+        "PT16B",
+        "PT16D",
+        "PT16E",
+        "PT16F",
+        "PT16G",
+        "PT16H",
+        "PT16I",
+        "PT16J",
+        "PT170",
+        "PT181",
+        "PT184",
+        "PT185",
+        "PT186",
+        "PT187"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2018,
+      "country": "DE",
+      "nuts_version": 2024,
+      "regions": [
+        "DEG04",
+        "DEG0B",
+        "DEG0F",
+        "DEG0H",
+        "DEG0I",
+        "DEG0N",
+        "DEG0P"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2018,
+      "country": "FI",
+      "nuts_version": 2024,
+      "regions": [
+        "FI193",
+        "FI194",
+        "FI195",
+        "FI197",
+        "FI1C3",
+        "FI1C4",
+        "FI1D1",
+        "FI1D2",
+        "FI1D3"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2018,
+      "region": "FRXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2018,
+      "region": "HUXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2018,
+      "country": "LV",
+      "nuts_version": 2024,
+      "regions": [
+        "LV003",
+        "LV006",
+        "LV007",
+        "LV008"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2018,
+      "country": "NL",
+      "nuts_version": 2024,
+      "regions": [
+        "NL111",
+        "NL113",
+        "NL124",
+        "NL125",
+        "NL310",
+        "NL324",
+        "NL329",
+        "NL332",
+        "NL333",
+        "NL337",
+        "NL33A",
+        "NL33B",
+        "NL33C",
+        "NL412",
+        "NL413"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2018,
+      "country": "NO",
+      "nuts_version": 2024,
+      "regions": [
+        "NO011",
+        "NO012",
+        "NO021",
+        "NO022",
+        "NO031",
+        "NO032",
+        "NO033",
+        "NO034",
+        "NO041",
+        "NO042",
+        "NO043",
+        "NO051",
+        "NO052",
+        "NO053",
+        "NO074",
+        "NO082",
+        "NO091"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2018,
+      "region": "NO061",
+      "nuts_version": 2024,
+      "value": 320884.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2018,
+      "region": "NO062",
+      "nuts_version": 2024,
+      "value": 137858.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2018,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2018,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2018,
+      "country": "PT",
+      "nuts_version": 2024,
+      "regions": [
+        "PT16B",
+        "PT16D",
+        "PT16E",
+        "PT16F",
+        "PT16G",
+        "PT16H",
+        "PT16I",
+        "PT16J",
+        "PT170",
+        "PT181",
+        "PT184",
+        "PT185",
+        "PT186",
+        "PT187"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2020,
+      "country": "DE",
+      "nuts_version": 2024,
+      "regions": [
+        "DEG04",
+        "DEG0B",
+        "DEG0F",
+        "DEG0H",
+        "DEG0I",
+        "DEG0N",
+        "DEG0P"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2020,
+      "country": "FI",
+      "nuts_version": 2024,
+      "regions": [
+        "FI193",
+        "FI194",
+        "FI195",
+        "FI197",
+        "FI1C3",
+        "FI1C4",
+        "FI1D1",
+        "FI1D2",
+        "FI1D3"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2020,
+      "region": "FRXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2020,
+      "region": "HUXXX",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2020,
+      "country": "LV",
+      "nuts_version": 2024,
+      "regions": [
+        "LV003",
+        "LV006",
+        "LV007",
+        "LV008"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2020,
+      "country": "NL",
+      "nuts_version": 2024,
+      "regions": [
+        "NL111",
+        "NL113",
+        "NL124",
+        "NL125",
+        "NL310",
+        "NL324",
+        "NL329",
+        "NL332",
+        "NL333",
+        "NL337",
+        "NL33A",
+        "NL33B",
+        "NL33C",
+        "NL412",
+        "NL413"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2020,
+      "country": "NO",
+      "nuts_version": 2024,
+      "regions": [
+        "NO011",
+        "NO012",
+        "NO021",
+        "NO022",
+        "NO031",
+        "NO032",
+        "NO033",
+        "NO034",
+        "NO041",
+        "NO042",
+        "NO043",
+        "NO051",
+        "NO052",
+        "NO053",
+        "NO074",
+        "NO082",
+        "NO091"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2020,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2020,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2020,
+      "country": "PT",
+      "nuts_version": 2024,
+      "regions": [
+        "PT16B",
+        "PT16D",
+        "PT16E",
+        "PT16F",
+        "PT16G",
+        "PT16H",
+        "PT16I",
+        "PT16J",
+        "PT170",
+        "PT181",
+        "PT184",
+        "PT185",
+        "PT186",
+        "PT187"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2022,
+      "country": "DE",
+      "nuts_version": 2024,
+      "regions": [
+        "DEG04",
+        "DEG0B",
+        "DEG0F",
+        "DEG0H",
+        "DEG0I",
+        "DEG0N",
+        "DEG0P"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2022,
+      "country": "FI",
+      "nuts_version": 2024,
+      "regions": [
+        "FI193",
+        "FI194",
+        "FI195",
+        "FI197",
+        "FI1C3",
+        "FI1C4",
+        "FI1D1",
+        "FI1D2",
+        "FI1D3"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2022,
+      "country": "LV",
+      "nuts_version": 2024,
+      "regions": [
+        "LV003",
+        "LV006",
+        "LV007",
+        "LV008"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2022,
+      "country": "NL",
+      "nuts_version": 2024,
+      "regions": [
+        "NL111",
+        "NL113",
+        "NL124",
+        "NL125",
+        "NL310",
+        "NL324",
+        "NL329",
+        "NL332",
+        "NL333",
+        "NL337",
+        "NL33A",
+        "NL33B",
+        "NL33C",
+        "NL412",
+        "NL413"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2022,
+      "country": "NO",
+      "nuts_version": 2024,
+      "regions": [
+        "NO074",
+        "NO082",
+        "NO091"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2022,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2022,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_other_version_codes_ignored",
+      "year": 2022,
+      "country": "PT",
+      "nuts_version": 2024,
+      "regions": [
+        "PT16B",
+        "PT16D",
+        "PT16E",
+        "PT16F",
+        "PT16G",
+        "PT16H",
+        "PT16I",
+        "PT16J",
+        "PT170",
+        "PT181",
+        "PT184",
+        "PT185",
+        "PT186",
+        "PT187"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2023,
+      "country": "DE",
+      "nuts_version": 2024,
+      "regions": [
+        "DEG04",
+        "DEG0B",
+        "DEG0F",
+        "DEG0H",
+        "DEG0I",
+        "DEG0N",
+        "DEG0P"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2023,
+      "country": "FI",
+      "nuts_version": 2024,
+      "regions": [
+        "FI193",
+        "FI194",
+        "FI195",
+        "FI197",
+        "FI1C3",
+        "FI1C4",
+        "FI1D1",
+        "FI1D2",
+        "FI1D3"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2023,
+      "country": "LV",
+      "nuts_version": 2024,
+      "regions": [
+        "LV003",
+        "LV006",
+        "LV007",
+        "LV008"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2023,
+      "country": "NL",
+      "nuts_version": 2024,
+      "regions": [
+        "NL111",
+        "NL113",
+        "NL124",
+        "NL125",
+        "NL310",
+        "NL324",
+        "NL329",
+        "NL332",
+        "NL333",
+        "NL337",
+        "NL33A",
+        "NL33B",
+        "NL33C",
+        "NL412",
+        "NL413"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2023,
+      "country": "NO",
+      "nuts_version": 2024,
+      "regions": [
+        "NO074",
+        "NO082",
+        "NO091"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2023,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_extra_code_ignored",
+      "year": 2023,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_weight_other_version_codes_ignored",
+      "year": 2023,
+      "country": "PT",
+      "nuts_version": 2024,
+      "regions": [
+        "PT16B",
+        "PT16D",
+        "PT16E",
+        "PT16F",
+        "PT16G",
+        "PT16H",
+        "PT16I",
+        "PT16J",
+        "PT170",
+        "PT181",
+        "PT184",
+        "PT185",
+        "PT186",
+        "PT187"
+      ]
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2025,
+      "region": "NO0B1",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "info",
+      "kind": "population_extra_code_ignored",
+      "year": 2025,
+      "region": "NO0B2",
+      "nuts_version": 2024,
+      "value": 0.0
+    },
+    {
+      "level": "fallback",
+      "kind": "no_gdp_level_carried",
+      "year": 2022,
+      "ratio_year": 2021,
+      "detail": "Mainland GDP/GVA ratio of the nearest Eurostat year applied to SSB county GVA."
+    },
+    {
+      "level": "fallback",
+      "kind": "no_gdp_level_carried",
+      "year": 2023,
+      "ratio_year": 2021,
+      "detail": "Mainland GDP/GVA ratio of the nearest Eurostat year applied to SSB county GVA."
+    },
+    {
+      "level": "fallback",
+      "kind": "no_volume_change_missing",
+      "year": 2018,
+      "regions": [
+        "NO060"
+      ],
+      "used_pct": 2.07,
+      "detail": "County merger year: average change of all counties used."
+    },
+    {
+      "level": "info",
+      "kind": "no_gdp_method",
+      "eurostat_calibration_years": [
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021
+      ],
+      "ratio_last": 1.0569,
+      "detail": "SSB 09391 county value added (basic prices) scaled to Eurostat mainland GDP (NO0 - NO0B); volumes chained from SSB county volume change."
+    },
+    {
+      "level": "mapping",
+      "kind": "gdp_nominal_nuts_version",
+      "year": 2023,
+      "country": "NO",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "info",
+      "kind": "extra_regio_excluded",
+      "unit": "MIO_EUR",
+      "year": 2023,
+      "value": 11672.0,
+      "regions": [
+        "ATZZZ",
+        "BEZZZ",
+        "DKZZZ",
+        "ESZZZ",
+        "FIZZZ",
+        "FRZZZ",
+        "HUZZZ",
+        "ITZZZ",
+        "LVZZZ",
+        "MTZZZ",
+        "NLZZZ",
+        "PTZZZ",
+        "ROZZZ",
+        "SEZZZ"
+      ]
+    },
+    {
+      "level": "fallback",
+      "kind": "ardeco_unavailable",
+      "url": "https://territorial.ec.europa.eu/ardeco-api-v2/rest/export/SOVGD?version=2024&level_id=3&format=csv",
+      "error": "500 Server Error: INTERNAL SERVER ERROR for url: https://territorial.ec.europa.eu/ardeco-api-v2/rest/export/SOVGD?version=2024&level_id=3&format=csv",
+      "detail": "Real GDP from NUTS 3 nominal deflated by the NUTS 2 implicit deflator (Eurostat nama_10r_3gdp MIO_NAC + nama_10r_2gvagr B1GQ I20)."
+    },
+    {
+      "level": "fallback",
+      "kind": "nuts3_nominal_missing_volume_from_nuts2",
+      "region": "IE062",
+      "year": 2018,
+      "from_year": 2017,
+      "detail": "Regional nominal GDP suppressed; NUTS 2 volume growth used."
+    },
+    {
+      "level": "fallback",
+      "kind": "nuts3_nominal_missing_volume_from_nuts2",
+      "region": "IE063",
+      "year": 2018,
+      "from_year": 2017,
+      "detail": "Regional nominal GDP suppressed; NUTS 2 volume growth used."
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "AT",
+      "factors": {
+        "2023": 1.00172,
+        "2018": 0.99973,
+        "2013": 0.99957
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "BE",
+      "factors": {
+        "2023": 0.9993,
+        "2018": 1.00021,
+        "2013": 1.0001
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "BG",
+      "factors": {
+        "2023": 0.97586,
+        "2018": 0.99824,
+        "2013": 0.99539
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "HR",
+      "factors": {
+        "2023": 1.00793,
+        "2018": 1.00204,
+        "2013": 0.99865
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "CY",
+      "factors": {
+        "2023": 1.02864,
+        "2018": 0.99993,
+        "2013": 1.00018
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "CZ",
+      "factors": {
+        "2023": 0.99969,
+        "2018": 1.00002,
+        "2013": 0.99953
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "DK",
+      "factors": {
+        "2023": 1.0064,
+        "2018": 1.00363,
+        "2013": 1.0126
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "EE",
+      "factors": {
+        "2023": 1.01748,
+        "2018": 0.9997,
+        "2013": 1.00049
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "FI",
+      "factors": {
+        "2023": 0.99912,
+        "2018": 1.00001,
+        "2013": 0.99991
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "FR",
+      "factors": {
+        "2023": 1.00175,
+        "2018": 1.00001,
+        "2013": 1.00006
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "DE",
+      "factors": {
+        "2023": 0.99944,
+        "2018": 0.99785,
+        "2013": 0.99361
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "EL",
+      "factors": {
+        "2023": 0.99889,
+        "2018": 0.99941,
+        "2013": 0.99922
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "HU",
+      "factors": {
+        "2023": 1.00082,
+        "2018": 0.99964,
+        "2013": 0.99945
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "IE",
+      "factors": {
+        "2023": 1.00057,
+        "2018": 0.8951,
+        "2013": 1.00373
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "IT",
+      "factors": {
+        "2023": 1.00345,
+        "2018": 0.99691,
+        "2013": 0.99038
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "LV",
+      "factors": {
+        "2023": 0.99378,
+        "2018": 1.00282,
+        "2013": 1.01072
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "LT",
+      "factors": {
+        "2023": 0.9997,
+        "2018": 0.99411,
+        "2013": 0.99445
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "LU",
+      "factors": {
+        "2023": 0.99964,
+        "2018": 1.00024,
+        "2013": 1.0005
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "MT",
+      "factors": {
+        "2023": 0.98194,
+        "2018": 1.00015,
+        "2013": 1.00036
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "NL",
+      "factors": {
+        "2023": 0.99591,
+        "2018": 1.00046,
+        "2013": 1.00369
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "PL",
+      "factors": {
+        "2023": 1.00028,
+        "2018": 1.00024,
+        "2013": 0.99992
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "PT",
+      "factors": {
+        "2023": 1.00004,
+        "2018": 1.00003,
+        "2013": 1.00014
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "RO",
+      "factors": {
+        "2023": 1.00868,
+        "2018": 0.99074,
+        "2013": 0.96988
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "SK",
+      "factors": {
+        "2023": 1.00295,
+        "2018": 0.99623,
+        "2013": 0.99794
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "SI",
+      "factors": {
+        "2023": 1.00206,
+        "2018": 1.0,
+        "2013": 1.0002
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "ES",
+      "factors": {
+        "2023": 0.99869,
+        "2018": 0.99984,
+        "2013": 1.0
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_benchmarked",
+      "country": "SE",
+      "factors": {
+        "2023": 0.99944,
+        "2018": 1.00018,
+        "2013": 0.99991
+      }
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_source",
+      "country": "UK",
+      "source": "ONS regional GDP by local authority, 1998-2024 (23 Sep 2026)"
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_source",
+      "country": "CH",
+      "source": "BFS je-d-04.02.06.01 (GDP by canton, 2011-2024)"
+    },
+    {
+      "level": "info",
+      "kind": "real_gdp_source",
+      "country": "NO",
+      "source": "SSB StatBank 09391 (regional accounts by county), level from Eurostat"
+    },
+    {
+      "level": "mapping",
+      "kind": "gdp_real_nuts_version",
+      "year": 2023,
+      "country": "NO",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "mapping",
+      "kind": "gdp_real_nuts_version",
+      "year": 2020,
+      "country": "NO",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "mapping",
+      "kind": "gdp_real_nuts_version",
+      "year": 2018,
+      "country": "NO",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "mapping",
+      "kind": "gdp_real_nuts_version",
+      "year": 2013,
+      "country": "NO",
+      "nuts_version": 2021,
+      "detail": "Source uses NUTS 2021 codes for this year; allocated with the grid's NUTS 2021 cell codes."
+    },
+    {
+      "level": "info",
+      "kind": "population_series_break",
+      "country": "CZ",
+      "year": 2021,
+      "rows_flagged": 15,
+      "detail": "Eurostat flag 'b' (break in time series)."
+    },
+    {
+      "level": "info",
+      "kind": "population_series_break",
+      "country": "DE",
+      "year": 2023,
+      "rows_flagged": 401,
+      "detail": "Eurostat flag 'b' (break in time series)."
+    },
+    {
+      "level": "info",
+      "kind": "population_series_break",
+      "country": "LU",
+      "year": 2017,
+      "rows_flagged": 2,
+      "detail": "Eurostat flag 'b' (break in time series)."
+    },
+    {
+      "level": "info",
+      "kind": "population_series_break",
+      "country": "PL",
+      "year": 2021,
+      "rows_flagged": 74,
+      "detail": "Eurostat flag 'b' (break in time series)."
+    },
+    {
+      "level": "info",
+      "kind": "population_series_break",
+      "country": "PT",
+      "year": 2022,
+      "rows_flagged": 27,
+      "detail": "Eurostat flag 'b' (break in time series)."
+    }
+  ],
+  "checks": [
+    {
+      "name": "pyramid_sum_conserved:pop_2015",
+      "ok": true,
+      "total": 518982250.557,
+      "max_rel_diff": 8.83104022094339e-10
+    },
+    {
+      "name": "pyramid_sum_conserved:pop_2020",
+      "ok": true,
+      "total": 525376765.966,
+      "max_rel_diff": 1.5669862370708982e-09
+    },
+    {
+      "name": "pyramid_sum_conserved:pop_2022",
+      "ok": true,
+      "total": 525425962.046,
+      "max_rel_diff": 8.728688194974447e-10
+    },
+    {
+      "name": "pyramid_sum_conserved:pop_2025",
+      "ok": true,
+      "total": 532995980.45,
+      "max_rel_diff": 8.668573508941345e-10
+    },
+    {
+      "name": "bfs_cantons_sum_to_switzerland",
+      "ok": true,
+      "max_rel_diff": 1.183762774068779e-15
+    },
+    {
+      "name": "pyramid_sum_conserved:gdp_nom_eur_2023",
+      "ok": true,
+      "total": 21524513.238,
+      "max_rel_diff": 1.943597041542981e-09
+    },
+    {
+      "name": "pps_ratio_constant_within_country:AT",
+      "ok": true,
+      "spread": 7.1196287541042125e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:BE",
+      "ok": true,
+      "spread": 5.431270617695105e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:BG",
+      "ok": true,
+      "spread": 1.2956651501472294e-05
+    },
+    {
+      "name": "pps_ratio_constant_within_country:CH",
+      "ok": true,
+      "spread": 4.440892098500626e-16
+    },
+    {
+      "name": "pps_ratio_constant_within_country:CY",
+      "ok": true,
+      "spread": 0.0
+    },
+    {
+      "name": "pps_ratio_constant_within_country:CZ",
+      "ok": true,
+      "spread": 1.03502200432537e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:DE",
+      "ok": true,
+      "spread": 7.85676270287361e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:DK",
+      "ok": true,
+      "spread": 1.201120587435156e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:EE",
+      "ok": true,
+      "spread": 2.8315791147370817e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:EL",
+      "ok": true,
+      "spread": 3.392348112396526e-05
+    },
+    {
+      "name": "pps_ratio_constant_within_country:ES",
+      "ok": true,
+      "spread": 1.6945704700344066e-05
+    },
+    {
+      "name": "pps_ratio_constant_within_country:FI",
+      "ok": true,
+      "spread": 3.352614314611202e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:FR",
+      "ok": true,
+      "spread": 3.154010864259149e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:HR",
+      "ok": true,
+      "spread": 1.0359335550713666e-05
+    },
+    {
+      "name": "pps_ratio_constant_within_country:HU",
+      "ok": true,
+      "spread": 4.454881427085056e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:IE",
+      "ok": true,
+      "spread": 3.5422221400516207e-07
+    },
+    {
+      "name": "pps_ratio_constant_within_country:IT",
+      "ok": true,
+      "spread": 4.583731642027189e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:LT",
+      "ok": true,
+      "spread": 4.423339853065755e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:LU",
+      "ok": true,
+      "spread": 0.0
+    },
+    {
+      "name": "pps_ratio_constant_within_country:LV",
+      "ok": true,
+      "spread": 2.047912428970733e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:MT",
+      "ok": true,
+      "spread": 5.193350203214209e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:NL",
+      "ok": true,
+      "spread": 1.4606396327998539e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:NO",
+      "ok": true,
+      "spread": 0.0
+    },
+    {
+      "name": "pps_ratio_constant_within_country:PL",
+      "ok": true,
+      "spread": 3.729006636810084e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:PT",
+      "ok": true,
+      "spread": 5.0563941025316694e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:RO",
+      "ok": true,
+      "spread": 3.6528915199340872e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:SE",
+      "ok": true,
+      "spread": 1.2376598699237462e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:SI",
+      "ok": true,
+      "spread": 5.063995216492145e-06
+    },
+    {
+      "name": "pps_ratio_constant_within_country:SK",
+      "ok": true,
+      "spread": 6.125308058546608e-07
+    },
+    {
+      "name": "pps_ratio_constant_within_country:UK",
+      "ok": true,
+      "spread": 2.220446049250313e-16
+    },
+    {
+      "name": "pyramid_sum_conserved:gdp_real_2023",
+      "ok": true,
+      "total": 18770707.52,
+      "max_rel_diff": 2.16400902849742e-09
+    },
+    {
+      "name": "pyramid_sum_conserved:gdp_real_2020",
+      "ok": true,
+      "total": 16850420.621,
+      "max_rel_diff": 3.620702317355077e-09
+    },
+    {
+      "name": "pyramid_sum_conserved:gdp_real_2018",
+      "ok": true,
+      "total": 17616083.104,
+      "max_rel_diff": 1.4400809778601384e-09
+    },
+    {
+      "name": "pyramid_sum_conserved:gdp_real_2013",
+      "ok": true,
+      "total": 15778241.089,
+      "max_rel_diff": 2.058278798700226e-09
+    }
+  ]
+}

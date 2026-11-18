@@ -1,0 +1,2794 @@
+{
+  "started": "2026-11-18T08:45:46+00:00",
+  "finished": "2026-11-18T08:47:20+00:00",
+  "summary": {
+    "gaps": 0,
+    "fallbacks": 0,
+    "mappings": 0,
+    "checks_failed": 0
+  },
+  "countries": [
+    "AT",
+    "BE",
+    "BG",
+    "HR",
+    "CY",
+    "CZ",
+    "DK",
+    "EE",
+    "FI",
+    "FR",
+    "DE",
+    "EL",
+    "HU",
+    "IE",
+    "IT",
+    "LV",
+    "LT",
+    "LU",
+    "MT",
+    "NL",
+    "PL",
+    "PT",
+    "RO",
+    "SK",
+    "SI",
+    "ES",
+    "SE",
+    "UK",
+    "CH",
+    "NO"
+  ],
+  "entries": [
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "AT",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 477837.33,
+      "nama_10_gdp": 479907.8,
+      "rel_diff": -0.00431,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "AT",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 423577.1,
+      "nama_10_gdp": 425427.5,
+      "rel_diff": -0.00435,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "BE",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 602376.3,
+      "nama_10_gdp": 603141.6,
+      "rel_diff": -0.00127,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "BE",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 534860.82,
+      "nama_10_gdp": 535559.4,
+      "rel_diff": -0.0013,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "BG",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 94525.11,
+      "nama_10_gdp": 95101.1,
+      "rel_diff": -0.00606,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "BG",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 156352.78,
+      "nama_10_gdp": 157311.2,
+      "rel_diff": -0.00609,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "HR",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 79186.33,
+      "nama_10_gdp": 79840.4,
+      "rel_diff": -0.00819,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "HR",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 115141.1,
+      "nama_10_gdp": 116096.4,
+      "rel_diff": -0.00823,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "CY",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 32439.16,
+      "nama_10_gdp": 33144.3,
+      "rel_diff": -0.02127,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "CY",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 35817.89,
+      "nama_10_gdp": 36597.9,
+      "rel_diff": -0.02131,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "CZ",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 319099.11,
+      "nama_10_gdp": 319099.1,
+      "rel_diff": 0.0,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "CZ",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 380433.84,
+      "nama_10_gdp": 380447.1,
+      "rel_diff": -3e-05,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "DK",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 374173.58,
+      "nama_10_gdp": 373287.5,
+      "rel_diff": 0.00237,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "DK",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 287603.43,
+      "nama_10_gdp": 286932.7,
+      "rel_diff": 0.00234,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "EE",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 38353.42,
+      "nama_10_gdp": 38157.9,
+      "rel_diff": 0.00512,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "EE",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 41809.56,
+      "nama_10_gdp": 41597.9,
+      "rel_diff": 0.00509,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "FI",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 273005.0,
+      "nama_10_gdp": 272735.0,
+      "rel_diff": 0.00099,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "FI",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 221361.39,
+      "nama_10_gdp": 221149.6,
+      "rel_diff": 0.00096,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "FR",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 2826541.5,
+      "nama_10_gdp": 2833826.4,
+      "rel_diff": -0.00257,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "FR",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 2601989.78,
+      "nama_10_gdp": 2608792.0,
+      "rel_diff": -0.00261,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "DE",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 4219310.0,
+      "nama_10_gdp": 4254930.0,
+      "rel_diff": -0.00837,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "DE",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 3759286.15,
+      "nama_10_gdp": 3791157.7,
+      "rel_diff": -0.00841,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "EL",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 224686.24,
+      "nama_10_gdp": 225057.5,
+      "rel_diff": -0.00165,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "EL",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 277016.28,
+      "nama_10_gdp": 277484.3,
+      "rel_diff": -0.00169,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "HU",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 197178.65,
+      "nama_10_gdp": 197284.9,
+      "rel_diff": -0.00054,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "HU",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 278136.52,
+      "nama_10_gdp": 278296.6,
+      "rel_diff": -0.00058,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "IE",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 524728.75,
+      "nama_10_gdp": 520792.2,
+      "rel_diff": 0.00756,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "IE",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 442715.67,
+      "nama_10_gdp": 439409.2,
+      "rel_diff": 0.00752,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "IT",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 2142601.7,
+      "nama_10_gdp": 2141760.8,
+      "rel_diff": 0.00039,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "IT",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 2223300.85,
+      "nama_10_gdp": 2222509.0,
+      "rel_diff": 0.00036,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "LV",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 39564.22,
+      "nama_10_gdp": 39474.9,
+      "rel_diff": 0.00226,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "LV",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 50339.62,
+      "nama_10_gdp": 50227.8,
+      "rel_diff": 0.00223,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "LT",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 74316.97,
+      "nama_10_gdp": 75538.8,
+      "rel_diff": -0.01617,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "LT",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 94561.45,
+      "nama_10_gdp": 96119.6,
+      "rel_diff": -0.01621,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "LU",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 82115.47,
+      "nama_10_gdp": 82115.5,
+      "rel_diff": -0.0,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "LU",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 63520.48,
+      "nama_10_gdp": 63522.9,
+      "rel_diff": -4e-05,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "MT",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 20923.41,
+      "nama_10_gdp": 20914.5,
+      "rel_diff": 0.00043,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "MT",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 23165.58,
+      "nama_10_gdp": 23156.6,
+      "rel_diff": 0.00039,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "NL",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 1050133.0,
+      "nama_10_gdp": 1050133.0,
+      "rel_diff": 0.0,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "NL",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 897687.68,
+      "nama_10_gdp": 897718.4,
+      "rel_diff": -3e-05,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "PL",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 751931.75,
+      "nama_10_gdp": 751931.7,
+      "rel_diff": 0.0,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "PL",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 1110795.48,
+      "nama_10_gdp": 1110835.2,
+      "rel_diff": -4e-05,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "PT",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 270352.62,
+      "nama_10_gdp": 270352.6,
+      "rel_diff": 0.0,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "PT",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 329048.24,
+      "nama_10_gdp": 329060.3,
+      "rel_diff": -4e-05,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "RO",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 321577.9,
+      "nama_10_gdp": 321013.3,
+      "rel_diff": 0.00176,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "RO",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 547454.47,
+      "nama_10_gdp": 546512.1,
+      "rel_diff": 0.00172,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "SK",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 123538.7,
+      "nama_10_gdp": 124140.8,
+      "rel_diff": -0.00485,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "SK",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 155465.18,
+      "nama_10_gdp": 156228.6,
+      "rel_diff": -0.00489,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "SI",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 64050.01,
+      "nama_10_gdp": 64118.9,
+      "rel_diff": -0.00107,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "SI",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 74370.73,
+      "nama_10_gdp": 74453.4,
+      "rel_diff": -0.00111,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "ES",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 1497761.0,
+      "nama_10_gdp": 1496277.0,
+      "rel_diff": 0.00099,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "ES",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 1681083.11,
+      "nama_10_gdp": 1679477.8,
+      "rel_diff": 0.00096,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "SE",
+      "layer": "gdp_nom_eur_2023",
+      "regional_table": 535176.76,
+      "nama_10_gdp": 535176.8,
+      "rel_diff": -0.0,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    },
+    {
+      "level": "info",
+      "kind": "national_accounts_vintage",
+      "country": "SE",
+      "layer": "gdp_pps (derived)",
+      "regional_table": 450548.74,
+      "nama_10_gdp": 450565.3,
+      "rel_diff": -4e-05,
+      "detail": "Regional accounts are not yet revised to the latest national accounts."
+    }
+  ],
+  "checks": [
+    {
+      "name": "regions_within_0.1pct:pop_2015",
+      "ok": true,
+      "regions": 1562,
+      "worst_region": "UKW06000006",
+      "worst_rel_diff": 2.1435496086683536e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:pop_2015",
+      "ok": true,
+      "max_abs_diff": 3.9537413889847812
+    },
+    {
+      "name": "pyramid_totals:pop_2015",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 1.6460448945994999e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:pop_2020",
+      "ok": true,
+      "regions": 1562,
+      "worst_region": "UKS12000021",
+      "worst_rel_diff": 2.1669953059628237e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:pop_2020",
+      "ok": true,
+      "max_abs_diff": 3.9425667641553446
+    },
+    {
+      "name": "pyramid_totals:pop_2020",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 2.5536719987066157e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:pop_2022",
+      "ok": true,
+      "regions": 1562,
+      "worst_region": "UKW06000006",
+      "worst_rel_diff": 2.1488674121541742e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:pop_2022",
+      "ok": true,
+      "max_abs_diff": 3.977474269035156
+    },
+    {
+      "name": "pyramid_totals:pop_2022",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 1.0410899009566099e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:pop_2025",
+      "ok": true,
+      "regions": 1562,
+      "worst_region": "UKS12000021",
+      "worst_rel_diff": 2.1760686722295192e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:pop_2025",
+      "ok": true,
+      "max_abs_diff": 3.99018783315114
+    },
+    {
+      "name": "pyramid_totals:pop_2025",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 1.475619692190127e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:gdp_nom_eur_2023",
+      "ok": true,
+      "regions": 1558,
+      "worst_region": "HU312",
+      "worst_rel_diff": 2.129540259603892e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:gdp_nom_eur_2023",
+      "ok": true,
+      "max_abs_diff": 2.616775331349345
+    },
+    {
+      "name": "pyramid_totals:gdp_nom_eur_2023",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 2.8385046337100243e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:gdp_real_2023",
+      "ok": true,
+      "regions": 1558,
+      "worst_region": "UKE07000149",
+      "worst_rel_diff": 2.122349582185476e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:gdp_real_2023",
+      "ok": true,
+      "max_abs_diff": 1.518011434116488
+    },
+    {
+      "name": "pyramid_totals:gdp_real_2023",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 1.6987975763485562e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:gdp_real_2020",
+      "ok": true,
+      "regions": 1558,
+      "worst_region": "UKE07000072",
+      "worst_rel_diff": 1.9731222535171284e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:gdp_real_2020",
+      "ok": true,
+      "max_abs_diff": 1.0934206768361037
+    },
+    {
+      "name": "pyramid_totals:gdp_real_2020",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 2.3436900461232583e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:gdp_real_2018",
+      "ok": true,
+      "regions": 1558,
+      "worst_region": "DEF0F",
+      "worst_rel_diff": 2.0870401453272143e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:gdp_real_2018",
+      "ok": true,
+      "max_abs_diff": 0.8742632642824901
+    },
+    {
+      "name": "pyramid_totals:gdp_real_2018",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 4.420011692070895e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "regions_within_0.1pct:gdp_real_2013",
+      "ok": true,
+      "regions": 1558,
+      "worst_region": "CH022",
+      "worst_rel_diff": 2.1437421306834056e-16,
+      "missing_in_source": 0
+    },
+    {
+      "name": "raster_equals_cells:gdp_real_2013",
+      "ok": true,
+      "max_abs_diff": 1.9634151548489172
+    },
+    {
+      "name": "pyramid_totals:gdp_real_2013",
+      "ok": true,
+      "levels": 6,
+      "max_rel_diff": 3.132130400927532e-06,
+      "tolerance": 2e-05
+    },
+    {
+      "name": "country_total_within_1pct:AT:pop_2015",
+      "ok": true,
+      "grid": 8583014.4,
+      "reference": 8584926.0,
+      "rel_diff": -0.00022,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:AT:pop_2020",
+      "ok": true,
+      "grid": 8899013.8,
+      "reference": 8901064.0,
+      "rel_diff": -0.00023,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:AT:pop_2022",
+      "ok": true,
+      "grid": 8976848.4,
+      "reference": 8978929.0,
+      "rel_diff": -0.00023,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:AT:pop_2025",
+      "ok": true,
+      "grid": 9195051.2,
+      "reference": 9197213.0,
+      "rel_diff": -0.00024,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:AT:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 477524.4,
+      "reference": 477676.06,
+      "rel_diff": -0.00032,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:AT:gdp_pps (derived)",
+      "ok": true,
+      "grid": 423299.8,
+      "reference": 423434.13999999996,
+      "rel_diff": -0.00032,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:AT:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.196,
+      "national_pct_pa": 3.194,
+      "diff_pp": 0.001
+    },
+    {
+      "name": "real_growth_vs_national:AT:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 0.934,
+      "national_pct_pa": 0.934,
+      "diff_pp": 0.001
+    },
+    {
+      "name": "real_growth_vs_national:AT:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.358,
+      "national_pct_pa": 1.358,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:BE:pop_2015",
+      "ok": true,
+      "grid": 11234086.6,
+      "reference": 11237274.0,
+      "rel_diff": -0.00028,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BE:pop_2020",
+      "ok": true,
+      "grid": 11519002.4,
+      "reference": 11522440.0,
+      "rel_diff": -0.0003,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BE:pop_2022",
+      "ok": true,
+      "grid": 11614135.2,
+      "reference": 11617623.0,
+      "rel_diff": -0.0003,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BE:pop_2025",
+      "ok": true,
+      "grid": 11879764.0,
+      "reference": 11883495.0,
+      "rel_diff": -0.00031,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BE:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 601992.0,
+      "reference": 602189.0,
+      "rel_diff": -0.00033,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:BE:gdp_pps (derived)",
+      "ok": true,
+      "grid": 534519.6,
+      "reference": 534694.5099999999,
+      "rel_diff": -0.00033,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:BE:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.935,
+      "national_pct_pa": 3.937,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "real_growth_vs_national:BE:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.832,
+      "national_pct_pa": 1.834,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "real_growth_vs_national:BE:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.695,
+      "national_pct_pa": 1.695,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "country_total_within_1pct:BG:pop_2015",
+      "ok": true,
+      "grid": 7029700.5,
+      "reference": 7029690.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BG:pop_2020",
+      "ok": true,
+      "grid": 6569266.6,
+      "reference": 6569275.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BG:pop_2022",
+      "ok": true,
+      "grid": 6482483.7,
+      "reference": 6482484.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BG:pop_2025",
+      "ok": true,
+      "grid": 6437348.2,
+      "reference": 6437360.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:BG:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 94525.0,
+      "reference": 94525.11,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:BG:gdp_pps (derived)",
+      "ok": true,
+      "grid": 156352.6,
+      "reference": 156352.78,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:BG:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.772,
+      "national_pct_pa": 3.772,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:BG:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 2.389,
+      "national_pct_pa": 2.389,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:BG:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.465,
+      "national_pct_pa": 2.465,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:HR:pop_2015",
+      "ok": true,
+      "grid": 4179865.0,
+      "reference": 4180915.0,
+      "rel_diff": -0.00025,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HR:pop_2020",
+      "ok": true,
+      "grid": 3932575.3,
+      "reference": 3933511.0,
+      "rel_diff": -0.00024,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HR:pop_2022",
+      "ok": true,
+      "grid": 3861408.1,
+      "reference": 3862305.0,
+      "rel_diff": -0.00023,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HR:pop_2025",
+      "ok": true,
+      "grid": 3873459.5,
+      "reference": 3874350.0,
+      "rel_diff": -0.00023,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HR:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 79181.2,
+      "reference": 79186.33,
+      "rel_diff": -6e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:HR:gdp_pps (derived)",
+      "ok": true,
+      "grid": 115133.7,
+      "reference": 115141.1,
+      "rel_diff": -6e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:HR:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 8.112,
+      "national_pct_pa": 8.113,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "real_growth_vs_national:HR:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 3.575,
+      "national_pct_pa": 3.575,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:HR:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.958,
+      "national_pct_pa": 2.958,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:CY:pop_2015",
+      "ok": true,
+      "grid": 860847.2,
+      "reference": 860846.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CY:pop_2020",
+      "ok": true,
+      "grid": 902431.2,
+      "reference": 902429.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CY:pop_2022",
+      "ok": true,
+      "grid": 929767.9,
+      "reference": 929764.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CY:pop_2025",
+      "ok": true,
+      "grid": 982965.2,
+      "reference": 982966.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CY:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 32439.1,
+      "reference": 32439.16,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:CY:gdp_pps (derived)",
+      "ok": true,
+      "grid": 35817.8,
+      "reference": 35817.89,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:CY:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 8.741,
+      "national_pct_pa": 8.74,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:CY:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 5.67,
+      "national_pct_pa": 5.67,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:CY:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 4.832,
+      "national_pct_pa": 4.832,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:CZ:pop_2015",
+      "ok": true,
+      "grid": 10541184.8,
+      "reference": 10538275.0,
+      "rel_diff": 0.00028,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CZ:pop_2020",
+      "ok": true,
+      "grid": 10696809.2,
+      "reference": 10693939.0,
+      "rel_diff": 0.00027,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CZ:pop_2022",
+      "ok": true,
+      "grid": 10519469.0,
+      "reference": 10516707.0,
+      "rel_diff": 0.00026,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CZ:pop_2025",
+      "ok": true,
+      "grid": 10912162.2,
+      "reference": 10909500.0,
+      "rel_diff": 0.00024,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CZ:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 319162.6,
+      "reference": 319099.11,
+      "rel_diff": 0.0002,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:CZ:gdp_pps (derived)",
+      "ok": true,
+      "grid": 380509.5,
+      "reference": 380433.84,
+      "rel_diff": 0.0002,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:CZ:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 2.295,
+      "national_pct_pa": 2.294,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:CZ:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 0.977,
+      "national_pct_pa": 0.976,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:CZ:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.256,
+      "national_pct_pa": 2.255,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:DK:pop_2015",
+      "ok": true,
+      "grid": 5659810.5,
+      "reference": 5659715.0,
+      "rel_diff": 2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DK:pop_2020",
+      "ok": true,
+      "grid": 5822857.4,
+      "reference": 5822763.0,
+      "rel_diff": 2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DK:pop_2022",
+      "ok": true,
+      "grid": 5873539.0,
+      "reference": 5873420.0,
+      "rel_diff": 2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DK:pop_2025",
+      "ok": true,
+      "grid": 5992847.9,
+      "reference": 5992734.0,
+      "rel_diff": 2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DK:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 371162.6,
+      "reference": 371159.60000000003,
+      "rel_diff": 1e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:DK:gdp_pps (derived)",
+      "ok": true,
+      "grid": 285289.1,
+      "reference": 285286.77,
+      "rel_diff": 1e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:DK:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 2.655,
+      "national_pct_pa": 2.655,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:DK:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.564,
+      "national_pct_pa": 1.564,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:DK:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.918,
+      "national_pct_pa": 1.918,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:EE:pop_2015",
+      "ok": true,
+      "grid": 1314747.3,
+      "reference": 1313271.0,
+      "rel_diff": 0.00112,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EE:pop_2020",
+      "ok": true,
+      "grid": 1330256.7,
+      "reference": 1328889.0,
+      "rel_diff": 0.00103,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EE:pop_2022",
+      "ok": true,
+      "grid": 1333138.4,
+      "reference": 1331796.0,
+      "rel_diff": 0.00101,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EE:pop_2025",
+      "ok": true,
+      "grid": 1371321.7,
+      "reference": 1369995.0,
+      "rel_diff": 0.00097,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EE:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 38368.9,
+      "reference": 38353.42,
+      "rel_diff": 0.0004,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:EE:gdp_pps (derived)",
+      "ok": true,
+      "grid": 41826.5,
+      "reference": 41809.56,
+      "rel_diff": 0.0004,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:EE:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 1.902,
+      "national_pct_pa": 1.903,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "real_growth_vs_national:EE:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.286,
+      "national_pct_pa": 1.286,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:EE:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.392,
+      "national_pct_pa": 2.392,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:FI:pop_2015",
+      "ok": true,
+      "grid": 5471962.9,
+      "reference": 5471753.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:FI:pop_2020",
+      "ok": true,
+      "grid": 5525502.9,
+      "reference": 5525292.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:FI:pop_2022",
+      "ok": true,
+      "grid": 5548452.2,
+      "reference": 5548241.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:FI:pop_2025",
+      "ok": true,
+      "grid": 5636179.9,
+      "reference": 5635971.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:FI:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 272873.5,
+      "reference": 272860.93,
+      "rel_diff": 5e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:FI:gdp_pps (derived)",
+      "ok": true,
+      "grid": 221254.8,
+      "reference": 221244.58000000002,
+      "rel_diff": 5e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:FI:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 0.665,
+      "national_pct_pa": 0.665,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:FI:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 0.162,
+      "national_pct_pa": 0.162,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:FI:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 0.78,
+      "national_pct_pa": 0.78,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:FR:pop_2015",
+      "ok": true,
+      "grid": 64303501.4,
+      "reference": 64300821.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country) minus unmapped regions ['FRY'] (2,157,332)"
+    },
+    {
+      "name": "country_total_within_1pct:FR:pop_2020",
+      "ok": true,
+      "grid": 65272085.9,
+      "reference": 65269154.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country) minus unmapped regions ['FRY'] (2,204,497)"
+    },
+    {
+      "name": "country_total_within_1pct:FR:pop_2022",
+      "ok": true,
+      "grid": 65849187.8,
+      "reference": 65846255.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country) minus unmapped regions ['FRY'] (2,245,448)"
+    },
+    {
+      "name": "country_total_within_1pct:FR:pop_2025",
+      "ok": true,
+      "grid": 66581820.1,
+      "reference": 66578547.0,
+      "rel_diff": 5e-05,
+      "source": "demo_r_pjanaggr3 (country) minus unmapped regions ['FRY'] (2,304,053)"
+    },
+    {
+      "name": "country_total_within_1pct:FR:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 2772927.2,
+      "reference": 2771806.9000000004,
+      "rel_diff": 0.0004,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio minus unmapped regions ['FRY'] (53,678)"
+    },
+    {
+      "name": "country_total_within_1pct:FR:gdp_pps (derived)",
+      "ok": true,
+      "grid": 2552634.8,
+      "reference": 2551603.52,
+      "rel_diff": 0.0004,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio minus unmapped regions ['FRY'] (49,414)"
+    },
+    {
+      "name": "real_growth_vs_national:FR:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.73,
+      "national_pct_pa": 3.72,
+      "diff_pp": 0.011
+    },
+    {
+      "name": "real_growth_vs_national:FR:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.042,
+      "national_pct_pa": 1.052,
+      "diff_pp": -0.01
+    },
+    {
+      "name": "real_growth_vs_national:FR:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.182,
+      "national_pct_pa": 1.191,
+      "diff_pp": -0.008
+    },
+    {
+      "name": "country_total_within_1pct:DE:pop_2015",
+      "ok": true,
+      "grid": 81193110.4,
+      "reference": 81197537.0,
+      "rel_diff": -5e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DE:pop_2020",
+      "ok": true,
+      "grid": 83162649.6,
+      "reference": 83166711.0,
+      "rel_diff": -5e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DE:pop_2022",
+      "ok": true,
+      "grid": 83233316.5,
+      "reference": 83237124.0,
+      "rel_diff": -5e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DE:pop_2025",
+      "ok": true,
+      "grid": 83573555.2,
+      "reference": 83577140.0,
+      "rel_diff": -4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:DE:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 4219746.0,
+      "reference": 4219310.0,
+      "rel_diff": 0.0001,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:DE:gdp_pps (derived)",
+      "ok": true,
+      "grid": 3759674.4,
+      "reference": 3759286.15,
+      "rel_diff": 0.0001,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:DE:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 1.586,
+      "national_pct_pa": 1.585,
+      "diff_pp": 0.001
+    },
+    {
+      "name": "real_growth_vs_national:DE:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 0.338,
+      "national_pct_pa": 0.337,
+      "diff_pp": 0.001
+    },
+    {
+      "name": "real_growth_vs_national:DE:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.208,
+      "national_pct_pa": 1.208,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:EL:pop_2015",
+      "ok": true,
+      "grid": 10818066.8,
+      "reference": 10818041.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EL:pop_2020",
+      "ok": true,
+      "grid": 10612594.9,
+      "reference": 10612591.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EL:pop_2022",
+      "ok": true,
+      "grid": 10461669.7,
+      "reference": 10461627.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EL:pop_2025",
+      "ok": true,
+      "grid": 10372331.0,
+      "reference": 10372335.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:EL:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 224686.9,
+      "reference": 224686.24,
+      "rel_diff": 0.0,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:EL:gdp_pps (derived)",
+      "ok": true,
+      "grid": 277017.1,
+      "reference": 277016.28,
+      "rel_diff": 0.0,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:EL:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 5.381,
+      "national_pct_pa": 5.381,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:EL:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.679,
+      "national_pct_pa": 1.679,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:EL:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.244,
+      "national_pct_pa": 1.244,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:HU:pop_2015",
+      "ok": true,
+      "grid": 9816277.6,
+      "reference": 9815858.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HU:pop_2020",
+      "ok": true,
+      "grid": 9689796.1,
+      "reference": 9689376.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HU:pop_2022",
+      "ok": true,
+      "grid": 9610818.5,
+      "reference": 9610403.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HU:pop_2025",
+      "ok": true,
+      "grid": 9539905.3,
+      "reference": 9539502.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:HU:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 197186.8,
+      "reference": 197178.65,
+      "rel_diff": 4e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:HU:gdp_pps (derived)",
+      "ok": true,
+      "grid": 278147.9,
+      "reference": 278136.52,
+      "rel_diff": 4e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:HU:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.507,
+      "national_pct_pa": 3.507,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:HU:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 2.194,
+      "national_pct_pa": 2.194,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:HU:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 3.108,
+      "national_pct_pa": 3.108,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:IE:pop_2015",
+      "ok": true,
+      "grid": 4677817.8,
+      "reference": 4677627.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IE:pop_2020",
+      "ok": true,
+      "grid": 5012761.2,
+      "reference": 5012600.0,
+      "rel_diff": 3e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IE:pop_2022",
+      "ok": true,
+      "grid": 5154429.7,
+      "reference": 5154277.0,
+      "rel_diff": 3e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IE:pop_2025",
+      "ok": true,
+      "grid": 5440405.1,
+      "reference": 5440278.0,
+      "rel_diff": 2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IE:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 524730.1,
+      "reference": 524728.75,
+      "rel_diff": 0.0,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:IE:gdp_pps (derived)",
+      "ok": true,
+      "grid": 442716.8,
+      "reference": 442715.67,
+      "rel_diff": 0.0,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:IE:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 6.823,
+      "national_pct_pa": 6.823,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:IE:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 6.483,
+      "national_pct_pa": 6.483,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:IE:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 8.401,
+      "national_pct_pa": 8.401,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:IT:pop_2015",
+      "ok": true,
+      "grid": 60295208.4,
+      "reference": 60295497.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IT:pop_2020",
+      "ok": true,
+      "grid": 59641164.1,
+      "reference": 59641488.0,
+      "rel_diff": -1e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IT:pop_2022",
+      "ok": true,
+      "grid": 59029949.2,
+      "reference": 59030133.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IT:pop_2025",
+      "ok": true,
+      "grid": 58943218.8,
+      "reference": 58943464.0,
+      "rel_diff": -0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:IT:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 2141694.9,
+      "reference": 2141643.16,
+      "rel_diff": 2e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:IT:gdp_pps (derived)",
+      "ok": true,
+      "grid": 2222359.9,
+      "reference": 2222306.21,
+      "rel_diff": 2e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:IT:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 4.987,
+      "national_pct_pa": 4.987,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:IT:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.215,
+      "national_pct_pa": 1.216,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:IT:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.126,
+      "national_pct_pa": 1.126,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:LV:pop_2015",
+      "ok": true,
+      "grid": 1984673.5,
+      "reference": 1986096.0,
+      "rel_diff": -0.00072,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LV:pop_2020",
+      "ok": true,
+      "grid": 1906350.1,
+      "reference": 1907675.0,
+      "rel_diff": -0.00069,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LV:pop_2022",
+      "ok": true,
+      "grid": 1874467.5,
+      "reference": 1875757.0,
+      "rel_diff": -0.00069,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LV:pop_2025",
+      "ok": true,
+      "grid": 1859285.4,
+      "reference": 1860565.0,
+      "rel_diff": -0.00069,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LV:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 39491.3,
+      "reference": 39505.630000000005,
+      "rel_diff": -0.00036,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:LV:gdp_pps (derived)",
+      "ok": true,
+      "grid": 50246.8,
+      "reference": 50265.07,
+      "rel_diff": -0.00036,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:LV:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 2.512,
+      "national_pct_pa": 2.512,
+      "diff_pp": 0.001
+    },
+    {
+      "name": "real_growth_vs_national:LV:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 0.923,
+      "national_pct_pa": 0.923,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:LV:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.063,
+      "national_pct_pa": 2.063,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:LT:pop_2015",
+      "ok": true,
+      "grid": 2926585.5,
+      "reference": 2926644.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LT:pop_2020",
+      "ok": true,
+      "grid": 2809920.7,
+      "reference": 2809977.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LT:pop_2022",
+      "ok": true,
+      "grid": 2805951.1,
+      "reference": 2805998.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LT:pop_2025",
+      "ok": true,
+      "grid": 2890621.8,
+      "reference": 2890664.0,
+      "rel_diff": -1e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LT:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 74315.6,
+      "reference": 74316.97,
+      "rel_diff": -2e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:LT:gdp_pps (derived)",
+      "ok": true,
+      "grid": 94559.8,
+      "reference": 94561.45,
+      "rel_diff": -2e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:LT:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.176,
+      "national_pct_pa": 3.176,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:LT:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 2.959,
+      "national_pct_pa": 2.959,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:LT:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 3.358,
+      "national_pct_pa": 3.358,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:LU:pop_2015",
+      "ok": true,
+      "grid": 566143.7,
+      "reference": 562958.0,
+      "rel_diff": 0.00566,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LU:pop_2020",
+      "ok": true,
+      "grid": 629270.6,
+      "reference": 626108.0,
+      "rel_diff": 0.00505,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LU:pop_2022",
+      "ok": true,
+      "grid": 648582.0,
+      "reference": 645397.0,
+      "rel_diff": 0.00494,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LU:pop_2025",
+      "ok": true,
+      "grid": 685068.6,
+      "reference": 681973.0,
+      "rel_diff": 0.00454,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:LU:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 82079.3,
+      "reference": 82115.47,
+      "rel_diff": -0.00044,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:LU:gdp_pps (derived)",
+      "ok": true,
+      "grid": 63492.5,
+      "reference": 63520.48,
+      "rel_diff": -0.00044,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:LU:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 1.916,
+      "national_pct_pa": 1.917,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "real_growth_vs_national:LU:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.59,
+      "national_pct_pa": 1.592,
+      "diff_pp": -0.002
+    },
+    {
+      "name": "real_growth_vs_national:LU:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.069,
+      "national_pct_pa": 2.071,
+      "diff_pp": -0.002
+    },
+    {
+      "name": "country_total_within_1pct:MT:pop_2015",
+      "ok": true,
+      "grid": 438805.6,
+      "reference": 438805.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:MT:pop_2020",
+      "ok": true,
+      "grid": 514855.6,
+      "reference": 514855.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:MT:pop_2022",
+      "ok": true,
+      "grid": 520971.1,
+      "reference": 520971.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:MT:pop_2025",
+      "ok": true,
+      "grid": 574251.5,
+      "reference": 574250.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:MT:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 20894.9,
+      "reference": 20894.93,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:MT:gdp_pps (derived)",
+      "ok": true,
+      "grid": 23134.0,
+      "reference": 23134.050000000003,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:MT:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 8.087,
+      "national_pct_pa": 8.087,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:MT:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 4.879,
+      "national_pct_pa": 4.879,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:MT:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 6.555,
+      "national_pct_pa": 6.555,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:NL:pop_2015",
+      "ok": true,
+      "grid": 16904359.9,
+      "reference": 16900726.0,
+      "rel_diff": 0.00022,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NL:pop_2020",
+      "ok": true,
+      "grid": 17411373.2,
+      "reference": 17407585.0,
+      "rel_diff": 0.00022,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NL:pop_2022",
+      "ok": true,
+      "grid": 17594509.1,
+      "reference": 17590672.0,
+      "rel_diff": 0.00022,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NL:pop_2025",
+      "ok": true,
+      "grid": 18048075.2,
+      "reference": 18044027.0,
+      "rel_diff": 0.00022,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NL:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 1046101.3,
+      "reference": 1045919.36,
+      "rel_diff": 0.00017,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:NL:gdp_pps (derived)",
+      "ok": true,
+      "grid": 894241.3,
+      "reference": 894085.7200000001,
+      "rel_diff": 0.00017,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:NL:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.518,
+      "national_pct_pa": 3.518,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:NL:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.756,
+      "national_pct_pa": 1.756,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:NL:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.997,
+      "national_pct_pa": 1.997,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:PL:pop_2015",
+      "ok": true,
+      "grid": 38006729.1,
+      "reference": 38005614.0,
+      "rel_diff": 3e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PL:pop_2020",
+      "ok": true,
+      "grid": 37959204.0,
+      "reference": 37958138.0,
+      "rel_diff": 3e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PL:pop_2022",
+      "ok": true,
+      "grid": 36890890.8,
+      "reference": 36889761.0,
+      "rel_diff": 3e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PL:pop_2025",
+      "ok": true,
+      "grid": 36498690.9,
+      "reference": 36497495.0,
+      "rel_diff": 3e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PL:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 752061.8,
+      "reference": 751931.75,
+      "rel_diff": 0.00017,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:PL:gdp_pps (derived)",
+      "ok": true,
+      "grid": 1110987.6,
+      "reference": 1110795.48,
+      "rel_diff": 0.00017,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:PL:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 4.104,
+      "national_pct_pa": 4.105,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "real_growth_vs_national:PL:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 2.94,
+      "national_pct_pa": 2.941,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:PL:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 3.742,
+      "national_pct_pa": 3.743,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "country_total_within_1pct:PT:pop_2015",
+      "ok": true,
+      "grid": 10394522.6,
+      "reference": 10395121.0,
+      "rel_diff": -6e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PT:pop_2020",
+      "ok": true,
+      "grid": 10374830.2,
+      "reference": 10375395.0,
+      "rel_diff": -5e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PT:pop_2022",
+      "ok": true,
+      "grid": 10598566.2,
+      "reference": 10599117.0,
+      "rel_diff": -5e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PT:pop_2025",
+      "ok": true,
+      "grid": 11386638.7,
+      "reference": 11387222.0,
+      "rel_diff": -5e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:PT:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 270153.8,
+      "reference": 270162.87,
+      "rel_diff": -3e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:PT:gdp_pps (derived)",
+      "ok": true,
+      "grid": 328806.2,
+      "reference": 328817.29,
+      "rel_diff": -3e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:PT:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 5.203,
+      "national_pct_pa": 5.203,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:PT:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.89,
+      "national_pct_pa": 1.89,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:PT:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.003,
+      "national_pct_pa": 2.003,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:RO:pop_2015",
+      "ok": true,
+      "grid": 19870659.9,
+      "reference": 19870647.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:RO:pop_2020",
+      "ok": true,
+      "grid": 19328850.9,
+      "reference": 19328838.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:RO:pop_2022",
+      "ok": true,
+      "grid": 19043100.6,
+      "reference": 19043098.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:RO:pop_2025",
+      "ok": true,
+      "grid": 19043182.5,
+      "reference": 19043151.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:RO:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 321397.6,
+      "reference": 321397.86000000004,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:RO:gdp_pps (derived)",
+      "ok": true,
+      "grid": 547147.5,
+      "reference": 547147.97,
+      "rel_diff": -0.0,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:RO:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 4.44,
+      "national_pct_pa": 4.44,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:RO:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 2.809,
+      "national_pct_pa": 2.809,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:RO:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 3.754,
+      "national_pct_pa": 3.754,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:SK:pop_2015",
+      "ok": true,
+      "grid": 5420607.7,
+      "reference": 5421349.0,
+      "rel_diff": -0.00014,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SK:pop_2020",
+      "ok": true,
+      "grid": 5457117.4,
+      "reference": 5457873.0,
+      "rel_diff": -0.00014,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SK:pop_2022",
+      "ok": true,
+      "grid": 5433953.3,
+      "reference": 5434712.0,
+      "rel_diff": -0.00014,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SK:pop_2025",
+      "ok": true,
+      "grid": 5418688.9,
+      "reference": 5419451.0,
+      "rel_diff": -0.00014,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SK:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 123520.7,
+      "reference": 123538.7,
+      "rel_diff": -0.00015,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:SK:gdp_pps (derived)",
+      "ok": true,
+      "grid": 155442.5,
+      "reference": 155465.18,
+      "rel_diff": -0.00015,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:SK:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 2.843,
+      "national_pct_pa": 2.843,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:SK:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.702,
+      "national_pct_pa": 1.702,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:SK:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 2.502,
+      "national_pct_pa": 2.502,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:SI:pop_2015",
+      "ok": true,
+      "grid": 2063329.0,
+      "reference": 2062874.0,
+      "rel_diff": 0.00022,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SI:pop_2020",
+      "ok": true,
+      "grid": 2096189.2,
+      "reference": 2095861.0,
+      "rel_diff": 0.00016,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SI:pop_2022",
+      "ok": true,
+      "grid": 2107455.2,
+      "reference": 2107180.0,
+      "rel_diff": 0.00013,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SI:pop_2025",
+      "ok": true,
+      "grid": 2131110.3,
+      "reference": 2130850.0,
+      "rel_diff": 0.00012,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SI:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 64048.3,
+      "reference": 64050.01,
+      "rel_diff": -3e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:SI:gdp_pps (derived)",
+      "ok": true,
+      "grid": 74368.8,
+      "reference": 74370.73,
+      "rel_diff": -3e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:SI:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 4.524,
+      "national_pct_pa": 4.522,
+      "diff_pp": 0.001
+    },
+    {
+      "name": "real_growth_vs_national:SI:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 2.541,
+      "national_pct_pa": 2.54,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:SI:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 3.04,
+      "national_pct_pa": 3.041,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "country_total_within_1pct:ES:pop_2015",
+      "ok": true,
+      "grid": 46427722.9,
+      "reference": 46425722.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:ES:pop_2020",
+      "ok": true,
+      "grid": 47320077.7,
+      "reference": 47318050.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:ES:pop_2022",
+      "ok": true,
+      "grid": 47488955.8,
+      "reference": 47486843.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:ES:pop_2025",
+      "ok": true,
+      "grid": 49130376.9,
+      "reference": 49128297.0,
+      "rel_diff": 4e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:ES:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 1496451.2,
+      "reference": 1496385.6,
+      "rel_diff": 4e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:ES:gdp_pps (derived)",
+      "ok": true,
+      "grid": 1679612.9,
+      "reference": 1679539.36,
+      "rel_diff": 4e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:ES:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 5.119,
+      "national_pct_pa": 5.119,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:ES:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.072,
+      "national_pct_pa": 1.072,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:ES:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.91,
+      "national_pct_pa": 1.91,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "country_total_within_1pct:SE:pop_2015",
+      "ok": true,
+      "grid": 9747127.4,
+      "reference": 9747355.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SE:pop_2020",
+      "ok": true,
+      "grid": 10327370.6,
+      "reference": 10327589.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SE:pop_2022",
+      "ok": true,
+      "grid": 10452118.8,
+      "reference": 10452326.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SE:pop_2025",
+      "ok": true,
+      "grid": 10587470.1,
+      "reference": 10587710.0,
+      "rel_diff": -2e-05,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:SE:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 535058.8,
+      "reference": 535072.12,
+      "rel_diff": -2e-05,
+      "source": "nama_10r_3gdp country total MIO_EUR minus extra-regio"
+    },
+    {
+      "name": "country_total_within_1pct:SE:gdp_pps (derived)",
+      "ok": true,
+      "grid": 450449.4,
+      "reference": 450460.64999999997,
+      "rel_diff": -2e-05,
+      "source": "nama_10r_3gdp country total MIO_PPS_EU27_2020 minus extra-regio"
+    },
+    {
+      "name": "real_growth_vs_national:SE:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 2.067,
+      "national_pct_pa": 2.067,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "real_growth_vs_national:SE:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.361,
+      "national_pct_pa": 1.361,
+      "diff_pp": -0.0
+    },
+    {
+      "name": "real_growth_vs_national:SE:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.924,
+      "national_pct_pa": 1.924,
+      "diff_pp": 0.0
+    },
+    {
+      "name": "country_total_within_1pct:UK:pop_2015",
+      "ok": true,
+      "grid": 64852658.9,
+      "reference": 64852825.5,
+      "rel_diff": -0.0,
+      "source": "ONS MYEB5 UK total, mean of mid-years"
+    },
+    {
+      "name": "country_total_within_1pct:UK:pop_2020",
+      "ok": true,
+      "grid": 66683500.7,
+      "reference": 66683687.0,
+      "rel_diff": -0.0,
+      "source": "ONS MYEB5 UK total, mean of mid-years"
+    },
+    {
+      "name": "country_total_within_1pct:UK:pop_2022",
+      "ok": true,
+      "grid": 67328834.0,
+      "reference": 67328981.0,
+      "rel_diff": -0.0,
+      "source": "ONS MYEB5 UK total, mean of mid-years"
+    },
+    {
+      "name": "country_total_within_1pct:UK:pop_2025",
+      "ok": true,
+      "grid": 69369982.8,
+      "reference": 69370106.5,
+      "rel_diff": -0.0,
+      "source": "ONS MYEB5 UK total, mean of mid-years"
+    },
+    {
+      "name": "country_total_within_1pct:UK:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 3132336.5,
+      "reference": 3132334.241598547,
+      "rel_diff": 0.0,
+      "source": "UK national source, sum of regions (no Eurostat total excluding offshore/extra-regio)"
+    },
+    {
+      "name": "country_total_within_1pct:UK:gdp_pps (derived)",
+      "ok": true,
+      "grid": 2585896.7,
+      "reference": 2585894.8927001962,
+      "rel_diff": 0.0,
+      "source": "UK national source, sum of regions (no Eurostat total excluding offshore/extra-regio)"
+    },
+    {
+      "name": "country_total_within_1pct:CH:pop_2015",
+      "ok": true,
+      "grid": 8233446.0,
+      "reference": 8237666.0,
+      "rel_diff": -0.00051,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CH:pop_2020",
+      "ok": true,
+      "grid": 8601443.8,
+      "reference": 8606033.0,
+      "rel_diff": -0.00053,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CH:pop_2022",
+      "ok": true,
+      "grid": 8734030.5,
+      "reference": 8738791.0,
+      "rel_diff": -0.00054,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CH:pop_2025",
+      "ok": true,
+      "grid": 9045867.4,
+      "reference": 9051029.0,
+      "rel_diff": -0.00057,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:CH:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 859818.4,
+      "reference": 858396.6,
+      "rel_diff": 0.00166,
+      "source": "nama_10_gdp CP_MEUR"
+    },
+    {
+      "name": "country_total_within_1pct:CH:gdp_pps (derived)",
+      "ok": true,
+      "grid": 542582.5,
+      "reference": 541685.2057480894,
+      "rel_diff": 0.00166,
+      "source": "nama_10_gdp CP_MNAC / prc_ppp_ind PPP"
+    },
+    {
+      "name": "real_growth_vs_national:CH:2020-2023",
+      "ok": true,
+      "grid_pct_pa": 3.563,
+      "national_pct_pa": 3.489,
+      "diff_pp": 0.074
+    },
+    {
+      "name": "real_growth_vs_national:CH:2018-2023",
+      "ok": true,
+      "grid_pct_pa": 1.872,
+      "national_pct_pa": 1.84,
+      "diff_pp": 0.032
+    },
+    {
+      "name": "real_growth_vs_national:CH:2013-2023",
+      "ok": true,
+      "grid_pct_pa": 1.984,
+      "national_pct_pa": 1.984,
+      "diff_pp": -0.001
+    },
+    {
+      "name": "country_total_within_1pct:NO:pop_2015",
+      "ok": true,
+      "grid": 5165818.9,
+      "reference": 5165802.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NO:pop_2020",
+      "ok": true,
+      "grid": 5367590.7,
+      "reference": 5367580.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NO:pop_2022",
+      "ok": true,
+      "grid": 5425283.4,
+      "reference": 5425270.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NO:pop_2025",
+      "ok": true,
+      "grid": 5594356.4,
+      "reference": 5594340.0,
+      "rel_diff": 0.0,
+      "source": "demo_r_pjanaggr3 (country)"
+    },
+    {
+      "name": "country_total_within_1pct:NO:gdp_nom_eur_2023",
+      "ok": true,
+      "grid": 338595.3,
+      "reference": 338595.93051966454,
+      "rel_diff": -0.0,
+      "source": "NO national source, sum of regions (no Eurostat total excluding offshore/extra-regio)"
+    },
+    {
+      "name": "country_total_within_1pct:NO:gdp_pps (derived)",
+      "ok": true,
+      "grid": 272697.9,
+      "reference": 272698.4256570792,
+      "rel_diff": -0.0,
+      "source": "NO national source, sum of regions (no Eurostat total excluding offshore/extra-regio)"
+    }
+  ]
+}

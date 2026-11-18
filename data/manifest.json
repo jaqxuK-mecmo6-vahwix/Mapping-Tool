@@ -1,0 +1,1081 @@
+{
+  "name": "RadiusStats Europe",
+  "schema": 2,
+  "generated": "2026-11-18T08:45:44+00:00",
+  "grid": {
+    "crs": "EPSG:3035",
+    "xmin": 864000,
+    "ymax": 5504000,
+    "xmax": 6592000,
+    "ymin": 864000,
+    "width": 5728,
+    "height": 4640,
+    "cell_m": 1000
+  },
+  "levels_km": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "nodata": -1.0,
+  "years": {
+    "population": {
+      "latest": 2025,
+      "compare": [
+        2022,
+        2020,
+        2015
+      ]
+    },
+    "gdp": {
+      "latest": 2023,
+      "compare": [
+        2020,
+        2018,
+        2013
+      ],
+      "real_base_year": 2020
+    }
+  },
+  "countries": [
+    {
+      "id": 1,
+      "code": "AT",
+      "name": "Austria",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 2,
+      "code": "BE",
+      "name": "Belgium",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 3,
+      "code": "BG",
+      "name": "Bulgaria",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 4,
+      "code": "HR",
+      "name": "Croatia",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 5,
+      "code": "CY",
+      "name": "Cyprus",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 6,
+      "code": "CZ",
+      "name": "Czechia",
+      "currency": "CZK",
+      "built": true
+    },
+    {
+      "id": 7,
+      "code": "DK",
+      "name": "Denmark",
+      "currency": "DKK",
+      "built": true
+    },
+    {
+      "id": 8,
+      "code": "EE",
+      "name": "Estonia",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 9,
+      "code": "FI",
+      "name": "Finland",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 10,
+      "code": "FR",
+      "name": "France",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 11,
+      "code": "DE",
+      "name": "Germany",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 12,
+      "code": "EL",
+      "name": "Greece",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 13,
+      "code": "HU",
+      "name": "Hungary",
+      "currency": "HUF",
+      "built": true
+    },
+    {
+      "id": 14,
+      "code": "IE",
+      "name": "Ireland",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 15,
+      "code": "IT",
+      "name": "Italy",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 16,
+      "code": "LV",
+      "name": "Latvia",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 17,
+      "code": "LT",
+      "name": "Lithuania",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 18,
+      "code": "LU",
+      "name": "Luxembourg",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 19,
+      "code": "MT",
+      "name": "Malta",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 20,
+      "code": "NL",
+      "name": "Netherlands",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 21,
+      "code": "PL",
+      "name": "Poland",
+      "currency": "PLN",
+      "built": true
+    },
+    {
+      "id": 22,
+      "code": "PT",
+      "name": "Portugal",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 23,
+      "code": "RO",
+      "name": "Romania",
+      "currency": "RON",
+      "built": true
+    },
+    {
+      "id": 24,
+      "code": "SK",
+      "name": "Slovakia",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 25,
+      "code": "SI",
+      "name": "Slovenia",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 26,
+      "code": "ES",
+      "name": "Spain",
+      "currency": "EUR",
+      "built": true
+    },
+    {
+      "id": 27,
+      "code": "SE",
+      "name": "Sweden",
+      "currency": "SEK",
+      "built": true
+    },
+    {
+      "id": 28,
+      "code": "UK",
+      "name": "United Kingdom",
+      "currency": "GBP",
+      "built": true
+    },
+    {
+      "id": 29,
+      "code": "CH",
+      "name": "Switzerland",
+      "currency": "CHF",
+      "built": true
+    },
+    {
+      "id": 30,
+      "code": "NO",
+      "name": "Norway",
+      "currency": "NOK",
+      "built": true
+    }
+  ],
+  "country_codes": {
+    "sea": 0,
+    "not_covered": 255
+  },
+  "low_confidence_gdp_radius_km": 25,
+  "series_breaks": {
+    "population": {
+      "CZ": [
+        2021
+      ],
+      "DE": [
+        2023
+      ],
+      "LU": [
+        2017
+      ],
+      "PL": [
+        2021
+      ],
+      "PT": [
+        2022
+      ]
+    },
+    "source": "Eurostat demo_r_pjanaggr3 observation flag 'b'"
+  },
+  "pps_per_eur": {
+    "year": 2023,
+    "factors": {
+      "AT": 0.8864463154562802,
+      "BE": 0.8879180659919704,
+      "BG": 1.6540872212777349,
+      "CH": 0.6310430587211605,
+      "CY": 1.1041559029272028,
+      "CZ": 1.1922121999090562,
+      "DE": 0.8909717500577216,
+      "DK": 0.7686364240245012,
+      "EE": 1.0901129547247677,
+      "EL": 1.232902858986698,
+      "ES": 1.122397428844544,
+      "FI": 0.8108327564521605,
+      "FR": 0.9205560092829365,
+      "HR": 1.4540528649326216,
+      "HU": 1.4105813180078066,
+      "IE": 0.8437038404374861,
+      "IT": 1.0376640921053077,
+      "LT": 1.272407402025056,
+      "LU": 0.7735507085327528,
+      "LV": 1.2723518141591466,
+      "MT": 1.1071604964268826,
+      "NL": 0.854832348550612,
+      "NO": 0.8053801037672004,
+      "PL": 1.4772557355835623,
+      "PT": 1.2171076204103244,
+      "RO": 1.702400743900364,
+      "SE": 0.8418690579156124,
+      "SI": 1.1611354688101578,
+      "SK": 1.2584331063869054,
+      "UK": 0.8255488377831983
+    },
+    "source": "regional MIO_PPS_EU27_2020 / MIO_EUR (Eurostat); prc_ppp_ind for national sources"
+  },
+  "bands": [
+    "pop_2015",
+    "pop_2020",
+    "pop_2022",
+    "pop_2025",
+    "gdp_nom_eur_2023",
+    "gdp_real_2023",
+    "gdp_real_2020",
+    "gdp_real_2018",
+    "gdp_real_2013",
+    "country",
+    "land",
+    "land_covered"
+  ],
+  "layers": {
+    "pop_2015": {
+      "kind": "population",
+      "year": 2015,
+      "unit": "persons",
+      "date": "2015-01-01",
+      "levels": {
+        "1": {
+          "band": 0,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 0,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 0,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 0,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 0,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 0,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 518982250.5
+    },
+    "pop_2020": {
+      "kind": "population",
+      "year": 2020,
+      "unit": "persons",
+      "date": "2020-01-01",
+      "levels": {
+        "1": {
+          "band": 1,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 1,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 1,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 1,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 1,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 1,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 525376766.0
+    },
+    "pop_2022": {
+      "kind": "population",
+      "year": 2022,
+      "unit": "persons",
+      "date": "2022-01-01",
+      "levels": {
+        "1": {
+          "band": 2,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 2,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 2,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 2,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 2,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 2,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 525425962.0
+    },
+    "pop_2025": {
+      "kind": "population",
+      "year": 2025,
+      "unit": "persons",
+      "date": "2025-01-01",
+      "levels": {
+        "1": {
+          "band": 3,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 3,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 3,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 3,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 3,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 3,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 532995980.5
+    },
+    "gdp_nom_eur_2023": {
+      "kind": "gdp",
+      "measure": "nominal",
+      "year": 2023,
+      "source_unit": "MIO_EUR",
+      "unit": "million EUR",
+      "prices": "current",
+      "levels": {
+        "1": {
+          "band": 4,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 4,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 4,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 4,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 4,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 4,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 21524513.235702343
+    },
+    "gdp_real_2023": {
+      "kind": "gdp",
+      "measure": "real",
+      "year": 2023,
+      "unit": "million EUR, 2020 prices and exchange rates",
+      "prices": "constant",
+      "levels": {
+        "1": {
+          "band": 5,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 5,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 5,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 5,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 5,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 5,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 18770707.52353947
+    },
+    "gdp_real_2020": {
+      "kind": "gdp",
+      "measure": "real",
+      "year": 2020,
+      "unit": "million EUR, 2020 prices and exchange rates",
+      "prices": "constant",
+      "levels": {
+        "1": {
+          "band": 6,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 6,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 6,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 6,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 6,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 6,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 16850420.62358062
+    },
+    "gdp_real_2018": {
+      "kind": "gdp",
+      "measure": "real",
+      "year": 2018,
+      "unit": "million EUR, 2020 prices and exchange rates",
+      "prices": "constant",
+      "levels": {
+        "1": {
+          "band": 7,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 7,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 7,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 7,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 7,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 7,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 17616083.105497256
+    },
+    "gdp_real_2013": {
+      "kind": "gdp",
+      "measure": "real",
+      "year": 2013,
+      "unit": "million EUR, 2020 prices and exchange rates",
+      "prices": "constant",
+      "levels": {
+        "1": {
+          "band": 8,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 8,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 8,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 8,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 8,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 8,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      },
+      "total": 15778241.08729023
+    },
+    "country": {
+      "kind": "country",
+      "levels": {
+        "1": {
+          "band": 9,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 9,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 9,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 9,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 9,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 9,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      }
+    },
+    "land": {
+      "kind": "land",
+      "levels": {
+        "1": {
+          "band": 10,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 10,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 10,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 10,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 10,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 10,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      }
+    },
+    "land_covered": {
+      "kind": "land",
+      "levels": {
+        "1": {
+          "band": 11,
+          "width": 5728,
+          "height": 4640,
+          "url": "cog/L1.tif",
+          "bytes": 53428501
+        },
+        "2": {
+          "band": 11,
+          "width": 2864,
+          "height": 2320,
+          "url": "cog/L2.tif",
+          "bytes": 20197528
+        },
+        "4": {
+          "band": 11,
+          "width": 1432,
+          "height": 1160,
+          "url": "cog/L4.tif",
+          "bytes": 6710319
+        },
+        "8": {
+          "band": 11,
+          "width": 716,
+          "height": 580,
+          "url": "cog/L8.tif",
+          "bytes": 2063692
+        },
+        "16": {
+          "band": 11,
+          "width": 358,
+          "height": 290,
+          "url": "cog/L16.tif",
+          "bytes": 618849
+        },
+        "32": {
+          "band": 11,
+          "width": 179,
+          "height": 145,
+          "url": "cog/L32.tif",
+          "bytes": 189858
+        }
+      }
+    }
+  },
+  "fx": "fx.json",
+  "heat": {
+    "population": {
+      "url": "heat/population.pmtiles",
+      "layer": "pop_2025",
+      "unit": "persons per km\u00b2",
+      "min": 0.9959293603897095,
+      "max": 6418.34423828125,
+      "tiles": 1261,
+      "min_zoom": 3,
+      "max_zoom": 8,
+      "ramp": [
+        [
+          59,
+          15,
+          112
+        ],
+        [
+          100,
+          26,
+          128
+        ],
+        [
+          140,
+          41,
+          129
+        ],
+        [
+          182,
+          54,
+          121
+        ],
+        [
+          222,
+          73,
+          104
+        ],
+        [
+          248,
+          118,
+          92
+        ],
+        [
+          254,
+          186,
+          128
+        ],
+        [
+          252,
+          253,
+          191
+        ]
+      ]
+    },
+    "gdp": {
+      "url": "heat/gdp.pmtiles",
+      "layer": "gdp_nom_eur_2023",
+      "unit": "million EUR per km\u00b2",
+      "min": 0.026014093309640884,
+      "max": 289.1580810546875,
+      "tiles": 1261,
+      "min_zoom": 3,
+      "max_zoom": 8,
+      "ramp": [
+        [
+          59,
+          15,
+          112
+        ],
+        [
+          100,
+          26,
+          128
+        ],
+        [
+          140,
+          41,
+          129
+        ],
+        [
+          182,
+          54,
+          121
+        ],
+        [
+          222,
+          73,
+          104
+        ],
+        [
+          248,
+          118,
+          92
+        ],
+        [
+          254,
+          186,
+          128
+        ],
+        [
+          252,
+          253,
+          191
+        ]
+      ]
+    }
+  },
+  "coverage_mask": {
+    "url": "coverage_mask.geojson",
+    "countries": [
+      "AT",
+      "BE",
+      "BG",
+      "CH",
+      "CY",
+      "CZ",
+      "DE",
+      "DK",
+      "EE",
+      "EL",
+      "ES",
+      "FI",
+      "FR",
+      "HR",
+      "HU",
+      "IE",
+      "IT",
+      "LT",
+      "LU",
+      "LV",
+      "MT",
+      "NL",
+      "NO",
+      "PL",
+      "PT",
+      "RO",
+      "SE",
+      "SI",
+      "SK",
+      "UK"
+    ],
+    "source": "https://gisco-services.ec.europa.eu/distribution/v2/countries/geojson/CNTR_RG_03M_2024_4326.geojson"
+  }
+}

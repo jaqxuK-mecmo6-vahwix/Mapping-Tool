@@ -1,0 +1,468 @@
+{
+  "method": "Independent spot checks of circle totals (`./run.sh xcheck`), for VALIDATION.md.\n\nDeliberately shares no code with the browser engine: every 1 km cell in the circle's bounding box is\nsampled at 10 x 10 points, each point is projected to WGS84 with pyproj and its geodesic distance to\nthe centre computed on the WGS84 ellipsoid (pyproj.Geod); the cell contributes value x inside-fraction.\nUses the level-1 (1 km) COGs only. Prints a table and writes data/build/xcheck.json.\n\nPlausibility against official figures: for each circle, the official totals (Eurostat / ONS / BFS / SSB,\nre-read from the cached source tables) of the regions lying ENTIRELY inside the circle give a lower\nbound, and those of all regions the circle touches give an upper bound. Region membership of 1 km cells\ncomes from the GISCO grid (or the ONS LAD boundaries for the UK); a cell is inside if its four corners\nare, and touched if its nearest point could be.",
+  "sub_samples": 10,
+  "rows": [
+    {
+      "place": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "radius_km": 25,
+      "pop_2025": 9687009.196762696,
+      "gdp_nom_eur_2023": 715559.6649674987,
+      "pop_bounds": {
+        "lower": 3733835.0,
+        "upper": 12549288.0,
+        "regions_inside": 2,
+        "regions_touched": 8,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 456189.9,
+        "upper": 829638.3,
+        "regions_inside": 2,
+        "regions_touched": 8,
+        "ok": true
+      }
+    },
+    {
+      "place": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "radius_km": 50,
+      "pop_2025": 12259090.539235841,
+      "gdp_nom_eur_2023": 816696.7358699036,
+      "pop_bounds": {
+        "lower": 6900499.0,
+        "upper": 13377216.0,
+        "regions_inside": 4,
+        "regions_touched": 9,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 602235.7000000001,
+        "upper": 855196.6000000001,
+        "regions_inside": 4,
+        "regions_touched": 9,
+        "ok": true
+      }
+    },
+    {
+      "place": "Paris",
+      "lat": 48.8566,
+      "lon": 2.3522,
+      "radius_km": 100,
+      "pop_2025": 14518663.145319823,
+      "gdp_nom_eur_2023": 890972.1137358476,
+      "pop_bounds": {
+        "lower": 12549288.0,
+        "upper": 18649092.0,
+        "regions_inside": 8,
+        "regions_touched": 18,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 829638.3,
+        "upper": 1038364.4,
+        "regions_inside": 8,
+        "regions_touched": 18,
+        "ok": true
+      }
+    },
+    {
+      "place": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "radius_km": 25,
+      "pop_2025": 9717034.620247804,
+      "gdp_nom_eur_2023": 749547.0447293854,
+      "pop_bounds": {
+        "lower": 7612517.0,
+        "upper": 12048298.0,
+        "regions_inside": 28,
+        "regions_touched": 53,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 655392.6809919635,
+        "upper": 867213.9252003359,
+        "regions_inside": 28,
+        "regions_touched": 53,
+        "ok": true
+      }
+    },
+    {
+      "place": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "radius_km": 50,
+      "pop_2025": 14361362.049356174,
+      "gdp_nom_eur_2023": 979046.2397236836,
+      "pop_bounds": {
+        "lower": 12028047.5,
+        "upper": 16477341.5,
+        "regions_inside": 58,
+        "regions_touched": 83,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 872686.5105370262,
+        "upper": 1067058.7153220891,
+        "regions_inside": 58,
+        "regions_touched": 83,
+        "ok": true
+      }
+    },
+    {
+      "place": "London",
+      "lat": 51.5074,
+      "lon": -0.1278,
+      "radius_km": 100,
+      "pop_2025": 22181264.216634534,
+      "gdp_nom_eur_2023": 1319549.7407334046,
+      "pop_bounds": {
+        "lower": 20215031.5,
+        "upper": 24522795.5,
+        "regions_inside": 107,
+        "regions_touched": 131,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 1236312.2132928637,
+        "upper": 1409728.7851090492,
+        "regions_inside": 107,
+        "regions_touched": 131,
+        "ok": true
+      }
+    },
+    {
+      "place": "Zurich",
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "radius_km": 25,
+      "pop_2025": 1934702.2915527346,
+      "gdp_nom_eur_2023": 206839.20320892334,
+      "pop_bounds": {
+        "lower": 0.0,
+        "upper": 4196233.0,
+        "regions_inside": 0,
+        "regions_touched": 9,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 0.0,
+        "upper": 376693.42578580166,
+        "regions_inside": 0,
+        "regions_touched": 9,
+        "ok": true
+      }
+    },
+    {
+      "place": "Zurich",
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "radius_km": 50,
+      "pop_2025": 3819580.3580224607,
+      "gdp_nom_eur_2023": 350316.6105322265,
+      "pop_bounds": {
+        "lower": 1842426.0,
+        "upper": 5933378.0,
+        "regions_inside": 3,
+        "regions_touched": 20,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 219789.75986777456,
+        "upper": 473767.062032337,
+        "regions_inside": 3,
+        "regions_touched": 20,
+        "ok": true
+      }
+    },
+    {
+      "place": "Zurich",
+      "lat": 47.3769,
+      "lon": 8.5417,
+      "radius_km": 100,
+      "pop_2025": 8899978.620488282,
+      "gdp_nom_eur_2023": 697586.1727277373,
+      "pop_bounds": {
+        "lower": 6575464.0,
+        "upper": 11774267.0,
+        "regions_inside": 24,
+        "regions_touched": 41,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 562796.5655829238,
+        "upper": 860392.4497485226,
+        "regions_inside": 24,
+        "regions_touched": 41,
+        "ok": true
+      }
+    },
+    {
+      "place": "Oslo",
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "radius_km": 25,
+      "pop_2025": 1225854.4323730469,
+      "gdp_nom_eur_2023": 100579.1154574585,
+      "pop_bounds": {
+        "lower": 0.0,
+        "upper": 2050625.0,
+        "regions_inside": 0,
+        "regions_touched": 4,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 0.0,
+        "upper": 141581.34443312587,
+        "regions_inside": 0,
+        "regions_touched": 2,
+        "ok": true
+      }
+    },
+    {
+      "place": "Oslo",
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "radius_km": 50,
+      "pop_2025": 1690005.3561865236,
+      "gdp_nom_eur_2023": 123517.04935516359,
+      "pop_bounds": {
+        "lower": 724290.0,
+        "upper": 2686252.0,
+        "regions_inside": 1,
+        "regions_touched": 6,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 77016.61257735224,
+        "upper": 179869.81152670196,
+        "regions_inside": 1,
+        "regions_touched": 4,
+        "ok": true
+      }
+    },
+    {
+      "place": "Oslo",
+      "lat": 59.9139,
+      "lon": 10.7522,
+      "radius_km": 100,
+      "pop_2025": 2425287.689291992,
+      "gdp_nom_eur_2023": 158994.4118458557,
+      "pop_bounds": {
+        "lower": 1464970.0,
+        "upper": 4920320.0,
+        "regions_inside": 2,
+        "regions_touched": 9,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 77016.61257735224,
+        "upper": 284244.32152670197,
+        "regions_inside": 1,
+        "regions_touched": 6,
+        "ok": true
+      }
+    },
+    {
+      "place": "Warsaw",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "radius_km": 25,
+      "pop_2025": 2783038.03887207,
+      "gdp_nom_eur_2023": 127424.62055744171,
+      "pop_bounds": {
+        "lower": 1875287.0,
+        "upper": 3298955.0,
+        "regions_inside": 1,
+        "regions_touched": 3,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 108750.97,
+        "upper": 137734.58000000002,
+        "regions_inside": 1,
+        "regions_touched": 3,
+        "ok": true
+      }
+    },
+    {
+      "place": "Warsaw",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "radius_km": 50,
+      "pop_2025": 3473815.1804504395,
+      "gdp_nom_eur_2023": 140849.0755142212,
+      "pop_bounds": {
+        "lower": 1875287.0,
+        "upper": 5516306.0,
+        "regions_inside": 1,
+        "regions_touched": 9,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 108750.97,
+        "upper": 173954.03999999998,
+        "regions_inside": 1,
+        "regions_touched": 9,
+        "ok": true
+      }
+    },
+    {
+      "place": "Warsaw",
+      "lat": 52.2297,
+      "lon": 21.0122,
+      "radius_km": 100,
+      "pop_2025": 5387992.921480713,
+      "gdp_nom_eur_2023": 175009.24791475298,
+      "pop_bounds": {
+        "lower": 3552922.0,
+        "upper": 8464477.0,
+        "regions_inside": 4,
+        "regions_touched": 16,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 142354.94,
+        "upper": 227083.3,
+        "regions_inside": 4,
+        "regions_touched": 16,
+        "ok": true
+      }
+    },
+    {
+      "place": "Basel",
+      "lat": 47.5596,
+      "lon": 7.5886,
+      "radius_km": 25,
+      "pop_2025": 941730.9016943359,
+      "gdp_nom_eur_2023": 101918.11190483093,
+      "pop_bounds": {
+        "lower": 201384.0,
+        "upper": 4127536.0,
+        "regions_inside": 1,
+        "regions_touched": 10,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 60017.439063886086,
+        "upper": 289864.37797015114,
+        "regions_inside": 1,
+        "regions_touched": 10,
+        "ok": true
+      }
+    },
+    {
+      "place": "Basel",
+      "lat": 47.5596,
+      "lon": 7.5886,
+      "radius_km": 50,
+      "pop_2025": 2455599.0908251954,
+      "gdp_nom_eur_2023": 181607.63079284667,
+      "pop_bounds": {
+        "lower": 740970.0,
+        "upper": 5489778.0,
+        "regions_inside": 3,
+        "regions_touched": 14,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 92473.43858882302,
+        "upper": 361887.5059134536,
+        "regions_inside": 3,
+        "regions_touched": 14,
+        "ok": true
+      }
+    },
+    {
+      "place": "Basel",
+      "lat": 47.5596,
+      "lon": 7.5886,
+      "radius_km": 100,
+      "pop_2025": 8744023.817978516,
+      "gdp_nom_eur_2023": 669096.3386548995,
+      "pop_bounds": {
+        "lower": 4478093.0,
+        "upper": 13129491.0,
+        "regions_inside": 16,
+        "regions_touched": 36,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 327556.3155627067,
+        "upper": 921349.3298375402,
+        "regions_inside": 16,
+        "regions_touched": 36,
+        "ok": true
+      }
+    },
+    {
+      "place": "Brussels",
+      "lat": 50.8467,
+      "lon": 4.3525,
+      "radius_km": 25,
+      "pop_2025": 2605735.753339844,
+      "gdp_nom_eur_2023": 178351.3410882568,
+      "pop_bounds": {
+        "lower": 1271709.0,
+        "upper": 5114741.0,
+        "regions_inside": 1,
+        "regions_touched": 10,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 103568.87,
+        "upper": 311307.52,
+        "regions_inside": 1,
+        "regions_touched": 10,
+        "ok": true
+      }
+    },
+    {
+      "place": "Brussels",
+      "lat": 50.8467,
+      "lon": 4.3525,
+      "radius_km": 50,
+      "pop_2025": 5999554.242119141,
+      "gdp_nom_eur_2023": 346601.63823852537,
+      "pop_bounds": {
+        "lower": 2934707.0,
+        "upper": 8751354.0,
+        "regions_inside": 6,
+        "regions_touched": 24,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 186690.06,
+        "upper": 474781.36,
+        "regions_inside": 6,
+        "regions_touched": 24,
+        "ok": true
+      }
+    },
+    {
+      "place": "Brussels",
+      "lat": 50.8467,
+      "lon": 4.3525,
+      "radius_km": 100,
+      "pop_2025": 14525663.176522218,
+      "gdp_nom_eur_2023": 727260.0387752152,
+      "pop_bounds": {
+        "lower": 8831329.0,
+        "upper": 22209977.0,
+        "regions_inside": 24,
+        "regions_touched": 53,
+        "ok": true
+      },
+      "gdp_nom_eur_bounds": {
+        "lower": 485718.49,
+        "upper": 1080918.86,
+        "regions_inside": 24,
+        "regions_touched": 53,
+        "ok": true
+      }
+    }
+  ]
+}

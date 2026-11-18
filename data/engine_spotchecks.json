@@ -1,0 +1,1109 @@
+{
+  "generated": "2026-11-18T08:48:22.603Z",
+  "rows": [
+    {
+      "place": "Paris",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "FR",
+      "covered_share": 1,
+      "population": 9686282.769104004,
+      "population_xcheck": 9687009.196762696,
+      "population_rel_diff": -0.00007498988015153252,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 33531.614430745445,
+          "pct_pa": 0.0034859258031436635
+        },
+        {
+          "years": 5,
+          "abs_per_year": 33491.313153076175,
+          "pct_pa": 0.003493928369697974
+        },
+        {
+          "years": 10,
+          "abs_per_year": 29286.8595993042,
+          "pct_pa": 0.003074909194281439
+        }
+      ],
+      "gdp_eur_m": 715525.061966896,
+      "gdp_eur_xcheck": 715559.6649674987,
+      "gdp_rel_diff": -0.00004835795293778311,
+      "gdp_pps_m": 658680.8955861717,
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04830068273109478
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.011938741148073584
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.01351377238906859
+        }
+      ],
+      "by_country_population": {
+        "FR": 9686282.769104004
+      },
+      "ms": 115.17174999999997
+    },
+    {
+      "place": "Paris",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "FR",
+      "covered_share": 1,
+      "population": 12259670.238494873,
+      "population_xcheck": 12259090.539235841,
+      "population_rel_diff": 0.000047287297306075615,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 51086.93784586588,
+          "pct_pa": 0.00420214297871313
+        },
+        {
+          "years": 5,
+          "abs_per_year": 50807.51037597656,
+          "pct_pa": 0.004196601691424995
+        },
+        {
+          "years": 10,
+          "abs_per_year": 43312.13028869629,
+          "pct_pa": 0.0036032881686753893
+        }
+      ],
+      "gdp_eur_m": 816720.4541578293,
+      "gdp_eur_xcheck": 816696.7358699036,
+      "gdp_rel_diff": 0.000029041732241497087,
+      "gdp_pps_m": 751836.9219792788,
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.047634441341004585
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.011897871359941803
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.013245558880796038
+        }
+      ],
+      "by_country_population": {
+        "FR": 12259670.238494873
+      },
+      "ms": 135.54537500000004
+    },
+    {
+      "place": "Paris",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "FR",
+      "covered_share": 1,
+      "population": 14518510.371749878,
+      "population_xcheck": 14518663.145319823,
+      "population_rel_diff": -0.000010522564537485124,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 55182.79453023275,
+          "pct_pa": 0.003830009621668573
+        },
+        {
+          "years": 5,
+          "abs_per_year": 55503.29094848633,
+          "pct_pa": 0.0038674014847166482
+        },
+        {
+          "years": 10,
+          "abs_per_year": 46956.049728393555,
+          "pct_pa": 0.0032930865049145552
+        }
+      ],
+      "gdp_eur_m": 890965.3921034336,
+      "gdp_eur_xcheck": 890972.1137358476,
+      "gdp_rel_diff": -0.000007544155771421757,
+      "gdp_pps_m": 820183.5457639436,
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.046501747097510426
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.01157318850692124
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.012745514700935878
+        }
+      ],
+      "by_country_population": {
+        "FR": 14518510.371749878
+      },
+      "ms": 359.606459
+    },
+    {
+      "place": "London",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "UK",
+      "covered_share": 1,
+      "population": 9716924.27173233,
+      "population_xcheck": 9717034.620247804,
+      "population_rel_diff": -0.00001135619247905062,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 95487.29319381714,
+          "pct_pa": 0.010024581437553026
+        },
+        {
+          "years": 5,
+          "abs_per_year": 55026.25984954834,
+          "pct_pa": 0.005761180091883311
+        },
+        {
+          "years": 10,
+          "abs_per_year": 56452.36549339294,
+          "pct_pa": 0.006003240462403081
+        }
+      ],
+      "gdp_eur_m": 749551.2347328663,
+      "gdp_eur_xcheck": 749547.0447293854,
+      "gdp_rel_diff": 0.000005590047363002171,
+      "gdp_pps_m": 618791.150692679,
+      "gdp_national": {
+        "currency": "GBP",
+        "millions": 651952.1684582997
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.0540144578596784
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.007482770713044706
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.01802111989416222
+        }
+      ],
+      "by_country_population": {
+        "UK": 9716924.27173233
+      },
+      "ms": 109.27133299999991
+    },
+    {
+      "place": "London",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "UK",
+      "covered_share": 1,
+      "population": 14360598.335815907,
+      "population_xcheck": 14361362.049356174,
+      "population_rel_diff": -0.0000531783501900307,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 148705.6985924244,
+          "pct_pa": 0.010574895091492786
+        },
+        {
+          "years": 5,
+          "abs_per_year": 96974.26460905075,
+          "pct_pa": 0.006893083490276952
+        },
+        {
+          "years": 10,
+          "abs_per_year": 92072.93566291333,
+          "pct_pa": 0.006648266571765538
+        }
+      ],
+      "gdp_eur_m": 979043.8806710541,
+      "gdp_eur_xcheck": 979046.2397236836,
+      "gdp_rel_diff": -0.000002409541586256836,
+      "gdp_pps_m": 808248.537826741,
+      "gdp_national": {
+        "currency": "GBP",
+        "millions": 851562.5769688761
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04917965811377423
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.007019834704138361
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.01722677952486973
+        }
+      ],
+      "by_country_population": {
+        "UK": 14360598.335815907
+      },
+      "ms": 111.14520800000014
+    },
+    {
+      "place": "London",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "UK",
+      "covered_share": 1,
+      "population": 22180607.686913222,
+      "population_xcheck": 22181264.216634534,
+      "population_rel_diff": -0.000029598390556162535,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 245630.39174340665,
+          "pct_pa": 0.011325895610134307
+        },
+        {
+          "years": 5,
+          "abs_per_year": 182917.07859796882,
+          "pct_pa": 0.008457116645512519
+        },
+        {
+          "years": 10,
+          "abs_per_year": 162150.91811094285,
+          "pct_pa": 0.007620367018027041
+        }
+      ],
+      "gdp_eur_m": 1319520.2325703693,
+      "gdp_eur_xcheck": 1319549.7407334046,
+      "gdp_rel_diff": -0.00002236229686880531,
+      "gdp_pps_m": 1089328.394429884,
+      "gdp_national": {
+        "currency": "GBP",
+        "millions": 1147705.5030873814
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04619105199961737
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.008296324092346374
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.018695250834702692
+        }
+      ],
+      "by_country_population": {
+        "UK": 22180607.686913222
+      },
+      "ms": 367.6143749999999
+    },
+    {
+      "place": "Zurich",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "CH",
+      "covered_share": 1,
+      "population": 1934655.6396484375,
+      "population_xcheck": 1934702.2915527346,
+      "population_rel_diff": -0.000024113221192112455,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 22890.816029866535,
+          "pct_pa": 0.012119942397153638
+        },
+        {
+          "years": 5,
+          "abs_per_year": 20263.359716796876,
+          "pct_pa": 0.010816184290150188
+        },
+        {
+          "years": 10,
+          "abs_per_year": 21091.56272277832,
+          "pct_pa": 0.011610180034180573
+        }
+      ],
+      "gdp_eur_m": 206842.9056301117,
+      "gdp_eur_xcheck": 206839.20320892334,
+      "gdp_rel_diff": 0.00001789999734524983,
+      "gdp_pps_m": 130554.98987638812,
+      "gdp_national": {
+        "currency": "CHF",
+        "millions": 201009.93569134254
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.020526562352089384
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.00564889491840459
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.013104271383074684
+        }
+      ],
+      "by_country_population": {
+        "CH": 1931802.595703125,
+        "DE": 2853.0439453125
+      },
+      "ms": 94.5032920000001
+    },
+    {
+      "place": "Zurich",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "CH",
+      "covered_share": 1,
+      "population": 3819561.9394226074,
+      "population_xcheck": 3819580.3580224607,
+      "population_rel_diff": -0.000004822152730676876,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 45376.93897501627,
+          "pct_pa": 0.012170482339482147
+        },
+        {
+          "years": 5,
+          "abs_per_year": 40102.90308837891,
+          "pct_pa": 0.010843345888504441
+        },
+        {
+          "years": 10,
+          "abs_per_year": 39226.00486755371,
+          "pct_pa": 0.010895165671855
+        }
+      ],
+      "gdp_eur_m": 350319.12620544434,
+      "gdp_eur_xcheck": 350316.6105322265,
+      "gdp_rel_diff": 0.000007181141693513027,
+      "gdp_pps_m": 223616.55579765892,
+      "gdp_national": {
+        "currency": "CHF",
+        "millions": 340440.1268464508
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.02542448459731772
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.010516286359278926
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.015227331431340696
+        }
+      ],
+      "by_country_population": {
+        "DE": 242445.82354736328,
+        "CH": 3577116.115875244
+      },
+      "ms": 132.73508399999992
+    },
+    {
+      "place": "Zurich",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "CH",
+      "covered_share": 0.9987502553905797,
+      "population": 8900888.938278198,
+      "population_xcheck": 8899978.620488282,
+      "population_rel_diff": 0.00010228314344717937,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 83008.25680541992,
+          "pct_pa": 0.009503656982064124
+        },
+        {
+          "years": 5,
+          "abs_per_year": 71180.13981323242,
+          "pct_pa": 0.008194636167016656
+        },
+        {
+          "years": 10,
+          "abs_per_year": 70654.41679840088,
+          "pct_pa": 0.008304986469315878
+        }
+      ],
+      "gdp_eur_m": 697623.2482442856,
+      "gdp_eur_xcheck": 697586.1727277373,
+      "gdp_rel_diff": 0.00005314829622160566,
+      "gdp_pps_m": 475963.7457093251,
+      "gdp_national": {
+        "currency": "CHF",
+        "millions": 677950.2726437968
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.03121619305919099
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.0141536969383258
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.016897952397738614
+        }
+      ],
+      "by_country_population": {
+        "DE": 2330327.8578186035,
+        "FR": 231425.08459472656,
+        "CH": 5994105.452301025,
+        "AT": 345030.5435638428
+      },
+      "ms": 333.38024999999993
+    },
+    {
+      "place": "Oslo",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "NO",
+      "covered_share": 1,
+      "population": 1225921.9739379883,
+      "population_xcheck": 1225854.4323730469,
+      "population_rel_diff": 0.00005509754107646536,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 16967.260030110676,
+          "pct_pa": 0.014236338037175278
+        },
+        {
+          "years": 5,
+          "abs_per_year": 14076.318548583984,
+          "pct_pa": 0.011895211065640288
+        },
+        {
+          "years": 10,
+          "abs_per_year": 15031.421630859375,
+          "pct_pa": 0.013166660542250241
+        }
+      ],
+      "gdp_eur_m": 100582.42463493347,
+      "gdp_eur_xcheck": 100579.1154574585,
+      "gdp_rel_diff": 0.000032901238591342974,
+      "gdp_pps_m": 81007.08358963933,
+      "gdp_national": {
+        "currency": "NOK",
+        "millions": 1149134.0849691879
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.05165268951895374
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.03536659273493692
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.030339564971262112
+        }
+      ],
+      "by_country_population": {
+        "NO": 1225921.9739379883
+      },
+      "ms": 73.44737500000019
+    },
+    {
+      "place": "Oslo",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "NO",
+      "covered_share": 1,
+      "population": 1690062.4962158203,
+      "population_xcheck": 1690005.3561865236,
+      "population_rel_diff": 0.000033810561065772404,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 23333.667978922527,
+          "pct_pa": 0.014200347668972269
+        },
+        {
+          "years": 5,
+          "abs_per_year": 19696.859637451173,
+          "pct_pa": 0.012080265430123305
+        },
+        {
+          "years": 10,
+          "abs_per_year": 20169.85998840332,
+          "pct_pa": 0.012789904833026888
+        }
+      ],
+      "gdp_eur_m": 123519.90141868591,
+      "gdp_eur_xcheck": 123517.04935516359,
+      "gdp_rel_diff": 0.00002309044409032346,
+      "gdp_pps_m": 99480.47102189562,
+      "gdp_national": {
+        "currency": "NOK",
+        "millions": 1411190.1697282027
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04870503461520426
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.033312472151569184
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.029102677336638072
+        }
+      ],
+      "by_country_population": {
+        "NO": 1690062.4962158203
+      },
+      "ms": 104.63458300000002
+    },
+    {
+      "place": "Oslo",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "NO",
+      "covered_share": 1,
+      "population": 2425230.9148864746,
+      "population_xcheck": 2425287.689291992,
+      "population_rel_diff": -0.00002340934882416601,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 29905.010182698566,
+          "pct_pa": 0.012643913577639498
+        },
+        {
+          "years": 5,
+          "abs_per_year": 25582.81169433594,
+          "pct_pa": 0.01089590966863474
+        },
+        {
+          "years": 10,
+          "abs_per_year": 25525.54443054199,
+          "pct_pa": 0.011183157064853955
+        }
+      ],
+      "gdp_eur_m": 158991.66350364685,
+      "gdp_eur_xcheck": 158994.4118458557,
+      "gdp_rel_diff": -0.000017285778644349215,
+      "gdp_pps_m": 128076.36505506518,
+      "gdp_national": {
+        "currency": "NOK",
+        "millions": 1816447.9571964645
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04491526781262545
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.02978941463365925
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.026967255340968554
+        }
+      ],
+      "by_country_population": {
+        "NO": 2406033.8940429688,
+        "SE": 19197.02084350586
+      },
+      "ms": 271.4489160000003
+    },
+    {
+      "place": "Warsaw",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "PL",
+      "covered_share": 1,
+      "population": 2783060.169784546,
+      "population_xcheck": 2783038.03887207,
+      "population_rel_diff": 0.000007952069704719733,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 9894.415018717447,
+          "pct_pa": 0.003580719453663228
+        },
+        {
+          "years": 5,
+          "abs_per_year": 33912.61433105469,
+          "pct_pa": 0.012651743397036341
+        },
+        {
+          "years": 10,
+          "abs_per_year": 26885.24461135864,
+          "pct_pa": 0.01021111819657583
+        }
+      ],
+      "gdp_eur_m": 127424.91645538807,
+      "gdp_eur_xcheck": 127424.62055744171,
+      "gdp_rel_diff": 0.0000023221410827556355,
+      "gdp_pps_m": 188239.18868997827,
+      "gdp_national": {
+        "currency": "PLN",
+        "millions": 578763.9705403725
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04921066391617335
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.03773685319491582
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.047244742325150524
+        }
+      ],
+      "by_country_population": {
+        "PL": 2783060.169784546
+      },
+      "ms": 49.387874999999894
+    },
+    {
+      "place": "Warsaw",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "PL",
+      "covered_share": 1,
+      "population": 3473921.300086975,
+      "population_xcheck": 3473815.1804504395,
+      "population_rel_diff": 0.00003054844055405681,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 13032.491981506348,
+          "pct_pa": 0.003779918502750057
+        },
+        {
+          "years": 5,
+          "abs_per_year": 41521.55950012207,
+          "pct_pa": 0.012400665234334918
+        },
+        {
+          "years": 10,
+          "abs_per_year": 32715.565260314943,
+          "pct_pa": 0.009939963171906152
+        }
+      ],
+      "gdp_eur_m": 140850.4338271618,
+      "gdp_eur_xcheck": 140849.0755142212,
+      "gdp_rel_diff": 0.000009643747647114509,
+      "gdp_pps_m": 208072.11123060776,
+      "gdp_national": {
+        "currency": "PLN",
+        "millions": 639742.6704429688
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04752066495062701
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.03701973282478721
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.04677156521413739
+        }
+      ],
+      "by_country_population": {
+        "PL": 3473921.300086975
+      },
+      "ms": 200.20695799999976
+    },
+    {
+      "place": "Warsaw",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "PL",
+      "covered_share": 1,
+      "population": 5387807.260124207,
+      "population_xcheck": 5387992.921480713,
+      "population_rel_diff": -0.000034458351971244916,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 1712.806396484375,
+          "pct_pa": 0.0003181064464223837
+        },
+        {
+          "years": 5,
+          "abs_per_year": 17796.884562683106,
+          "pct_pa": 0.003336312367017147
+        },
+        {
+          "years": 10,
+          "abs_per_year": 18015.489629364012,
+          "pct_pa": 0.0034067230938363835
+        }
+      ],
+      "gdp_eur_m": 175006.9252667427,
+      "gdp_eur_xcheck": 175009.24791475298,
+      "gdp_rel_diff": -0.000013271573005124715,
+      "gdp_pps_m": 258529.9841171395,
+      "gdp_national": {
+        "currency": "PLN",
+        "millions": 794881.4545615454
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.046184234315585826
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.03635098373856338
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.04457861452699596
+        }
+      ],
+      "by_country_population": {
+        "PL": 5387807.260124207
+      },
+      "ms": 434.4002499999997
+    },
+    {
+      "place": "Basel",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "CH",
+      "covered_share": 1,
+      "population": 941829.5824584961,
+      "population_xcheck": 941730.9016943359,
+      "population_rel_diff": 0.00010478658391988027,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 8626.415532430014,
+          "pct_pa": 0.009330662787359056
+        },
+        {
+          "years": 5,
+          "abs_per_year": 6395.064678955078,
+          "pct_pa": 0.006931898364625599
+        },
+        {
+          "years": 10,
+          "abs_per_year": 5551.3375244140625,
+          "pct_pa": 0.006093547373970054
+        }
+      ],
+      "gdp_eur_m": 101918.71502017975,
+      "gdp_eur_xcheck": 101918.11190483093,
+      "gdp_rel_diff": 0.000005917646408004629,
+      "gdp_pps_m": 67929.99746221406,
+      "gdp_national": {
+        "currency": "CHF",
+        "millions": 99044.60725661067
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.08780112927039307
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.05421221253139463
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.0389341503008771
+        }
+      ],
+      "by_country_population": {
+        "DE": 225291.29754638672,
+        "FR": 123976.82348632812,
+        "CH": 592561.4614257812
+      },
+      "ms": 49.519790999999714
+    },
+    {
+      "place": "Basel",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "CH",
+      "covered_share": 1,
+      "population": 2455467.939819336,
+      "population_xcheck": 2455599.0908251954,
+      "population_rel_diff": -0.000053408964985179885,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 19966.59654744466,
+          "pct_pa": 0.008266286539831968
+        },
+        {
+          "years": 5,
+          "abs_per_year": 16133.476611328126,
+          "pct_pa": 0.006703144594975452
+        },
+        {
+          "years": 10,
+          "abs_per_year": 14932.481326293946,
+          "pct_pa": 0.006293809605441902
+        }
+      ],
+      "gdp_eur_m": 181604.0220785141,
+      "gdp_eur_xcheck": 181607.63079284667,
+      "gdp_rel_diff": -0.00001987093998645495,
+      "gdp_pps_m": 125387.68814655737,
+      "gdp_national": {
+        "currency": "CHF",
+        "millions": 176482.7886559
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.060288237481173956
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.03207365252606764
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.02501967097022595
+        }
+      ],
+      "by_country_population": {
+        "FR": 572814.6338500977,
+        "DE": 494499.1052246094,
+        "CH": 1388154.200744629
+      },
+      "ms": 136.8679159999997
+    },
+    {
+      "place": "Basel",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "CH",
+      "covered_share": 1,
+      "population": 8743110.94833374,
+      "population_xcheck": 8744023.817978516,
+      "population_rel_diff": -0.00010439926328875693,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 71655.33763122559,
+          "pct_pa": 0.008332593590932191
+        },
+        {
+          "years": 5,
+          "abs_per_year": 60764.727896118166,
+          "pct_pa": 0.007098718719158459
+        },
+        {
+          "years": 10,
+          "abs_per_year": 60102.65652618408,
+          "pct_pa": 0.0071474072674220235
+        }
+      ],
+      "gdp_eur_m": 669057.2272384167,
+      "gdp_eur_xcheck": 669096.3386548995,
+      "gdp_rel_diff": -0.00005845408833271559,
+      "gdp_pps_m": 456975.53415633657,
+      "gdp_national": {
+        "currency": "CHF",
+        "millions": 650189.8134302933
+      },
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.03237400358723641
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.016187519450769017
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.017984252900016484
+        }
+      ],
+      "by_country_population": {
+        "FR": 1527957.3289489746,
+        "DE": 1703496.400238037,
+        "CH": 5511657.2191467285
+      },
+      "ms": 419.65166699999963
+    },
+    {
+      "place": "Brussels",
+      "radius_km": 25,
+      "level_km": 1,
+      "point_country": "BE",
+      "covered_share": 1,
+      "population": 2606048.1940307617,
+      "population_xcheck": 2605735.753339844,
+      "population_rel_diff": 0.00011990497905145503,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 25580.41221110026,
+          "pct_pa": 0.010013010273953515
+        },
+        {
+          "years": 5,
+          "abs_per_year": 20224.42237548828,
+          "pct_pa": 0.007946556812302497
+        },
+        {
+          "years": 10,
+          "abs_per_year": 18652.11421508789,
+          "pct_pa": 0.007453931672178449
+        }
+      ],
+      "gdp_eur_m": 178369.28295898438,
+      "gdp_eur_xcheck": 178351.3410882568,
+      "gdp_rel_diff": 0.00010059846266430306,
+      "gdp_pps_m": 158377.30875731594,
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.03747079562521982
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.017106063482667633
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.015891051125931144
+        }
+      ],
+      "by_country_population": {
+        "BE": 2606048.1940307617
+      },
+      "ms": 55.53304199999957
+    },
+    {
+      "place": "Brussels",
+      "radius_km": 50,
+      "level_km": 1,
+      "point_country": "BE",
+      "covered_share": 1,
+      "population": 5999820.54876709,
+      "population_xcheck": 5999554.242119141,
+      "population_rel_diff": 0.00004438773902215587,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 52884.90985107422,
+          "pct_pa": 0.008973071034731772
+        },
+        {
+          "years": 5,
+          "abs_per_year": 42427.27701416016,
+          "pct_pa": 0.0072254425266939926
+        },
+        {
+          "years": 10,
+          "abs_per_year": 38444.58409423828,
+          "pct_pa": 0.0066440988351208485
+        }
+      ],
+      "gdp_eur_m": 346615.40019989014,
+      "gdp_eur_xcheck": 346601.63823852537,
+      "gdp_rel_diff": 0.00003970541349640477,
+      "gdp_pps_m": 307763.86414542503,
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.04019855385224602
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.01883249713765678
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.017731904465849713
+        }
+      ],
+      "by_country_population": {
+        "BE": 5998519.02923584,
+        "NL": 1301.51953125
+      },
+      "ms": 144.9033330000002
+    },
+    {
+      "place": "Brussels",
+      "radius_km": 100,
+      "level_km": 1,
+      "point_country": "BE",
+      "covered_share": 1,
+      "population": 14525136.208145142,
+      "population_xcheck": 14525663.176522218,
+      "population_rel_diff": -0.00003627843842113343,
+      "population_growth": [
+        {
+          "years": 3,
+          "abs_per_year": 95986.24915059407,
+          "pct_pa": 0.006696993872148838
+        },
+        {
+          "years": 5,
+          "abs_per_year": 79400.08678894043,
+          "pct_pa": 0.0055578732040870715
+        },
+        {
+          "years": 10,
+          "abs_per_year": 69839.29792633056,
+          "pct_pa": 0.004939765433334076
+        }
+      ],
+      "gdp_eur_m": 727245.7784843445,
+      "gdp_eur_xcheck": 727260.0387752152,
+      "gdp_rel_diff": -0.000019608242045943136,
+      "gdp_pps_m": 644621.257787422,
+      "real_growth": [
+        {
+          "years": 3,
+          "pct_pa": 0.036662626937277176
+        },
+        {
+          "years": 5,
+          "pct_pa": 0.016289488851344958
+        },
+        {
+          "years": 10,
+          "pct_pa": 0.016132131302681874
+        }
+      ],
+      "by_country_population": {
+        "NL": 1779151.1447753906,
+        "BE": 10915515.819580078,
+        "FR": 1830469.2437896729
+      },
+      "ms": 357.2147500000001
+    }
+  ]
+}
