@@ -61,6 +61,14 @@ What step 4 found and changed:
   Tools: `app/scripts/measure-bytes.mjs` (tile index) and `app/scripts/measure-http.mjs` (real requests).
 - YAML reads a bare `NO` as false: the config now rejects non-string country codes.
 
+Step 5 (validation) done, 2026-11-18: [VALIDATION.md](VALIDATION.md). Engine vs independent pyproj
+computation: 21 circles (Paris, London, Zurich, Oslo, Warsaw, Basel, Brussels × 25/50/100 km) within
+0.012 %; all 42 circle totals within bounds from official regional figures; 291/291 build checks.
+Found and fixed on the way: population series breaks (census re-basing in DE/CZ/PL/PT/LU) now flagged in
+the manifest and marked in the app; radius slider did not respond to arrow keys; map attribution and
+zoom buttons hidden behind the mobile sheet; axe-core findings (landmarks, link styling, translucent
+backgrounds) → 0 violations. Not tested: real screen reader, real phone on 4G, PWA install.
+
 Original draft for review, 2026-11-14: Every fact marked ✅ was
 checked on 2026-11-14 against the live Eurostat API or by reading the file. Facts marked ⚠️ come
 from release notes or search results and are re-checked when the pipeline downloads the data.

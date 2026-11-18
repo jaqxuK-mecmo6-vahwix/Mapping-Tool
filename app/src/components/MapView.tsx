@@ -186,7 +186,7 @@ export default function MapView({ manifest, dataUrl, point, radiusKm, layer, sho
 
   // maplibre sets `position: relative` on its container, so the sizing lives on a wrapper
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 z-0">
       <div ref={el} className="h-full w-full" role="application" aria-label="Map of Europe" />
     </div>
   );

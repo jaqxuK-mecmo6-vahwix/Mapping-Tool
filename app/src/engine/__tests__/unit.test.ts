@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { MAX_CELLS, chooseLevel, geodesicCircle, geodesicDistanceKm, project, unproject } from "../geometry";
 import { coverageWeights, rowInterval, subsamplingFor, weightedSumByCountry } from "../mask";
-import { absPerYear, cagr, convertEur, currencyOptions, eurRate, gdpSummary, populationSummary } from "../stats";
+import { absPerYear, cagr, convertEur, currencyOptions, eurRate, gdpSummary, populationBreaks, populationSummary } from "../stats";
 import type { FxTable, Manifest, QueryResult } from "../types";
 
 // ---------------------------------------------------------------------------------------------- CAGR
@@ -207,5 +207,24 @@ describe("currency", () => {
     const p = populationSummary(manifest, result);
     expect(p.growth[0].absPerYear).toBe(10);
     expect(p.growth[0].pctPerYear).toBeCloseTo(Math.cbrt(1.03) - 1, 12);
+  });
+});
+
+describe("population series breaks", () => {
+  const m = {
+    years: { population: { latest: 2025, compare: [2022, 2020, 2015] } },
+    series_breaks: { population: { DE: [2023], PL: [2021], LU: [2017] }, source: "test" },
+  } as unknown as Manifest;
+  const r = (byCountry: Record<string, number>) =>
+    ({ layers: { pop_2025: { total: 0, byCountry } } }) as unknown as QueryResult;
+
+  it("lists the growth periods that cross a break year", () => {
+    expect(populationBreaks(m, r({ DE: 900, FR: 100 }))).toEqual([{ country: "DE", year: 2023, periods: [3, 5, 10] }]);
+    expect(populationBreaks(m, r({ PL: 1000 }))).toEqual([{ country: "PL", year: 2021, periods: [5, 10] }]);
+    expect(populationBreaks(m, r({ LU: 1000 }))).toEqual([{ country: "LU", year: 2017, periods: [10] }]);
+  });
+  it("ignores countries with less than 1 % of the circle's population, and manifests without breaks", () => {
+    expect(populationBreaks(m, r({ FR: 995, DE: 5 }))).toEqual([]);
+    expect(populationBreaks({ ...m, series_breaks: undefined } as Manifest, r({ DE: 1 }))).toEqual([]);
   });
 });

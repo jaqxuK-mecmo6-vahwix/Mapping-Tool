@@ -85,6 +85,27 @@ export function SearchBox({ onPlace, id = "place-search" }: Pick<Props, "onPlace
   );
 }
 
+/** Keyboard step for the radius slider: 0.5 km below 10, 1 km below 100, 5 km above (×10 with Page keys). */
+export function keyStep(r: number, key: string): number | undefined {
+  const up = (x: number) => (x < 10 ? 0.5 : x < 100 ? 1 : 5);
+  const down = (x: number) => (x <= 10 ? 0.5 : x <= 100 ? 1 : 5);
+  const snap = (x: number, s: number) => Math.round(x / s) * s;
+  let v = r;
+  const n = key === "PageUp" || key === "PageDown" ? 10 : 1;
+  switch (key) {
+    case "ArrowRight": case "ArrowUp": case "PageUp":
+      for (let i = 0; i < n; i++) v = snap(v, up(v)) + up(v);
+      break;
+    case "ArrowLeft": case "ArrowDown": case "PageDown":
+      for (let i = 0; i < n; i++) v = snap(v, down(v)) - down(v);
+      break;
+    case "Home": return RADIUS_MIN;
+    case "End": return RADIUS_MAX;
+    default: return undefined;
+  }
+  return clampRadius(v);
+}
+
 export function RadiusControl({ radiusKm, onRadius }: Pick<Props, "radiusKm" | "onRadius">) {
   const [text, setText] = useState(String(radiusKm));
   useEffect(() => setText(String(radiusKm)), [radiusKm]);
@@ -104,6 +125,11 @@ export function RadiusControl({ radiusKm, onRadius }: Pick<Props, "radiusKm" | "
       <label htmlFor="radius-slider" className="shrink-0 text-xs font-medium text-slate-600">Radius</label>
       <input id="radius-slider" type="range" min={toSlider(RADIUS_MIN)} max={toSlider(RADIUS_MAX)} step={1}
         value={toSlider(radiusKm)} onChange={(e) => onRadius(clampRadius(fromSlider(Number(e.target.value))))}
+        onKeyDown={(e) => {
+          // native arrow steps are ~0.1 km on the sqrt scale and get rounded away: step in the rounding units
+          const n = keyStep(radiusKm, e.key);
+          if (n !== undefined) { e.preventDefault(); onRadius(n); }
+        }}
         aria-valuetext={`${radiusKm} kilometres`} className="min-w-0 flex-1 accent-orange-600" />
       <div className="flex shrink-0 items-center rounded-md bg-white ring-1 ring-slate-300 focus-within:ring-2 focus-within:ring-orange-500">
         <label htmlFor="radius-input" className="sr-only">Radius in kilometres</label>

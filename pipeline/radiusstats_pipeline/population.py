@@ -246,3 +246,21 @@ def yearly_population(cfg: Config, ct: CellTable, years: list[int], report,
                             year=use, report=report, countries=[c])
         out[y] = acc
     return out
+
+
+def series_breaks(cfg: Config, report) -> dict[str, list[int]]:
+    """Years in which Eurostat flags a break in series ('b') for a country's population (any NUTS 3 row
+    or the country row), within the span of the configured years. Growth across such a year partly
+    reflects a revision (e.g. a census rebasing), not change; the app warns about it."""
+    df = eurostat.table(cfg, "demo_r_pjanaggr3", "A.NR.T.TOTAL.")
+    years = cfg.pop_years
+    lo, hi = min(years), max(years)
+    es = [c for c in cfg.build_countries if c not in cfg.national_population]
+    m = (df["OBS_FLAG"].fillna("").str.contains("b") & df["geo"].str[:2].isin(es)
+         & df["TIME_PERIOD"].between(lo + 1, hi) & df["geo"].str.len().isin([2, 5]))
+    out: dict[str, list[int]] = {}
+    for (c, y), g in df[m].groupby([df["geo"].str[:2], "TIME_PERIOD"]):
+        out.setdefault(c, []).append(int(y))
+        report.note("population_series_break", country=c, year=int(y), rows_flagged=len(g),
+                    detail="Eurostat flag 'b' (break in time series).")
+    return {c: sorted(v) for c, v in sorted(out.items())}

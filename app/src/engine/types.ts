@@ -40,6 +40,8 @@ export interface Manifest {
   countries: CountryMeta[];
   country_codes: { sea: number; not_covered: number };
   low_confidence_gdp_radius_km: number;
+  /** years with a break in the population series per country (Eurostat flag 'b'), e.g. census rebasing */
+  series_breaks?: { population: Record<string, number[]>; source: string };
   /** PPS (EU27_2020) per EUR of GDP, per country: circle PPS = sum over countries of EUR x factor */
   pps_per_eur: { year: number; factors: Record<string, number>; source: string };
   layers: Record<string, LayerMeta>;

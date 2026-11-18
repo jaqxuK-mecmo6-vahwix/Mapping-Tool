@@ -18,7 +18,7 @@ from .coverage import build_mask
 from .fx import build_fx
 from .heat import build_pmtiles
 from .grid import GridSpec, extent_for
-from .population import CellTable, allocate, build_cell_table, yearly_population
+from .population import CellTable, allocate, build_cell_table, series_breaks, yearly_population
 from .report import Report
 from .sources import eurostat, gisco
 
@@ -217,6 +217,8 @@ def main(argv: list[str] | None = None) -> None:
                        "currency": cfg.currency(c), "built": c in cfg.build_countries} for c in cfg.coverage],
         "country_codes": {"sea": SEA, "not_covered": NOT_COVERED},
         "low_confidence_gdp_radius_km": cfg.raw["low_confidence_gdp_radius_km"],
+        "series_breaks": {"population": series_breaks(cfg, report),
+                          "source": "Eurostat demo_r_pjanaggr3 observation flag 'b'"},
         "pps_per_eur": {"year": G, "factors": pps_per_eur,
                         "source": "regional MIO_PPS_EU27_2020 / MIO_EUR (Eurostat); prc_ppp_ind for national sources"},
         "bands": bands,

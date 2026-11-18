@@ -100,3 +100,24 @@ export function gdpSummary(m: Manifest, fx: FxTable, r: QueryResult, measure: Gd
     realGrowth, lowConfidence,
   };
 }
+
+
+export interface SeriesBreak { country: string; year: number; periods: number[] }
+
+/** Population series breaks that a circle's growth periods cross: a break in year Y affects a period
+ *  from..to when from < Y <= to. Only countries with at least `minShare` of the circle's population. */
+export function populationBreaks(m: Manifest, r: QueryResult, minShare = 0.01): SeriesBreak[] {
+  const breaks = m.series_breaks?.population ?? {};
+  const latest = m.years.population.latest;
+  const by = r.layers[`pop_${latest}`]?.byCountry ?? {};
+  const total = Object.values(by).reduce((a, b) => a + Math.max(b, 0), 0);
+  const out: SeriesBreak[] = [];
+  for (const [country, years] of Object.entries(breaks)) {
+    if (!total || (by[country] ?? 0) / total < minShare) continue;
+    for (const year of years) {
+      const periods = m.years.population.compare.filter((from) => from < year && year <= latest).map((from) => latest - from);
+      if (periods.length) out.push({ country, year, periods });
+    }
+  }
+  return out;
+}

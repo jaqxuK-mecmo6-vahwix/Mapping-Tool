@@ -71,6 +71,9 @@ Status: ✔ = used by the current full build (EU-27, UK, CH, NO; step 4).
 - Germany has no NUTS 3 population on 1 January 2013: the 2013 GDP weights use 2014 (within-region
   distribution only). French outermost regions (FRY) are not mapped and are excluded from national
   comparisons.
+- **Series breaks:** years in which Eurostat flags a break (`b`) in a country's population series
+  (census re-basing: CZ/PL 2021, PT 2022, DE 2023, LU 2017) are listed in `manifest.json` →
+  `series_breaks`; the app marks growth periods that cross one. The data themselves are not adjusted.
 - Data layers keep 12 of 23 float32 mantissa bits (rounded to nearest; ≤ 0.012 % per cell) for smaller
   downloads.
 - Extra-regio GDP (NUTS code `..ZZZ`, e.g. embassies, offshore installations) cannot be located

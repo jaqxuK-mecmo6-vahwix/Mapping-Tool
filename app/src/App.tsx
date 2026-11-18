@@ -94,13 +94,8 @@ export default function App() {
   );
 
   return (
-    <div className="relative h-dvh w-full overflow-hidden">
+    <main className="relative h-dvh w-full overflow-hidden">
       <h1 className="sr-only">RadiusStats Europe: population and GDP within a radius</h1>
-      {boot && (
-        <MapView manifest={boot.manifest} dataUrl={DATA_URL} point={point} radiusKm={state.radiusKm}
-          layer={state.layer} showHeat={showHeat} onPick={pick} centreRef={centre} />
-      )}
-
       {/* mobile: search bar on top */}
       <div className="absolute inset-x-2 top-2 z-10 md:hidden">
         <SearchBox id="place-search-mobile" onPlace={pick} />
@@ -114,7 +109,7 @@ export default function App() {
 
       {/* results: bottom sheet on mobile, side panel on desktop */}
       <section aria-label="Results"
-        className={`absolute inset-x-0 bottom-0 z-10 flex flex-col rounded-t-2xl bg-white/97 shadow-[0_-4px_24px_rgb(0_0_0/0.15)] backdrop-blur
+        className={`absolute inset-x-0 bottom-0 z-10 flex flex-col rounded-t-2xl bg-white shadow-[0_-4px_24px_rgb(0_0_0/0.15)]
           md:inset-x-auto md:top-3 md:bottom-3 md:left-3 md:w-[25rem] md:rounded-2xl md:shadow-xl
           ${sheetOpen ? "max-h-[72dvh]" : "max-h-[10.5rem]"} md:max-h-none`}>
         <button type="button" onClick={() => setSheetOpen((v) => !v)} aria-expanded={sheetOpen}
@@ -151,7 +146,14 @@ export default function App() {
         </div>
       </section>
 
+      {/* the map comes last in the DOM so keyboard focus reaches search and controls first;
+          it is drawn underneath them (z-0) */}
+      {boot && (
+        <MapView manifest={boot.manifest} dataUrl={DATA_URL} point={point} radiusKm={state.radiusKm}
+          layer={state.layer} showHeat={showHeat} onPick={pick} centreRef={centre} />
+      )}
+
       {boot && <SourcesDialog open={sourcesOpen} onClose={() => setSourcesOpen(false)} manifest={boot.manifest} />}
-    </div>
+    </main>
   );
 }

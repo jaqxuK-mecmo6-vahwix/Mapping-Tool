@@ -1,5 +1,5 @@
 import type { FxTable, Manifest, QueryResult } from "../engine/types";
-import { currencyOptions, gdpSummary, populationSummary } from "../engine/stats";
+import { currencyOptions, gdpSummary, populationBreaks, populationSummary } from "../engine/stats";
 import { fmtKm, fmtMoneyMillions, fmtPctPa, fmtPeople, fmtShare, fmtThousandsPerYear } from "../lib/format";
 import type { LayerKey, Measure } from "../lib/urlState";
 import { Notice, Segmented } from "./ui";
@@ -95,6 +95,8 @@ export default function ResultsPanel(p: Props) {
   if (p.layer === "population") {
     if (!r.layers[`pop_${m.years.population.latest}`]) return <p className="text-sm text-slate-600" role="status">Calculating…</p>;
     const s = populationSummary(m, r);
+    const breaks = populationBreaks(m, r);
+    const brokenPeriods = new Set(breaks.flatMap((b) => b.periods));
     return (
       <div className="space-y-3">
         <div aria-live="polite">
@@ -106,7 +108,14 @@ export default function ResultsPanel(p: Props) {
         </div>
         {notices}
         <GrowthTable caption="Growth per year"
-          rows={s.growth.map((g) => ({ label: `${g.years} years (${g.fromYear}–${g.toYear})`, a: fmtThousandsPerYear(g.absPerYear), b: fmtPctPa(g.pctPerYear) }))} />
+          rows={s.growth.map((g) => ({ label: `${g.years} years (${g.fromYear}–${g.toYear})${brokenPeriods.has(g.years) ? " *" : ""}`, a: fmtThousandsPerYear(g.absPerYear), b: fmtPctPa(g.pctPerYear) }))} />
+        {breaks.length > 0 && (
+          <Notice tone="info">
+            <strong>* Break in the official series:</strong>{" "}
+            {breaks.map((b) => `${nameOf(m, b.country)} ${b.year}`).join(", ")} (population re-based, e.g. on a census).
+            Growth across that year partly reflects the revision, not only real change.
+          </Notice>
+        )}
         <Breakdown m={m} rows={s.byCountry} format={fmtPeople} label="By country" />
         <p className="text-[11px] leading-snug text-slate-500">
           Reference years: population on 1 January {s.year}, compared with {m.years.population.compare.join(", ")}.
