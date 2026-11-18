@@ -12,6 +12,50 @@ data, non-commercial.
 | [VALIDATION.md](VALIDATION.md) | checks, spot checks, status of each GDP figure, limitations |
 | [pipeline/README.md](pipeline/README.md) | data pipeline commands and output format |
 
+## Location tiers
+
+For a 25 km or 50 km circle the results panel shows a screening grade, A–D, for comparing locations
+(e.g. for real estate). It is not investment advice: rents, yields, supply and local rules are not in it.
+
+- **25 km, city tier:** the city and its inner suburbs.
+- **50 km, market tier:** the whole commuting region.
+
+A circle gets the highest tier whose GDP **and** population thresholds it both meets (GDP 2023, nominal
+EUR; population 1 January 2025):
+
+| Tier | 25 km city tier | 50 km market tier |
+|---|---|---|
+| A | Global city: ≥ €200 bn and ≥ 4 M people | Gateway metro: ≥ €300 bn and ≥ 5 M people |
+| B | Major city: ≥ €75 bn and ≥ 1.5 M | Major metro: ≥ €100 bn and ≥ 2 M |
+| C | Regional city: ≥ €20 bn and ≥ 0.5 M | Regional centre: ≥ €30 bn and ≥ 1 M |
+| D | Local market: below C | Local market: below C |
+
+- **"+"**: population growth ≥ 0.8 % a year **and** real GDP growth ≥ 2.5 % a year, both over 10 years.
+- **"−"**: population falling by more than 0.1 % a year. Smaller changes count as flat.
+- **Borderline**: GDP and population both within 5 % of the next tier's thresholds.
+- **Irish GDP warning**: shown when Ireland has ≥ 25 % of the circle's GDP. Multinational profits booked
+  in Ireland inflate GDP there (Dublin about €150k per person at 25 km), so judge those areas by population.
+
+**How the thresholds were chosen:** from the 25 km and 50 km totals of 51 European cities, read from
+this data build at each city centre. The lines fall in natural gaps between groups of cities.
+
+Examples:
+
+| City | 25 km | 50 km |
+|---|---|---|
+| Madrid | A+ | A+ |
+| Berlin | A | B |
+| Amsterdam | B+ | A+ |
+| Dublin | B+ | B+ |
+| Athens | B− | B− |
+| Bucharest | B | C (borderline B) |
+| Oslo | C+ | C+ |
+| Aarhus | C | D |
+
+The rules and thresholds are in `app/src/engine/tier.ts`, with tests in
+`app/src/engine/__tests__/tier.test.ts`. After a data update, re-check the thresholds against the new
+totals.
+
 ## Layout
 
 ```
