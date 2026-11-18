@@ -141,6 +141,7 @@ export default function App() {
             <ResultsPanel manifest={boot.manifest} fx={boot.fx} result={result} partial={partial} loading={loading}
               error={error} layer={state.layer} measure={state.measure} currency={state.currency} hasPoint={hasPoint}
               onMeasure={(measure) => setState((s) => ({ ...s, measure }))}
+              onRadius={(radiusKm) => setState((s) => ({ ...s, radiusKm }))}
               onCurrency={(currency) => setState((s) => ({ ...s, currency, measure: currency === "EUR" ? s.measure : "nominal" }))} />
           ) : (
             <p className="text-sm text-slate-600" role="status">Loading data…</p>

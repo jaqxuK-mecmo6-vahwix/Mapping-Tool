@@ -2,6 +2,7 @@ import type { FxTable, Manifest, QueryResult } from "../engine/types";
 import { currencyOptions, gdpSummary, populationBreaks, populationSummary } from "../engine/stats";
 import { fmtKm, fmtMoneyMillions, fmtPctPa, fmtPeople, fmtShare, fmtThousandsPerYear } from "../lib/format";
 import type { LayerKey, Measure } from "../lib/urlState";
+import TierCard from "./TierCard";
 import { Notice, Segmented } from "./ui";
 
 interface Props {
@@ -17,6 +18,7 @@ interface Props {
   hasPoint: boolean;
   onMeasure(m: Measure): void;
   onCurrency(c: string): void;
+  onRadius(km: number): void;
 }
 
 const nameOf = (m: Manifest, code: string) =>
@@ -106,6 +108,7 @@ export default function ResultsPanel(p: Props) {
           <p className="text-3xl font-semibold tracking-tight text-slate-900 tabular-nums">{fmtPeople(s.total)}</p>
           <p className="text-xs text-slate-500">on 1 January {s.year}</p>
         </div>
+        <TierCard m={m} r={r} onRadius={p.onRadius} />
         {notices}
         <GrowthTable caption="Growth per year"
           rows={s.growth.map((g) => ({ label: `${g.years} years (${g.fromYear}–${g.toYear})${brokenPeriods.has(g.years) ? " *" : ""}`, a: fmtThousandsPerYear(g.absPerYear), b: fmtPctPa(g.pctPerYear) }))} />
@@ -163,6 +166,7 @@ export default function ResultsPanel(p: Props) {
           {currency !== "EUR" && `, converted at the ${fx.reference_year} average rate (1 EUR = ${fx.rates[currency][String(fx.reference_year)]} ${currency})`}
         </p>
       </div>
+      <TierCard m={m} r={r} onRadius={p.onRadius} />
       {s.lowConfidence && (
         <Notice tone="warn">
           <strong>Low confidence:</strong> below {m.low_confidence_gdp_radius_km} km, GDP mostly reflects how regional GDP was
