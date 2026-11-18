@@ -83,12 +83,15 @@ export function gdpSummary(m: Manifest, fx: FxTable, r: QueryResult, measure: Gd
   const realGrowth = g.compare.map((c) => growth(real(g.latest), real(c), g.latest, c));
   const lowConfidence = r.params.radiusKm < m.low_confidence_gdp_radius_km;
 
-  if (measure === "pps") {
-    const l = r.layers[`gdp_pps_${g.latest}`];
-    return { year: g.latest, measure, currency: "PPS", totalMillions: l.total,
-      byCountryMillions: l.byCountry, realGrowth, lowConfidence };
-  }
   const l = r.layers[`gdp_nom_eur_${g.latest}`];
+  if (measure === "pps") {
+    // Eurostat converts regional GDP to PPS with one national factor, so the circle's PPS is the sum of
+    // each country's EUR part times that country's factor (no separate PPS raster is needed)
+    const f = m.pps_per_eur.factors;
+    const byCountryMillions = Object.fromEntries(Object.entries(l.byCountry).map(([k, v]) => [k, v * (f[k] ?? 0)]));
+    const totalMillions = Object.values(byCountryMillions).reduce((a, b) => a + b, 0);
+    return { year: g.latest, measure, currency: "PPS", totalMillions, byCountryMillions, realGrowth, lowConfidence };
+  }
   const rate = eurRate(fx, currency, fx.reference_year);
   return {
     year: g.latest, measure, currency,

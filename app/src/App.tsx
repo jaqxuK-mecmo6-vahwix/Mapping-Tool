@@ -70,10 +70,12 @@ export default function App() {
   // reset the currency when the point moves to a country where it is not offered
   useEffect(() => {
     if (!boot || !result || partial) return;
+    // only judge a result for the current point (a stale one would reset a shared link's currency)
+    if (result.params.lat !== state.lat || result.params.lon !== state.lon) return;
     if (!currencyOptions(boot.fx, result.pointCountry).includes(state.currency)) {
       setState((s) => ({ ...s, currency: "EUR" }));
     }
-  }, [boot, result, partial, state.currency]);
+  }, [boot, result, partial, state.currency, state.lat, state.lon]);
 
   const pick = useCallback((lat: number, lon: number) => setState((s) => ({ ...s, lat, lon })), []);
   const point = useMemo(() => (hasPoint ? { lat: state.lat!, lon: state.lon! } : undefined), [hasPoint, state.lat, state.lon]);

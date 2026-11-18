@@ -112,3 +112,37 @@ def test_cog_roundtrip_is_valid(tmp_path):
     ok, errors, _ = cog_validate(str(p))
     assert ok, errors
     np.testing.assert_array_equal(cog.read(p), a)
+
+
+def test_keep_mantissa_bits_bounds_the_relative_error_and_keeps_nodata():
+    from radiusstats_pipeline.pyramid import keep_mantissa_bits
+    rng = np.random.default_rng(1)
+    a = (rng.lognormal(0, 3, 10_000)).astype(np.float32)
+    a[:5] = [-1.0, 0.0, 1.0, 3.0e-7, 123456.789]
+    q = keep_mantissa_bits(a, 12, nodata=-1.0)
+    assert q[0] == -1.0 and q[1] == 0.0 and q[2] == 1.0
+    ok = a > 0
+    rel = np.abs(q[ok].astype(np.float64) - a[ok]) / a[ok]
+    assert rel.max() <= 2.0 ** -13 + 1e-12
+    # round to nearest: no systematic bias on the sum
+    assert abs(q[ok].astype(np.float64).sum() / a[ok].astype(np.float64).sum() - 1) < 1e-5
+    assert keep_mantissa_bits(a, 23) is a
+
+
+def test_uk_population_on_1_january_is_mean_of_mid_years():
+    from radiusstats_pipeline.sources.national import jan1_from_midyear
+    mid = pd.DataFrame({2024: [100.0, 50.0], 2025: [110.0, 52.0]}, index=["UKa", "UKb"])
+    assert jan1_from_midyear(mid, 2025).tolist() == [105.0, 51.0]
+
+
+def test_norway_county_mappings_are_complete():
+    from radiusstats_pipeline.sources.national import NO_2016, NO_2016_TO_2021, NO_2021
+    assert set(NO_2016.values()) == set(NO_2016_TO_2021)              # every old region maps forward
+    assert set(NO_2016_TO_2021.values()) == set(NO_2021.values())       # onto exactly the 2021 regions
+    assert len(set(NO_2021.values())) == 11
+
+
+def test_swiss_cantons_are_the_26_nuts3_regions():
+    from radiusstats_pipeline.sources.national import CH_CANTONS
+    assert len(CH_CANTONS) == 26 and len(set(CH_CANTONS.values())) == 26
+    assert all(v.startswith("CH0") and len(v) == 5 for v in CH_CANTONS.values())

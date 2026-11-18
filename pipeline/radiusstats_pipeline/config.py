@@ -24,6 +24,13 @@ class Config:
     def __post_init__(self) -> None:
         bc = self.raw["build_countries"]
         cov = list(self.raw["coverage"])
+        # YAML 1.1 reads a bare NO as false ("the Norway problem"): require quoted codes
+        for name, codes in (("coverage", cov), ("build_countries", [] if bc == "all" else bc),
+                            ("euro_area", self.raw["euro_area"]), ("currencies", list(self.raw["currencies"])),
+                            ("country_names", list(self.raw["country_names"]))):
+            bad = [c for c in codes if not isinstance(c, str)]
+            if bad:
+                raise ValueError(f"{name}: non-string country codes {bad} (quote \"NO\" in the YAML)")
         self.build_countries = cov if bc == "all" else list(bc)
         unknown = set(self.build_countries) - set(cov)
         if unknown:
@@ -59,6 +66,21 @@ class Config:
 
     def currency(self, country: str) -> str:
         return "EUR" if country in self.euro_area else self.raw["currencies"][country]
+
+    def _national(self, key: str) -> set[str]:
+        return set(self.raw.get("national_sources", {}).get(key, [])) & set(self.build_countries)
+
+    @property
+    def national_gdp(self) -> set[str]:
+        return self._national("gdp")
+
+    @property
+    def national_population(self) -> set[str]:
+        return self._national("population")
+
+    @property
+    def national_grid(self) -> set[str]:
+        return self._national("grid")
 
     @property
     def non_euro_currencies(self) -> list[str]:

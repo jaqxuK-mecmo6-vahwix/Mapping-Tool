@@ -132,7 +132,7 @@ export default function ResultsPanel(p: Props) {
         <div className="min-w-48 flex-1">
           <Segmented label="GDP measure" size="sm" value={measure} onChange={p.onMeasure}
             options={[
-              { value: "nominal", label: "Nominal (current prices)" },
+              { value: "nominal", label: "Nominal", title: "Current prices" },
               { value: "pps", label: "PPS", disabled: currency !== "EUR",
                 title: currency !== "EUR" ? "PPS is shown in the EUR view only" : "Purchasing power standards" },
             ]} />

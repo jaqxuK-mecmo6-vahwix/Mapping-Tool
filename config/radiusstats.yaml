@@ -13,14 +13,21 @@ gdp:
 low_confidence_gdp_radius_km: 25
 
 # Countries the pipeline processes in this run. Full coverage list is `coverage`.
-# Step 1 builds Belgium only; set to `all` for the full build.
-build_countries: [BE]
+# `all` = every country in `coverage`; a list (e.g. [BE]) builds a subset for testing.
+build_countries: all
 
 coverage: [AT, BE, BG, HR, CY, CZ, DK, EE, FI, FR, DE, EL, HU, IE, IT, LV, LT, LU, MT, NL,
-           PL, PT, RO, SK, SI, ES, SE, UK, CH, NO]
+           PL, PT, RO, SK, SI, ES, SE, UK, CH, "NO"]
 
 # NUTS 3 prefixes inside covered countries that are NOT mapped (too far from the map extent).
 excluded_nuts_prefixes: [FRY]   # French outermost regions (Guadeloupe, Martinique, Guyane, Réunion, Mayotte)
+
+# Countries whose regional statistics come from national offices instead of Eurostat NUTS 3 tables
+# (Eurostat has no UK data after 2019; CH GDP ends 2022 and is pre-revision; NO GDP is incomplete).
+national_sources:
+  gdp: [CH, "NO", UK]       # BFS, SSB, ONS
+  population: [UK]          # ONS mid-year estimates (1 January = mean of the two mid-years)
+  grid: [UK]                # no Census 2021 grid for the UK: WorldPop 2021 100 m + ONS LAD 2023 boundaries
 
 # Euro area membership as of 2026-11-14 (Bulgaria joined 1 Jan 2026; verified at build time).
 euro_area: [AT, BE, BG, HR, CY, EE, FI, FR, DE, EL, IE, IT, LV, LT, LU, MT, NL, PT, SK, SI, ES]
@@ -33,7 +40,7 @@ currencies:
   SE: SEK
   UK: GBP
   CH: CHF
-  NO: NOK
+  "NO": NOK
 
 country_names:
   AT: Austria
@@ -65,13 +72,15 @@ country_names:
   SE: Sweden
   UK: United Kingdom
   CH: Switzerland
-  NO: Norway
+  "NO": Norway
 
 raster:
   cell_m: 1000
   levels: [1, 2, 4, 8, 16, 32]   # pyramid cell sizes in km; each level is a 2x2 sum of the previous
   pad_km: 64                      # padding around the built countries' bbox
-  blocksize: 256
+  blocksize: 64                   # COG tile edge in cells: small tiles keep small circles to a few KB per layer
+  mantissa_bits: 12               # float32 data layers keep 12 of 23 mantissa bits (round to nearest):
+                                  # <= 0.012 % per cell, ~1e-7 on large sums; makes files ~30 % smaller
   nodata: -1.0
 
 sources:
@@ -81,6 +90,12 @@ sources:
   census_country_member: Eurostat_Census-GRID_2021_V3/ESTAT_Census_2021_country.csv.zip
   eurostat_sdmx: https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data
   ardeco_export: https://territorial.ec.europa.eu/ardeco-api-v2/rest/export
+  bfs_canton_gdp: https://dam-api.bfs.admin.ch/hub/api/dam/assets/36251918/master
+  ssb_09391: https://data.ssb.no/api/pxwebapi/v2/tables/09391/data?lang=en&outputFormat=csv&valueCodes%5BContentsCode%5D=BNPB,BNPBvolum&valueCodes%5BRegion%5D=*&valueCodes%5BTid%5D=*
+  ons_gdp_la: https://www.ons.gov.uk/file?uri=/economy/grossdomesticproductgdp/datasets/regionalgrossdomesticproductlocalauthorities/1998to2024/regionalgrossdomesticproductgdplocalauthorities.xlsx
+  ons_mye_la: https://www.ons.gov.uk/file?uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/datasets/populationestimatesforukenglandandwalesscotlandandnorthernireland/mid2011tomid2025/myebtablesuk20112025.xlsx
+  worldpop_uk_2021: https://data.worldpop.org/GIS/Population/Global_2015_2030/R2025A/2021/GBR/v1/100m/constrained/gbr_pop_2021_CN_100m_R2025A_v1.tif
+  uk_lad_2023: https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Local_Authority_Districts_May_2023_UK_BGC_V2/FeatureServer/0/query?where=1%3D1&outFields=LAD23CD&outSR=4326&f=geojson
 
 output:
   dir: data/build          # relative to the repository root

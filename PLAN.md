@@ -36,6 +36,31 @@ Not yet checkable with the Belgium-only build: the currency toggle (needs a non-
 Dev notes: `npm run dev` in app/ serves `../data/build` at /data/ with Range support; Vite's fs.strict is
 off in dev only because of the ':' in the folder name.
 
+Step 4 (all countries) done, 2026-11-18: full build of EU-27 + UK + CH + NO in ~5 min (`run.sh build`),
+`run.sh validate` 291/291 checks, `run.sh xcheck` 21 independent circles (Paris, London, Zurich, Oslo,
+Warsaw, Basel, Brussels × 25/50/100 km) all reproduced by the engine within 0.1 %. App: 46 tests.
+What step 4 found and changed:
+- **UK:** no census grid → WorldPop 2021 100 m counts assigned to ONS local authorities (LAD 2023) and
+  summed per 1 km cell × authority; ONS mid-year population (1 Jan = mean of the two mid-years, Q1) and
+  ONS GDP by local authority (current prices + chained volume index). The ONS GDP and population files
+  share the same 361 LAD 2023 codes, so no boundary conversion is needed.
+- **CH:** BFS cantonal GDP 2011–2024 (revised 2026) for every year; Eurostat ends 2022 and is pre-revision.
+- **NO:** Eurostat NUTS 3 GDP misses three regions and ends 2021 → SSB 09391 county value added scaled to
+  Eurostat's mainland GDP (2011–2021), carried forward for 2022–2023; SSB county volumes for real growth.
+- **Real growth** (EU countries): benchmarked to the latest national chain-linked volumes per country
+  and year, because the regional volume table lags national revisions (CY, MT were up to 1 pp p.a. off).
+  Irish IE062/IE063 2018 nominal is suppressed → NUTS 2 volume used.
+- Germany has no NUTS 3 population on 1 Jan 2013 → the 2013 GDP weights use 2014 (also NL, PL).
+- **PPS** needs no raster: Eurostat applies one national PPP factor per country (verified: ratio constant
+  within every country to 0.003 %), so PPS = Σ country EUR × factor (`manifest.pps_per_eur`).
+- **Bytes per query (measured, real HTTP):** 256 px tiles and one file per layer made a 10 km circle in
+  London cost 5 MB. Now: one **12-band pixel-interleaved COG per level**, **64 px tiles**, float32 rounded to
+  **12 mantissa bits** (≤ 0.012 % per cell), 16 KiB range blocks → cold query 160–430 KB for r ≤ 50 km,
+  ~1–1.3 MB at 100–200 km, ≤ 1.7 MB at 500 km, in 4–8 requests; moving the point a few km costs 0 bytes
+  (cached). COGs total 80 MB (was 151 MB). Cell budget stays **100k**: 250k would cost up to 4.7 MB.
+  Tools: `app/scripts/measure-bytes.mjs` (tile index) and `app/scripts/measure-http.mjs` (real requests).
+- YAML reads a bare `NO` as false: the config now rejects non-string country codes.
+
 Original draft for review, 2026-11-14: Every fact marked ✅ was
 checked on 2026-11-14 against the live Eurostat API or by reading the file. Facts marked ⚠️ come
 from release notes or search results and are re-checked when the pipeline downloads the data.
@@ -62,16 +87,16 @@ from release notes or search results and are re-checked when the pipeline downlo
  └────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Layers (each one COG per pyramid level, float32, DEFLATE + predictor 3, nodata = -1)
+### Layers (step 4: all layers are bands of ONE COG per pyramid level, float32, pixel-interleaved, 64 px tiles, DEFLATE + predictor 3, nodata = -1)
 
 | id | content | years (from `config/years.yaml`) |
 |---|---|---|
 | `pop_{Y}` | population on 1 Jan | 2025, 2022, 2020, 2015 |
 | `gdp_nom_eur_{Y}` | GDP, current prices, mio EUR | 2023 |
-| `gdp_pps_{Y}` | GDP, current prices, mio PPS (EU27_2020) | 2023 |
+| ~~`gdp_pps_{Y}`~~ | dropped in step 4: PPS = country EUR × national factor (`pps_per_eur`) | — |
 | `gdp_real_{Y}` | GDP, constant prices, mio EUR at fixed base-year rates | 2023, 2020, 2018, 2013 |
-| `country` | uint8 country ID (0 = sea, 255 = land outside coverage) | — |
-| `land` | land share of the cell, 0–1 (for partial-coverage %) | — |
+| `country` | country ID (0 = sea, 255 = land outside coverage), stored as a float32 band | — |
+| `land`, `land_covered` | land share of the cell, and the share in covered countries (partial-coverage %) | — |
 
 The country breakdown and the currency toggle use `country`. Each layer is summed **per country**
 inside the circle, so the breakdown and the currency conversion come out of the same pass.

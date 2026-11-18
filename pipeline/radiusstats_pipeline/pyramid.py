@@ -69,3 +69,19 @@ def build(a: np.ndarray, levels: list[int], kind: str, nodata: float = -1.0,
 
 def total(a: np.ndarray, nodata: float) -> float:
     return float(np.where(a == nodata, 0.0, a.astype(np.float64)).sum())
+
+
+def keep_mantissa_bits(a: np.ndarray, bits: int, nodata: float | None = None) -> np.ndarray:
+    """Round float32 values to `bits` mantissa bits (round half up on the magnitude, sign kept).
+    Relative error per value <= 2**-(bits+1). nodata and zeros are unchanged."""
+    if bits >= 23 or a.dtype != np.float32:
+        return a
+    drop = 23 - bits
+    u = a.view(np.uint32)
+    sign = u & np.uint32(0x80000000)
+    mag = u & np.uint32(0x7FFFFFFF)
+    mag = (mag + np.uint32(1 << (drop - 1))) & np.uint32((0x7FFFFFFF >> drop) << drop)
+    out = (sign | mag).view(np.float32)
+    if nodata is not None:
+        out = np.where(a == nodata, a, out)
+    return out

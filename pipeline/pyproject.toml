@@ -15,10 +15,11 @@ dependencies = [
   "shapely>=2.0",
   "pillow>=10.4",
   "pmtiles>=3.4",
+  "openpyxl>=3.1",
 ]
 
 [dependency-groups]
-dev = ["pytest>=8"]
+dev = ["pytest>=8", "pyproj>=3.6"]
 
 [project.scripts]
 radiusstats-build = "radiusstats_pipeline.cli:main"

@@ -2,14 +2,19 @@
 import { chooseLevel, geodesicCircle, polygonToPixels, project, windowFor } from "./geometry";
 import { coverageWeights, subsamplingFor, weightStats, weightedSumByCountry } from "./mask";
 import type { RasterSource } from "./source";
-import type { LayerSum, Manifest, QueryParams, QueryResult } from "./types";
+import type { LayerSum, Manifest, QueryParams, QueryResult, Window } from "./types";
 
-function levelUrl(m: Manifest, layer: string, level: number): string {
+function levelRef(m: Manifest, layer: string, level: number): { url: string; band: number } {
   const meta = m.layers[layer];
   if (!meta) throw new Error(`unknown layer ${layer}`);
   const f = meta.levels[String(level)];
   if (!f) throw new Error(`layer ${layer} has no level ${level}`);
-  return f.url;
+  return { url: f.url, band: f.band ?? 0 };
+}
+
+function read(src: RasterSource, m: Manifest, layer: string, level: number, win: Window, signal?: AbortSignal) {
+  const { url, band } = levelRef(m, layer, level);
+  return src.read(url, win, signal, band);
 }
 
 /** Country code at a point (1 km level), or undefined for sea / outside coverage / outside grid. */
@@ -19,7 +24,7 @@ export async function countryAt(m: Manifest, src: RasterSource, lat: number, lon
   const col = Math.floor((x - m.grid.xmin) / m.grid.cell_m);
   const row = Math.floor((m.grid.ymax - y) / m.grid.cell_m);
   if (col < 0 || row < 0 || col >= m.grid.width || row >= m.grid.height) return undefined;
-  const d = await src.read(levelUrl(m, "country", 1), { level: 1, row0: row, col0: col, width: 1, height: 1 }, signal);
+  const d = await read(src, m, "country", 1, { level: 1, row0: row, col0: col, width: 1, height: 1 }, signal);
   return m.countries.find((c) => c.id === d[0] && c.built)?.code;
 }
 
@@ -40,10 +45,10 @@ export async function runQuery(m: Manifest, src: RasterSource, params: QueryPara
   const radiusCells = (params.radiusKm * 1000) / (m.grid.cell_m * level);
   const weights = coverageWeights(poly, win, subsamplingFor(radiusCells));
   const [country, land, landCovered, ...layerData] = await Promise.all([
-    src.read(levelUrl(m, "country", level), win, signal),
-    src.read(levelUrl(m, "land", level), win, signal),
-    src.read(levelUrl(m, "land_covered", level), win, signal),
-    ...params.layers.map((l) => src.read(levelUrl(m, l, level), win, signal)),
+    read(src, m, "country", level, win, signal),
+    read(src, m, "land", level, win, signal),
+    read(src, m, "land_covered", level, win, signal),
+    ...params.layers.map((l) => read(src, m, l, level, win, signal)),
   ]);
   signal?.throwIfAborted();
 
@@ -84,7 +89,7 @@ export async function runQuery(m: Manifest, src: RasterSource, params: QueryPara
 export function layersFor(m: Manifest, first: "population" | "gdp"): string[] {
   const y = m.years;
   const pop = [y.population.latest, ...y.population.compare].map((v) => `pop_${v}`);
-  const gdp = [`gdp_nom_eur_${y.gdp.latest}`, `gdp_pps_${y.gdp.latest}`,
+  const gdp = [`gdp_nom_eur_${y.gdp.latest}`,
     ...[y.gdp.latest, ...y.gdp.compare].map((v) => `gdp_real_${v}`)];
   return first === "population" ? [...pop, ...gdp] : [...gdp, ...pop];
 }

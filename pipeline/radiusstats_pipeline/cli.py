@@ -60,18 +60,20 @@ def rasterise(shape, row, col, values, covered: np.ndarray, nodata: float) -> np
     return out
 
 
-def write_layer(cfg: Config, out_dir: Path, grid: GridSpec, layer_id: str, arr: np.ndarray, kind: str,
+def write_layer(cfg: Config, stack: cog.LevelStack, layer_id: str, arr: np.ndarray, kind: str,
                 report: Report, land: np.ndarray | None = None) -> dict:
+    """Build the pyramid of one layer and write every level into its band of the level stack.
+    Returns the manifest `levels` entry (url and size are filled in when the stack is finished)."""
     levels = cfg.levels
-    nd = cfg.nodata if kind == "sum" else None
     pyr = pyramid.build(arr, levels, kind, nodata=cfg.nodata, land=land)
+    bits = int(cfg.raw["raster"].get("mantissa_bits", 23))
+    band = stack.band_of(layer_id)
     files = {}
     for lv, a in pyr.items():
-        p = out_dir / "cog" / layer_id / f"L{lv}.tif"
-        cog.write_cog(p, a, grid, lv, nodata=nd,
-                      blocksize=cfg.raw["raster"]["blocksize"], description=layer_id)
-        files[str(lv)] = {"url": f"cog/{layer_id}/L{lv}.tif", "bytes": p.stat().st_size,
-                          "width": a.shape[1], "height": a.shape[0]}
+        if kind == "sum":
+            a = pyramid.keep_mantissa_bits(a, bits, cfg.nodata)
+        stack.write(layer_id, lv, a)
+        files[str(lv)] = {"band": band, "width": a.shape[1], "height": a.shape[0]}
     if kind == "sum":
         t0 = pyramid.total(pyr[1], cfg.nodata)
         worst = max(abs(pyramid.total(a, cfg.nodata) - t0) / max(abs(t0), 1e-9) for a in pyr.values())
@@ -113,6 +115,11 @@ def main(argv: list[str] | None = None) -> None:
     layers: dict[str, dict] = {}
     row_values: dict[str, np.ndarray] = {}
 
+    G = cfg.gdp_latest
+    bands = ([f"pop_{y}" for y in sorted(cfg.pop_years)] + [f"gdp_nom_eur_{G}"]
+             + [f"gdp_real_{y}" for y in cfg.gdp_years] + ["country", "land", "land_covered"])
+    stack = cog.LevelStack(WORK_DIR / "stack", grid, cfg.levels, bands, cfg.nodata)
+
     alloc_dir = WORK_DIR / "alloc"
     if alloc_dir.exists():
         shutil.rmtree(alloc_dir)
@@ -122,14 +129,15 @@ def main(argv: list[str] | None = None) -> None:
         row_values[layer_id] = values
         pd.concat(detail, ignore_index=True).to_parquet(alloc_dir / f"{layer_id}.parquet")
         arr = rasterise(shape, row, col, values, covered, cfg.nodata)
-        files = write_layer(cfg, stage, grid, layer_id, arr, "sum", report)
+        files = write_layer(cfg, stack, layer_id, arr, "sum", report)
         layers[layer_id] = {**meta, "levels": files, "total": float(values.sum())}
         print(f"   wrote {layer_id}: total {values.sum():,.1f}")
 
     # --- population -------------------------------------------------------------------------------
     # GDP years need same-year population weights, so population is built for both sets of years
     pop_detail: dict[int, list] = {}
-    pop_by_year = yearly_population(cfg, ct, cfg.pop_years + cfg.gdp_years, report, details=pop_detail)
+    pop_by_year = yearly_population(cfg, ct, cfg.pop_years + cfg.gdp_years, report, details=pop_detail,
+                                    weight_only=set(cfg.gdp_years) - set(cfg.pop_years))
     for y in sorted(cfg.pop_years):
         emit(f"pop_{y}", pop_by_year[y], {"kind": "population", "year": y, "unit": "persons", "date": f"{y}-01-01"},
              pop_detail[y])
@@ -137,17 +145,18 @@ def main(argv: list[str] | None = None) -> None:
         row_values[f"popw_{y}"] = pop_by_year[y]   # weights only, not published
 
     # --- GDP ---------------------------------------------------------------------------------------
-    G = cfg.gdp_latest
 
-    for unit, lid, label in (("MIO_EUR", f"gdp_nom_eur_{G}", "nominal"), ("MIO_PPS_EU27_2020", f"gdp_pps_{G}", "pps")):
-        tot = gdp.nominal(cfg, G, unit)
-        det: list = []
-        v = allocate(ct, tot, pop_by_year[G], what=f"gdp_{label}", year=G, report=report, detail=det)
-        emit(lid, v, {"kind": "gdp", "measure": label, "year": G, "source_unit": unit,
-                      "unit": "million EUR" if unit == "MIO_EUR" else "million PPS (EU27_2020)", "prices": "current"}, det)
-        zzz = gdp.extra_regio(cfg, G, unit)
-        if not zzz.empty:
-            report.note("extra_regio_excluded", unit=unit, year=G, value=float(zzz.sum()), regions=zzz.index.tolist())
+    tot = gdp.nominal(cfg, G, "MIO_EUR", report)
+    det: list = []
+    v = allocate(ct, tot, pop_by_year[G], what="gdp_nominal", year=G, report=report, detail=det)
+    emit(f"gdp_nom_eur_{G}", v, {"kind": "gdp", "measure": "nominal", "year": G, "source_unit": "MIO_EUR",
+                                 "unit": "million EUR", "prices": "current"}, det)
+    zzz = gdp.extra_regio(cfg, G, "MIO_EUR")
+    if not zzz.empty:
+        report.note("extra_regio_excluded", unit="MIO_EUR", year=G, value=float(zzz.sum()), regions=zzz.index.tolist())
+    # PPS = EUR x one national factor (Eurostat converts regional GDP with national PPPs), so no PPS layer:
+    # the app multiplies each country's EUR sum by its factor
+    pps_per_eur = gdp.pps_per_eur(cfg, G, report)
 
     real = gdp.real(cfg, report)
     for y in cfg.gdp_years:
@@ -162,13 +171,20 @@ def main(argv: list[str] | None = None) -> None:
     # coarse-level country = the country with most population in the 2x2 block (land decides empty blocks)
     pop_latest = rasterise(shape, row, col, pop_by_year[cfg.pop_years[0]], covered, 0.0)
     cweight = np.maximum(pop_latest, 0).astype(np.float64) + 1e-6 * land
-    layers["country"] = {"kind": "country", "levels": write_layer(cfg, stage, grid, "country", country, "country",
+    layers["country"] = {"kind": "country", "levels": write_layer(cfg, stack, "country", country, "country",
                                                                   report, land=cweight)}
-    layers["land"] = {"kind": "land", "levels": write_layer(cfg, stage, grid, "land", land, "mean", report)}
+    layers["land"] = {"kind": "land", "levels": write_layer(cfg, stack, "land", land, "mean", report)}
     # land share that lies in built (covered) countries; mean-aggregated so coarse cells stay exact
     land_cov = np.where(covered, land, 0).astype(np.float32)
-    layers["land_covered"] = {"kind": "land", "levels": write_layer(cfg, stage, grid, "land_covered", land_cov,
+    layers["land_covered"] = {"kind": "land", "levels": write_layer(cfg, stack, "land_covered", land_cov,
                                                                     "mean", report)}
+
+    # --- one multi-band COG per level -------------------------------------------------------------
+    level_files = stack.finish(stage, int(cfg.raw["raster"]["blocksize"]))
+    for meta in layers.values():
+        for lv, f in meta["levels"].items():
+            f.update(url=level_files[int(lv)]["url"], bytes=level_files[int(lv)]["bytes"])
+    print("   level files: " + ", ".join(f"L{lv} {f['bytes'] / 1e6:.1f} MB" for lv, f in level_files.items()))
 
     # --- cell table with every layer's row values, for the validation script ----------------------
     WORK_DIR.mkdir(parents=True, exist_ok=True)
@@ -189,7 +205,7 @@ def main(argv: list[str] | None = None) -> None:
 
     manifest = {
         "name": "RadiusStats Europe",
-        "schema": 1,
+        "schema": 2,
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "grid": grid.to_dict(),
         "levels_km": cfg.levels,
@@ -201,6 +217,9 @@ def main(argv: list[str] | None = None) -> None:
                        "currency": cfg.currency(c), "built": c in cfg.build_countries} for c in cfg.coverage],
         "country_codes": {"sea": SEA, "not_covered": NOT_COVERED},
         "low_confidence_gdp_radius_km": cfg.raw["low_confidence_gdp_radius_km"],
+        "pps_per_eur": {"year": G, "factors": pps_per_eur,
+                        "source": "regional MIO_PPS_EU27_2020 / MIO_EUR (Eurostat); prc_ppp_ind for national sources"},
+        "bands": bands,
         "layers": layers,
         "fx": "fx.json",
         "heat": heat,
@@ -211,7 +230,8 @@ def main(argv: list[str] | None = None) -> None:
         "countries": cfg.build_countries, "seconds": round(time.time() - t_start, 1),
         "downloads": download_index(),
         "eurostat_last_update": {t: eurostat.last_update(cfg, t, k) for t, k in (
-            ("demo_r_pjanaggr3", "A.NR.T.TOTAL."), ("nama_10r_3gdp", ""), ("nama_10r_2gvagr", ""), ("ert_bil_eur_a", ""))},
+            ("demo_r_pjanaggr3", "A.NR.T.TOTAL."), ("nama_10r_3gdp", ""), ("nama_10r_2gvagr", ""), ("ert_bil_eur_a", ""),
+            ("prc_ppp_ind", "A.PPP_EU27_2020.GDP."))},
     })
 
     if out_dir.exists():

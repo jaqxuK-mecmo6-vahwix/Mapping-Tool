@@ -176,12 +176,12 @@ describe("currency", () => {
   const manifest = {
     years: { population: { latest: 2025, compare: [2022] }, gdp: { latest: 2023, compare: [2020], real_base_year: 2020 } },
     low_confidence_gdp_radius_km: 25,
+    pps_per_eur: { year: 2023, factors: { PL: 110 / 60, DE: 1.0 }, source: "test" },
   } as unknown as Manifest;
   const result = {
     params: { lat: 0, lon: 0, radiusKm: 20, layers: [] },
     layers: {
       gdp_nom_eur_2023: { total: 100, byCountry: { PL: 60, DE: 40 } },
-      gdp_pps_2023: { total: 150, byCountry: { PL: 110, DE: 40 } },
       gdp_real_2023: { total: 110, byCountry: {} },
       gdp_real_2020: { total: 100, byCountry: {} },
       pop_2025: { total: 1030, byCountry: {} },
@@ -197,7 +197,11 @@ describe("currency", () => {
     expect(pln.realGrowth).toEqual(eur.realGrowth);
     expect(eur.realGrowth[0].pctPerYear).toBeCloseTo(Math.cbrt(1.1) - 1, 12);
     expect(eur.lowConfidence).toBe(true);
-    expect(gdpSummary(manifest, fx, result, "pps", "EUR").currency).toBe("PPS");
+    const pps = gdpSummary(manifest, fx, result, "pps", "EUR");
+    expect(pps.currency).toBe("PPS");
+    expect(pps.totalMillions).toBeCloseTo(150, 9);        // PL 60 EUR x 110/60 + DE 40 x 1
+    expect(pps.byCountryMillions.PL).toBeCloseTo(110, 9);
+    expect(pps.realGrowth).toEqual(eur.realGrowth);
   });
   it("population summary", () => {
     const p = populationSummary(manifest, result);

@@ -18,7 +18,7 @@ import pandas as pd
 from scipy.spatial import cKDTree
 
 from .config import Config
-from .sources import eurostat, gisco
+from .sources import eurostat, gisco, national, uk_grid
 from .sources.gisco import NUTS_VERSIONS
 
 
@@ -71,8 +71,9 @@ def build_cell_table(cfg: Config, grid_df: pd.DataFrame, report) -> CellTable:
     excluded = tuple(cfg.raw.get("excluded_nuts_prefixes", []))
     parts = []
     for c in cfg.build_countries:
-        if c == "UK":
-            raise NotImplementedError("UK uses ONS + WorldPop (step 4 of PLAN.md)")
+        if c in cfg.national_grid:
+            parts.append(_national_grid_cells(cfg, c, grid_df, report))
+            continue
         cen = gisco.load_census_country(cfg, c, report)
         m = cen.merge(grid_df, on=["x", "y"], how="left")
         no_grid = m["land"].isna()
@@ -97,6 +98,27 @@ def build_cell_table(cfg: Config, grid_df: pd.DataFrame, report) -> CellTable:
     return CellTable(cc=cc, report=report, excluded=excluded)
 
 
+def _national_grid_cells(cfg: Config, c: str, grid_df: pd.DataFrame, report) -> pd.DataFrame:
+    """Cell rows for a country without a census grid (UK): one row per (cell, local authority);
+    the region code is written into every NUTS-version column, so allocation is version-independent."""
+    if c != "UK":
+        raise NotImplementedError(f"no national grid source for {c}")
+    u = uk_grid.uk_cells(cfg, report)
+    m = u.merge(grid_df[["x", "y", "land"]], on=["x", "y"], how="left")
+    no_grid = m["land"].isna()
+    if no_grid.any():
+        report.gap("national_cell_not_in_gisco_grid", country=c, cells=int(no_grid.sum()),
+                   population=float(m.loc[no_grid, "pop"].sum()), detail="Kept with land share 0.")
+    m["land"] = m["land"].fillna(0).astype(np.float32)
+    out = pd.DataFrame({"x": m["x"], "y": m["y"], "country": c, "base": m["pop"].astype(np.float64),
+                        "land": m["land"]})
+    for v in NUTS_VERSIONS:
+        out[f"nuts{v}"] = m["lad"].to_numpy()
+    report.note("national_base", country=c, rows=len(out), population_2021=float(out["base"].sum()),
+                source="WorldPop 2021 constrained 100 m, by ONS LAD 2023")
+    return out
+
+
 def choose_version(ct: CellTable, country: str, codes: set[str]) -> tuple[int, set[str]]:
     """NUTS version to allocate a source table with: the newest version whose regions are ALL in the
     table; otherwise the version with the most matching regions. (Eurostat sometimes publishes a
@@ -118,6 +140,8 @@ def allocate(ct: CellTable, totals: pd.Series, weights: np.ndarray, *, what: str
     w_all = np.asarray(weights, dtype=np.float64)
     for c in countries or sorted(ct.cc["country"].unique()):
         t = totals[totals.index.str[:2] == c]
+        if ct.excluded:
+            t = t[~t.index.str.startswith(ct.excluded)]   # deliberately unmapped regions (see config)
         if t.empty:
             report.gap(f"{what}_country_missing", year=year, country=c)
             continue
@@ -130,9 +154,17 @@ def allocate(ct: CellTable, totals: pd.Series, weights: np.ndarray, *, what: str
         dup = [r for r in extra if r in other_versions]
         if dup:
             report.note(f"{what}_other_version_codes_ignored", year=year, country=c, nuts_version=v, regions=dup)
+        complete = regs <= set(t.index)
         for r in extra:
-            if r not in other_versions:
-                report.gap(f"{what}_region_without_cells", year=year, region=r, nuts_version=v, value=float(t[r]))
+            if r in other_versions:
+                continue
+            val = float(t[r])
+            if complete or not (val > 0) or r.endswith("XXX"):
+                # the chosen version is complete, so this is an older-NUTS duplicate, an empty region
+                # (e.g. Svalbard) or "not regionalised": nothing is lost
+                report.note(f"{what}_extra_code_ignored", year=year, region=r, nuts_version=v, value=val)
+            else:
+                report.gap(f"{what}_region_without_cells", year=year, region=r, nuts_version=v, value=val)
         t = t[t.index.isin(regs)]
         for r in sorted(regs - set(t.index)):
             report.gap(f"{what}_region_missing_in_source", year=year, region=r, nuts_version=v,
@@ -159,21 +191,58 @@ def allocate(ct: CellTable, totals: pd.Series, weights: np.ndarray, *, what: str
     return out
 
 
-def regional_population(cfg: Config) -> pd.DataFrame:
-    """Eurostat population on 1 January by NUTS 3 (any NUTS version): columns geo, year, value."""
+def regional_population(cfg: Config, years: list[int] | None = None) -> pd.DataFrame:
+    """Population on 1 January by region: Eurostat NUTS 3 (any NUTS version) and, for countries with a
+    national source, that source (UK: ONS by local authority). Columns geo, year, value."""
+    es = [c for c in cfg.build_countries if c not in cfg.national_population]
     df = eurostat.table(cfg, "demo_r_pjanaggr3", "A.NR.T.TOTAL.")
-    df = eurostat.nuts3(df, cfg.build_countries)
-    return df.rename(columns={"TIME_PERIOD": "year", "OBS_VALUE": "value"})[["geo", "year", "value"]].dropna()
+    df = eurostat.nuts3(df, es)
+    parts = [df.rename(columns={"TIME_PERIOD": "year", "OBS_VALUE": "value"})[["geo", "year", "value"]].dropna()]
+    if "UK" in cfg.national_population:
+        ys = sorted(set(years or (cfg.pop_years + cfg.gdp_years)))
+        parts.append(national.uk_population(cfg, ys))
+    return pd.concat(parts, ignore_index=True)
+
+
+def complete_for(ct: CellTable, country: str, codes: set[str]) -> bool:
+    """True if the table covers every region of `country` in at least one NUTS version."""
+    return any(ct.regions(country, v) <= codes for v in NUTS_VERSIONS)
 
 
 def yearly_population(cfg: Config, ct: CellTable, years: list[int], report,
-                      details: dict[int, list] | None = None) -> dict[int, np.ndarray]:
-    reg = regional_population(cfg)
+                      details: dict[int, list] | None = None,
+                      weight_only: set[int] | None = None) -> dict[int, np.ndarray]:
+    """Allocate each year's regional population to cells. For `weight_only` years (used only as GDP
+    weights, never published) a country whose table is incomplete in that year uses the nearest complete
+    year instead (e.g. Germany has no NUTS 3 population on 1 January 2013); the within-region
+    distribution barely changes in a year, and only relative weights matter for GDP."""
+    reg = regional_population(cfg, years)
+    weight_only = weight_only or set()
+    countries = sorted(ct.cc["country"].unique())
+    by_year = {y: g.set_index("geo")["value"] for y, g in reg.groupby("year")}
     out = {}
     for y in sorted(set(years)):
-        t = reg[reg["year"] == y].set_index("geo")["value"]
+        t = by_year.get(y, pd.Series(dtype=float))
         if t.empty:
-            raise RuntimeError(f"No NUTS 3 population for {y} in demo_r_pjanaggr3")
+            raise RuntimeError(f"No regional population for {y}")
         d = details.setdefault(y, []) if details is not None else None
-        out[y] = allocate(ct, t, ct.cc["base"].to_numpy(), what="population", year=y, report=report, detail=d)
+        if y not in weight_only:
+            out[y] = allocate(ct, t, ct.cc["base"].to_numpy(), what="population", year=y, report=report, detail=d)
+            continue
+        acc = np.zeros(len(ct.cc))
+        for c in countries:
+            use = y
+            for dy in (0, 1, -1, 2, -2, 3, -3):
+                tc = by_year.get(y + dy, pd.Series(dtype=float))
+                tc = tc[tc.index.str[:2] == c]
+                if not tc.empty and complete_for(ct, c, set(tc.index)):
+                    use = y + dy
+                    break
+            if use != y:
+                report.fallback("population_weight_year", country=c, year=y, used_year=use,
+                                detail="Regional population incomplete for this year; GDP weights use the nearest complete year.")
+            tc = by_year[use]
+            acc += allocate(ct, tc[tc.index.str[:2] == c], ct.cc["base"].to_numpy(), what="population_weight",
+                            year=use, report=report, countries=[c])
+        out[y] = acc
     return out

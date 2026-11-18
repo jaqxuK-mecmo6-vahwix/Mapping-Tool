@@ -1,5 +1,5 @@
 /**
- * Engine against the real pipeline output in ../data/build (Belgium build of step 1).
+ * Engine against the real pipeline output in ../data/build (full build: EU-27, UK, CH, NO).
  * Skipped when the build is absent. Reads COGs from disk with the same geotiff.js code path.
  */
 import { existsSync, readFileSync } from "node:fs";
@@ -15,23 +15,23 @@ const BUILD = fileURLToPath(new URL("../../../../data/build/", import.meta.url))
 const has = existsSync(BUILD + "manifest.json");
 const manifest: Manifest = has ? JSON.parse(readFileSync(BUILD + "manifest.json", "utf8")) : ({} as Manifest);
 const fx: FxTable = has ? JSON.parse(readFileSync(BUILD + "fx.json", "utf8")) : ({} as FxTable);
+const full = has && manifest.countries.every((c) => c.built);
 const src = () => new CogSource(pathToFileURL(BUILD).toString(), (u) => fromFile(fileURLToPath(u)));
 
 const BRUSSELS = { lat: 50.8467, lon: 4.3525 };
-const BE_CENTRE = { lat: 50.64, lon: 4.67 };
+const MALTA = { lat: 35.92, lon: 14.42 };
 
-describe.skipIf(!has)("query engine on the Belgium build", () => {
-  it("a circle containing all of Belgium returns the national totals at every pyramid level", async () => {
+describe.skipIf(!full)("query engine on the full build", () => {
+  it("an isolated country (Malta) gives the same total at every pyramid level", async () => {
     const layers = layersFor(manifest, "population");
-    for (const lv of manifest.levels_km.filter((l) => l <= 8)) {
-      const m = { ...manifest, levels_km: [lv] };   // force the level
-      const r = await runQuery(m, src(), { ...BE_CENTRE, radiusKm: 220, layers });
+    const ref = await runQuery({ ...manifest, levels_km: [1] }, src(), { ...MALTA, radiusKm: 60, layers });
+    expect(ref.layers.pop_2025.total).toBeGreaterThan(4.5e5);
+    expect(Object.keys(ref.layers.pop_2025.byCountry).filter((c) => ref.layers.pop_2025.byCountry[c] > 0)).toEqual(["MT"]);
+    for (const lv of manifest.levels_km.filter((l) => l > 1 && l <= 8)) {
+      const r = await runQuery({ ...manifest, levels_km: [lv] }, src(), { ...MALTA, radiusKm: 60, layers });
       expect(r.level).toBe(lv);
-      for (const l of layers) {
-        const total = manifest.layers[l].total!;
-        expect(Math.abs(r.layers[l].total - total) / total).toBeLessThan(1e-5);
-        expect(r.layers[l].byCountry.BE).toBeCloseTo(r.layers[l].total, 3);
-      }
+      // each level is stored with 12 mantissa bits (pipeline raster.mantissa_bits): <= 2^-13 per cell
+      for (const l of layers) expect(Math.abs(r.layers[l].total - ref.layers[l].total) / ref.layers[l].total).toBeLessThan(2 ** -13);
     }
   });
 
@@ -47,12 +47,34 @@ describe.skipIf(!has)("query engine on the Belgium build", () => {
     expect(r1.coveredShare).toBe(1);
   });
 
-  it("partial coverage near the French border (France not in this build)", async () => {
-    const r = await runQuery(manifest, src(), { lat: 50.73, lon: 3.23, radiusKm: 30, layers: ["pop_2025"] });
+  it("partial coverage at the Croatian-Serbian border (Serbia is not covered)", async () => {
+    const r = await runQuery(manifest, src(), { lat: 45.35, lon: 19.0, radiusKm: 30, layers: ["pop_2025"] });
     expect(r.coveredShare).toBeGreaterThan(0.2);
     expect(r.coveredShare).toBeLessThan(0.9);
-    const lille = await runQuery(manifest, src(), { lat: 50.63, lon: 3.06, radiusKm: 5, layers: ["pop_2025"] });
-    expect(lille.pointCountry).toBeUndefined();
+    const belgrade = await runQuery(manifest, src(), { lat: 44.82, lon: 20.46, radiusKm: 5, layers: ["pop_2025"] });
+    expect(belgrade.pointCountry).toBeUndefined();
+  });
+
+  it("cross-border circle (Basel 25 km) splits by country", async () => {
+    const r = await runQuery(manifest, src(), { lat: 47.5596, lon: 7.5886, radiusKm: 25, layers: ["pop_2025"] });
+    const bc = r.layers.pop_2025.byCountry;
+    for (const c of ["CH", "DE", "FR"]) expect(bc[c]).toBeGreaterThan(5e4);
+    expect(r.pointCountry).toBe("CH");
+  });
+
+  it("UK and non-euro currencies: London in GBP, Zurich in CHF, Oslo in NOK", async () => {
+    for (const [lat, lon, cc, cur] of [[51.5074, -0.1278, "UK", "GBP"], [47.3769, 8.5417, "CH", "CHF"],
+                                        [59.9139, 10.7522, "NO", "NOK"]] as const) {
+      const r = await runQuery(manifest, src(), { lat, lon, radiusKm: 25, layers: layersFor(manifest, "gdp") });
+      expect(r.pointCountry).toBe(cc);
+      const eur = gdpSummary(manifest, fx, r, "nominal", "EUR");
+      const nat = gdpSummary(manifest, fx, r, "nominal", cur);
+      expect(eur.totalMillions).toBeGreaterThan(5e4);
+      expect(nat.totalMillions / eur.totalMillions).toBeCloseTo(fx.rates[cur][String(fx.reference_year)], 9);
+      expect(nat.realGrowth).toEqual(eur.realGrowth);
+      const pps = gdpSummary(manifest, fx, r, "pps", "EUR");
+      expect(pps.totalMillions).toBeGreaterThan(0);
+    }
   });
 
   it("summaries: growth, real growth and currency", async () => {
@@ -67,21 +89,19 @@ describe.skipIf(!has)("query engine on the Belgium build", () => {
     for (const g of eur.realGrowth) expect(Math.abs(g.pctPerYear)).toBeLessThan(0.06);
   });
 
-  // Independent reference: pyproj geodesic distance on a 10x10 sample of every 1 km cell
-  // (scratch script xcheck.py, 2026-11-15, pop_2025 of the Belgium build).
-  const REF: [string, number, number, number, number][] = [
-    ["Brussels", 50.8467, 4.3525, 10, 1580365], ["Brussels", 50.8467, 4.3525, 25, 2605729],
-    ["Brussels", 50.8467, 4.3525, 50, 5997768], ["Antwerp", 51.2194, 4.4025, 10, 774081],
-    ["Antwerp", 51.2194, 4.4025, 25, 1632981], ["Liege", 50.6326, 5.5797, 25, 949123],
-    ["Liege", 50.6326, 5.5797, 50, 1951985],
-  ];
-  it.each(REF)("%s %d km matches an independent geodesic computation within 0.1 %%", async (_n, lat, lon, r, ref) => {
+  // Independent reference: pipeline `./run.sh xcheck` (pyproj geodesic distance on a 10x10 sample of
+  // every 1 km cell), pop_2025 of the full build; see VALIDATION.md.
+  const REF: [string, number, number, number, number][] = (has && existsSync(BUILD + "xcheck.json"))
+    ? JSON.parse(readFileSync(BUILD + "xcheck.json", "utf8")).rows
+        .map((r: Record<string, number | string>) => [r.place, r.lat, r.lon, r.radius_km, r.pop_2025])
+    : [];
+  it.skipIf(!REF.length).each(REF)("%s %d km matches an independent geodesic computation within 0.1 %%", async (_n, lat, lon, r, ref) => {
     const q = await runQuery(manifest, src(), { lat, lon, radiusKm: r, layers: ["pop_2025"] });
     expect(Math.abs(q.layers.pop_2025.total - ref) / ref).toBeLessThan(0.001);
   });
 
-  it("a circle fully outside the grid returns zeros, not an error", async () => {
-    const r = await runQuery(manifest, src(), { lat: 40.4, lon: -3.7, radiusKm: 50, layers: ["pop_2025"] });
+  it("a circle over the open Atlantic returns zeros, not an error", async () => {
+    const r = await runQuery(manifest, src(), { lat: 40.0, lon: -20.0, radiusKm: 50, layers: ["pop_2025"] });
     expect(r.layers.pop_2025.total).toBe(0);
   });
 
