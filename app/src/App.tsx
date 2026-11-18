@@ -9,7 +9,9 @@ import ResultsPanel, { headline } from "./components/ResultsPanel";
 import SourcesDialog from "./components/SourcesDialog";
 import { parseHash, toHash, type AppState } from "./lib/urlState";
 
-const DATA_URL: string = import.meta.env.VITE_DATA_URL ?? "/data/";
+/** Data folder, absolute (the worker resolves URLs against its own script location, not the page):
+ *  `data/` next to index.html unless VITE_DATA_URL points elsewhere (e.g. another host with CORS). */
+const DATA_URL: string = new URL(import.meta.env.VITE_DATA_URL ?? "data/", document.baseURI).toString();
 const QUERY_DEBOUNCE_MS = 120;
 
 export default function App() {

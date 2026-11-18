@@ -69,6 +69,17 @@ the manifest and marked in the app; radius slider did not respond to arrow keys;
 zoom buttons hidden behind the mobile sheet; axe-core findings (landmarks, link styling, translucent
 backgrounds) → 0 violations. Not tested: real screen reader, real phone on 4G, PWA install.
 
+Step 6 (deploy) done, 2026-11-18: GitHub Pages chosen (Q3). The app uses relative paths (Vite `base: "./"`,
+data at `data/` next to index.html), so it runs under `https://<user>.github.io/<repo>/`.
+`scripts/deploy-gh-pages.sh` builds the app, adds `data/build` and force-pushes one commit to `gh-pages`
+(refuses if validation failed); `scripts/serve-site.mjs` previews the site from a subfolder;
+`scripts/check-deploy.mjs` checks a live site (pages, manifest, HTTP 206 on COGs and PMTiles). Verified:
+GitHub Pages answers range requests with 206 and CORS `*` (tested on a github.io binary); the assembled
+site passes all checks locally from a subfolder and works in the browser. Not verifiable before the real
+deploy: the service worker (the preview browser cannot fetch service-worker scripts from localhost;
+the generated sw.js uses relative URLs and excludes data/), PWA install, a phone on 4G.
+Instructions: [README.md](README.md). Account steps (GitHub account, public repo, Pages setting) are the user's.
+
 Original draft for review, 2026-11-14: Every fact marked ✅ was
 checked on 2026-11-14 against the live Eurostat API or by reading the file. Facts marked ⚠️ come
 from release notes or search results and are re-checked when the pipeline downloads the data.

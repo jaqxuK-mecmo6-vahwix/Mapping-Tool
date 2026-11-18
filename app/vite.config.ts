@@ -44,6 +44,9 @@ function devData(): Plugin {
 }
 
 export default defineConfig({
+  // relative asset URLs: the same build works at a domain root and in a subfolder
+  // (GitHub Pages project sites are served from https://<user>.github.io/<repo>/)
+  base: "./",
   plugins: [
     react(),
     tailwindcss(),
@@ -51,7 +54,7 @@ export default defineConfig({
     VitePWA({
       registerType: "autoUpdate",
       // app shell only: data (COGs, PMTiles, manifest) is never precached or runtime-cached
-      workbox: { globPatterns: ["**/*.{js,css,html,svg,png,webmanifest}"], navigateFallbackDenylist: [/^\/data\//] },
+      workbox: { globPatterns: ["**/*.{js,css,html,svg,png,webmanifest}"], navigateFallbackDenylist: [/\/data\//] },
       includeAssets: ["icon.svg"],
       manifest: {
         name: "RadiusStats Europe",

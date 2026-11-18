@@ -6,3 +6,6 @@ dist/
 .DS_Store
 __pycache__/
 *.pyc
+
+# assembled GitHub Pages site (scripts/deploy-gh-pages.sh)
+/site/
